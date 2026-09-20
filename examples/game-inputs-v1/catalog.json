@@ -1,0 +1,791 @@
+{
+  "schema_version": 1,
+  "title": "游戏任务输入库 · 第一批",
+  "bases": [
+    {
+      "id": "platformer",
+      "name": "平台跳跃",
+      "source": "bases/platformer/source.json",
+      "readme": "bases/platformer/README.md",
+      "preview": "previews/platformer/scene.png",
+      "task_count": 4
+    },
+    {
+      "id": "city-builder",
+      "name": "城市建造",
+      "source": "bases/city-builder/source.json",
+      "readme": "bases/city-builder/README.md",
+      "preview": "previews/city-builder/scene.png",
+      "task_count": 4
+    },
+    {
+      "id": "racing",
+      "name": "赛车",
+      "source": "bases/racing/source.json",
+      "readme": "bases/racing/README.md",
+      "preview": "previews/racing/scene.png",
+      "task_count": 4
+    }
+  ],
+  "tasks": [
+    {
+      "id": "platformer-01",
+      "title": "把悬空群岛改造成主线与挑战支路",
+      "category": "布局与关卡设计",
+      "query": "请基于现有悬空平台关卡重新设计从出生点到旗帜的探索路线。主线依次呈现安全起步、台阶式上升、抵达高处旗帜三个清楚的空间段落；同时保留一条离开主线、经过下坠平台和顶碎砖块、再回到主线的可选挑战支路。用金币分布提示前进方向，保留总共14枚金币，主线与支路都要有奖励。沿用原角色、草地平台、下坠平台、砖块与旗帜素材，可以重排或复制平台，但不要只是把整关平移或简单延长一排跳台。",
+      "initial_state": [
+        "原始单关卡直接进入scenes/main.tscn，无标题菜单。",
+        "已有14枚金币、3个下坠平台、3个从下方顶碎的砖块。",
+        "Player出生点约[0,0.493,0]，旗帜位于[0,3.481,-6]；旗帜只有模型，没有通关逻辑。",
+        "平台从出生点延伸到x约-22处；下坠平台分别在[-9,0.419,4]、[-12,-0.315,4]、[-11.753,1.830,-2.306]。"
+      ],
+      "available_assets": [
+        "objects/player.tscn",
+        "objects/platform.tscn",
+        "objects/platform_medium.tscn",
+        "objects/platform_grass_large_round.tscn",
+        "objects/platform_falling.tscn",
+        "objects/coin.tscn",
+        "objects/brick.tscn",
+        "objects/cloud.tscn",
+        "models/flag.glb"
+      ],
+      "editable_paths": [
+        "scenes/main.tscn",
+        "objects/platform.tscn",
+        "objects/platform_medium.tscn",
+        "objects/platform_grass_large_round.tscn",
+        "objects/platform_falling.tscn",
+        "objects/coin.tscn",
+        "objects/brick.tscn"
+      ],
+      "required_preservation": [
+        "保持原角色控制、相机控制、金币收集与二段跳，不提高跳跃高度来掩盖不可达布局。",
+        "仍从原出生平台出发，保留旗帜作为空间终点，本任务不增加通关系统。",
+        "保留14枚金币、至少3个下坠平台与3个可顶碎砖块，并保留现有许可证。"
+      ],
+      "acceptance_notes": [
+        "人工试玩能从出生点辨认主线方向，用现有二段跳完成三段上升并到达旗帜。",
+        "挑战支路具有不同风险节奏，绕行有金币奖励且能汇入主线，不是无回路死路。",
+        "金币在可跳取位置，平台边缘与落点可辨认，主线不要求踩已坠毁平台回头。"
+      ],
+      "difficulty": "中等",
+      "schema_version": 1,
+      "base_id": "platformer",
+      "base_name": "平台跳跃",
+      "status": "input_ready_task_not_executed",
+      "query_origin": "Authored for this collection; not an upstream dataset annotation",
+      "initial_project": "bases/platformer/project",
+      "scene_setup": "default",
+      "source_manifest": "bases/platformer/source.json",
+      "source_manifest_sha256": "0991bb58f2462052f465fc41134c921b4e41d43ce6ff078e7e3333cb973397f1",
+      "preview": "previews/platformer/scene.png",
+      "path_conventions": {
+        "initial_project": "relative to collection root",
+        "available_assets": "relative to initial_project",
+        "editable_paths": "relative to initial_project; annotations specify new files or restrictions"
+      },
+      "evaluation_status": "Acceptance notes are human-authored task requirements, not implemented automatic checkers."
+    },
+    {
+      "id": "platformer-02",
+      "title": "给装饰旗帜加入金币门槛与通关流程",
+      "category": "玩法新增",
+      "query": "现在关卡旗帜只是装饰。请新增完整的小关卡目标：收集至少8枚金币后到旗帜处才能通关。金币不足时靠近旗帜应显示还缺几枚，玩家仍能离开继续探索；满足条件时明确提示成功，并显示本次收集数量，提供重新挑战按钮。HUD需要一直显示当前金币和目标数量，让玩家知道为什么在收集。尽量复用现有旗帜、金币UI与音效，不引入新美术包。",
+      "initial_state": [
+        "原关卡有14枚金币，金币脚本避免重复收集，通过Player.coin_collected信号更新HUD。",
+        "HUD只有金币图标、乘号和数量；scripts/hud.gd只把收到的数量显示出来。",
+        "旗帜直接实例化models/flag.glb，没有Area3D触发器或胜利脚本。",
+        "掉到y<-10会重新加载整个场景，同时重置金币、砖块与下坠平台。"
+      ],
+      "available_assets": [
+        "models/flag.glb",
+        "objects/coin.tscn",
+        "objects/player.tscn",
+        "sprites/coin.png",
+        "sounds/coin.ogg",
+        "fonts/lilita_one_regular.ttf"
+      ],
+      "editable_paths": [
+        "scenes/main.tscn",
+        "scripts/main.gd",
+        "scripts/hud.gd",
+        "scripts/player.gd",
+        "objects/coin.gd",
+        "scripts/gameplay/ (可新建)",
+        "objects/goal/ (可新建)"
+      ],
+      "required_preservation": [
+        "保持原平台与14枚金币位置、角色移动和相机手感。",
+        "金币只能计数一次；保持现有掉落死亡重载行为。",
+        "保留脚本MIT、素材CC0和字体OFL许可证。"
+      ],
+      "acceptance_notes": [
+        "人工分别以少于8枚及至少8枚金币靠近旗帜，能看到缺额提示或通关结果。",
+        "成功流程不会重复触发，重新挑战恢复金币、角色、砖块和下坠平台。",
+        "目标进度在游玩时易读，成功后有清楚且可点击的重新挑战入口。"
+      ],
+      "difficulty": "中等偏高",
+      "schema_version": 1,
+      "base_id": "platformer",
+      "base_name": "平台跳跃",
+      "status": "input_ready_task_not_executed",
+      "query_origin": "Authored for this collection; not an upstream dataset annotation",
+      "initial_project": "bases/platformer/project",
+      "scene_setup": "default",
+      "source_manifest": "bases/platformer/source.json",
+      "source_manifest_sha256": "0991bb58f2462052f465fc41134c921b4e41d43ce6ff078e7e3333cb973397f1",
+      "preview": "previews/platformer/scene.png",
+      "path_conventions": {
+        "initial_project": "relative to collection root",
+        "available_assets": "relative to initial_project",
+        "editable_paths": "relative to initial_project; annotations specify new files or restrictions"
+      },
+      "evaluation_status": "Acceptance notes are human-authored task requirements, not implemented automatic checkers."
+    },
+    {
+      "id": "platformer-03",
+      "title": "改善平台边缘起跳与落地连跳手感",
+      "category": "操作体验与可用性",
+      "query": "请让这个二段跳平台游戏对短促输入更宽容：离开平台边缘后约0.12秒内仍允许一次地面起跳；落地前约0.15秒内按下跳跃，落地时应执行该次起跳。必须保留原有二段跳，但不能借两种缓冲获得第三段跳或无限空中跳跃。保持原移动速度和跳跃高度，在HUD边角增加简短操作提示，说明移动、跳跃及相机控制，避免挡住落点。不要改关卡布局，也不要添加自动跳跃。",
+      "initial_state": [
+        "支持WASD相机相对移动、空格二段跳、方向键旋转相机及手柄输入。",
+        "scripts/player.gd直接读取Input.is_action_just_pressed并用jump_single/jump_double布尔值控制跳跃，尚无显式离地计时器或落地输入缓冲。",
+        "原控制器离地后仍可能保留jump_single；需要明确区分短暂离地宽容与真正空中跳跃，不能仅追加跳跃机会。",
+        "原参数movement_speed=250、jump_strength=7，已有跳跃/落地音效和角色拉伸动画。"
+      ],
+      "available_assets": [
+        "objects/player.tscn",
+        "objects/character.tscn",
+        "sounds/jump.ogg",
+        "sounds/land.ogg",
+        "sprites/coin.png",
+        "fonts/lilita_one_regular.ttf"
+      ],
+      "editable_paths": [
+        "scripts/player.gd",
+        "scripts/hud.gd",
+        "scenes/main.tscn"
+      ],
+      "required_preservation": [
+        "不改变关卡物体transform、金币数、下坠平台和砖块机制。",
+        "保持原movement_speed=250与jump_strength=7，保留跳跃和落地动画音效。",
+        "相机旋转、缩放和手柄控制仍可用；提示文字与金币HUD不重叠。"
+      ],
+      "acceptance_notes": [
+        "人工在平台边缘刚走空后短按空格仍能起跳；超过宽容窗口不会额外获得地面起跳次数。",
+        "即将落地前按空格能够接上下一跳，单纯长按不会不停自动跳。",
+        "连续空中输入不会出现第三次起跳；正常地面起跳加一次空中跳仍保持原手感。"
+      ],
+      "difficulty": "中等偏高",
+      "schema_version": 1,
+      "base_id": "platformer",
+      "base_name": "平台跳跃",
+      "status": "input_ready_task_not_executed",
+      "query_origin": "Authored for this collection; not an upstream dataset annotation",
+      "initial_project": "bases/platformer/project",
+      "scene_setup": "default",
+      "source_manifest": "bases/platformer/source.json",
+      "source_manifest_sha256": "0991bb58f2462052f465fc41134c921b4e41d43ce6ff078e7e3333cb973397f1",
+      "preview": "previews/platformer/scene.png",
+      "path_conventions": {
+        "initial_project": "relative to collection root",
+        "available_assets": "relative to initial_project",
+        "editable_paths": "relative to initial_project; annotations specify new files or restrictions"
+      },
+      "evaluation_status": "Acceptance notes are human-authored task requirements, not implemented automatic checkers."
+    },
+    {
+      "id": "platformer-04",
+      "title": "把明亮玩具群岛改为清晰可读的黄昏关卡",
+      "category": "视觉与信息设计",
+      "query": "请在不改变关卡玩法和布局的前提下，把明亮天空群岛调整为温暖黄昏风格：天空和远处云朵形成暖橙到淡紫的层次，角色、金币与平台边缘仍容易识别；下坠平台应通过与普通草地不同的颜色或细节传达危险，不能只靠HUD文字说明。同步整理金币HUD的配色、阴影和留白，使它和场景协调。复用已有模型、材质贴图、字体与粒子，避免给全屏套一层同色滤镜。",
+      "initial_state": [
+        "场景使用scenes/main-environment.tres天空、Sun方向光、objects/cloud.tscn漂浮云和共享models/Textures/colormap.png贴图。",
+        "主场景已有14枚金币和3个下坠平台，HUD使用Lilita字体。",
+        "scripts/main.gd为Compatibility renderer专门降低太阳和背景能量，视觉修改需要考虑这个既有分支。"
+      ],
+      "available_assets": [
+        "objects/cloud.tscn",
+        "objects/platform.tscn",
+        "objects/platform_falling.tscn",
+        "models/colormap.tres",
+        "models/Textures/colormap.png",
+        "sprites/skybox.png",
+        "sprites/particle.png",
+        "sprites/coin.png",
+        "fonts/lilita_one_regular.ttf"
+      ],
+      "editable_paths": [
+        "scenes/main-environment.tres",
+        "scenes/main.tscn",
+        "scripts/main.gd",
+        "objects/cloud.tscn",
+        "objects/platform.tscn",
+        "objects/platform_medium.tscn",
+        "objects/platform_grass_large_round.tscn",
+        "objects/platform_falling.tscn",
+        "models/colormap.tres",
+        "models/Textures/colormap.png",
+        "sprites/skybox.png",
+        "materials/ (可新建)"
+      ],
+      "required_preservation": [
+        "不改玩法脚本、碰撞形状或世界中物体的位置尺寸；金币数和原始路线保持不变。",
+        "角色、金币与旗帜的识别度不能因调暗而降低，下坠平台保持原机制。",
+        "保留原模型、字体许可，新增材质只用项目已有资源。"
+      ],
+      "acceptance_notes": [
+        "人工从出生点和远端平台观察，能看出黄昏氛围及前中后景层次，金币与下一落点仍清晰。",
+        "普通平台和下坠平台有稳定可识别的视觉区分，阴影不遮住落点边界。",
+        "1280×720窗口中金币HUD不贴边、不覆盖主要落点；兼容渲染模式无明显曝光异常。"
+      ],
+      "difficulty": "中等",
+      "schema_version": 1,
+      "base_id": "platformer",
+      "base_name": "平台跳跃",
+      "status": "input_ready_task_not_executed",
+      "query_origin": "Authored for this collection; not an upstream dataset annotation",
+      "initial_project": "bases/platformer/project",
+      "scene_setup": "default",
+      "source_manifest": "bases/platformer/source.json",
+      "source_manifest_sha256": "0991bb58f2462052f465fc41134c921b4e41d43ce6ff078e7e3333cb973397f1",
+      "preview": "previews/platformer/scene.png",
+      "path_conventions": {
+        "initial_project": "relative to collection root",
+        "available_assets": "relative to initial_project",
+        "editable_paths": "relative to initial_project; annotations specify new files or restrictions"
+      },
+      "evaluation_status": "Acceptance notes are human-authored task requirements, not implemented automatic checkers."
+    },
+    {
+      "id": "city-01-civic-square",
+      "title": "把喷泉旁扩成可辨认的社区广场",
+      "category": "布局与场景扩建",
+      "query": "加载官方示例城市后，以现有喷泉广场为中心，在相邻空地扩建一个紧凑的社区休闲区。加入有层次的树木绿地、可辨认的人行铺装，以及至少两种现有住宅模型，让新增建筑的朝向与道路关系合理。保留原有喷泉、所有既有建筑和道路；新区域应有清晰入口接到原有道路，不能靠覆盖现有街区腾地。玩家进入任务版本时能直接看到扩建后的城市，并仍然可以继续正常建造。只使用随工程提供的素材。",
+      "available_assets": [
+        "sample map/map.res",
+        "models/pavement-fountain.glb",
+        "models/pavement.glb",
+        "models/grass.glb",
+        "models/grass-trees.glb",
+        "models/grass-trees-tall.glb",
+        "models/building-small-a.glb",
+        "models/building-small-b.glb",
+        "models/building-small-c.glb",
+        "models/building-small-d.glb",
+        "models/road-straight.glb",
+        "models/road-corner.glb"
+      ],
+      "editable_paths": [
+        "scenes/",
+        "scripts/",
+        "structures/",
+        "sample map/"
+      ],
+      "required_preservation": [
+        "保留官方素材许可证与字体许可证。",
+        "保留原有15种结构资源及其索引语义，已有地图仍可加载。",
+        "除本任务明确要求外，保留建造、拆除、90度旋转、相机移动/旋转/缩放、F1/F2/F3基本能力。",
+        "任务从加载官方sample map后的城市状态开始，不把空场景或宣传截图当作实际初始地图。",
+        "保留初始122个格子的类型、位置与朝向；新增内容放在未占用格子，不能修改官方sample map原件，扩建版另存新资源。"
+      ],
+      "acceptance_notes": [
+        "人工从总体视角确认喷泉与新增区域形成连贯空间，而非散落道具。",
+        "对照原始示例地图，检查既有城市未被抹掉，新增区域入口与道路关系可理解。",
+        "打开任务版本确认扩建布局可见，切换结构并试放一次，原建造功能仍可用。",
+        "这些是交付审阅要求，不是现成引擎奖励或自动评分器。"
+      ],
+      "difficulty": "medium",
+      "initial_state": {
+        "kind": "official_sample_map",
+        "startup": "Use the collection launcher to load the official sample resource automatically; opening upstream project directly requires F3. The adapter populates existing GridMap and cash from that resource without implementing the query.",
+        "default_scene_warning": "上游默认启动为空地图，并非已有小镇。F3加载是任务输入准备，不是任务实现。",
+        "resource": "sample map/map.res",
+        "occupied_cells": 122,
+        "cash": 5860,
+        "bounds_xz": {
+          "x": [
+            -7,
+            9
+          ],
+          "z": [
+            -5,
+            7
+          ]
+        },
+        "fountain_cell": [
+          5,
+          0,
+          4
+        ],
+        "source_evidence": "validation/sample-map-inspection.json"
+      },
+      "schema_version": 1,
+      "base_id": "city-builder",
+      "base_name": "城市建造",
+      "status": "input_ready_task_not_executed",
+      "query_origin": "Authored for this collection; not an upstream dataset annotation",
+      "initial_project": "bases/city-builder/project",
+      "scene_setup": "city-sample",
+      "source_manifest": "bases/city-builder/source.json",
+      "source_manifest_sha256": "8cc2ebde3b2843df602e11e9090136d1a50abcaaa57d5f8ca647c54175609dee",
+      "preview": "previews/city-builder/scene.png",
+      "path_conventions": {
+        "initial_project": "relative to collection root",
+        "available_assets": "relative to initial_project",
+        "editable_paths": "relative to initial_project; annotations specify new files or restrictions"
+      },
+      "evaluation_status": "Acceptance notes are human-authored task requirements, not implemented automatic checkers."
+    },
+    {
+      "id": "city-02-road-stroke",
+      "title": "为道路增加可取消的拖拽连续铺设",
+      "category": "新增编辑功能",
+      "query": "当前示例城市一次点击只能放一个结构。为道路类型增加拖拽连续铺设：按住左键沿网格拖动时给出整段预览，松开后一次提交；按Esc可取消而不改变地图或资金。同一格在一次拖动中只收费一次，且不能无提示地覆盖已有非道路结构。保留建筑和绿地的原有单格放置方式，并让用户在开始拖拽前知道当前是否处于道路编辑模式。无需模拟车辆或交通。",
+      "available_assets": [
+        "models/road-straight.glb",
+        "models/road-straight-lightposts.glb",
+        "models/road-corner.glb",
+        "models/road-split.glb",
+        "models/road-intersection.glb",
+        "sprites/selector.png",
+        "sounds/placement-a.ogg",
+        "structures/road-straight.tres",
+        "structures/road-corner.tres"
+      ],
+      "editable_paths": [
+        "scripts/",
+        "scenes/main.tscn",
+        "project.godot",
+        "structures/"
+      ],
+      "required_preservation": [
+        "保留官方素材许可证与字体许可证。",
+        "保留原有15种结构资源及其索引语义，已有地图仍可加载。",
+        "除本任务明确要求外，保留建造、拆除、90度旋转、相机移动/旋转/缩放、F1/F2/F3基本能力。",
+        "任务从加载官方sample map后的城市状态开始，不把空场景或宣传截图当作实际初始地图。",
+        "未确认拖动前不得修改示例地图或余额；取消后恢复原状态。",
+        "不要事先替用户在输入地图中铺好道路来冒充新增工具。"
+      ],
+      "acceptance_notes": [
+        "人工拖出一段含转向的道路，观察预览、提交与收费是否一致。",
+        "拖动经过同一格、经过现有住宅并按Esc取消，检查不会重复收费或静默拆除住宅。",
+        "切换住宅后确认普通单格放置、右键旋转和Q/E切换仍可用。"
+      ],
+      "difficulty": "hard",
+      "initial_state": {
+        "kind": "official_sample_map",
+        "startup": "Use the collection launcher to load the official sample resource automatically; opening upstream project directly requires F3. The adapter populates existing GridMap and cash from that resource without implementing the query.",
+        "default_scene_warning": "上游默认启动为空地图，并非已有小镇。F3加载是任务输入准备，不是任务实现。",
+        "resource": "sample map/map.res",
+        "occupied_cells": 122,
+        "cash": 5860,
+        "bounds_xz": {
+          "x": [
+            -7,
+            9
+          ],
+          "z": [
+            -5,
+            7
+          ]
+        },
+        "fountain_cell": [
+          5,
+          0,
+          4
+        ],
+        "source_evidence": "validation/sample-map-inspection.json"
+      },
+      "schema_version": 1,
+      "base_id": "city-builder",
+      "base_name": "城市建造",
+      "status": "input_ready_task_not_executed",
+      "query_origin": "Authored for this collection; not an upstream dataset annotation",
+      "initial_project": "bases/city-builder/project",
+      "scene_setup": "city-sample",
+      "source_manifest": "bases/city-builder/source.json",
+      "source_manifest_sha256": "8cc2ebde3b2843df602e11e9090136d1a50abcaaa57d5f8ca647c54175609dee",
+      "preview": "previews/city-builder/scene.png",
+      "path_conventions": {
+        "initial_project": "relative to collection root",
+        "available_assets": "relative to initial_project",
+        "editable_paths": "relative to initial_project; annotations specify new files or restrictions"
+      },
+      "evaluation_status": "Acceptance notes are human-authored task requirements, not implemented automatic checkers."
+    },
+    {
+      "id": "city-03-save-safety",
+      "title": "让存读档能可靠反馈并保护当前城市",
+      "category": "存档行为与可靠性",
+      "query": "基于加载后的示例城市改进F1/F2存读档：存档和读取成功时给出不挡住建造的清晰提示；存档不存在、损坏或读取失败时解释原因，并完整保留当前城市和余额，不能先清空场景再失败。连续保存两次不同修改后，F2必须读取最后一次真实保存的数据，包括结构位置、类型、旋转和资金。保留F3作为重载官方示例城市的独立操作，并在此操作会丢失未保存修改时提醒用户。不要改写随包提供的官方sample map。",
+      "available_assets": [
+        "sample map/map.res",
+        "sprites/coin.png",
+        "sprites/instructions.png",
+        "fonts/lilita_one_regular.ttf",
+        "sounds/toggle.ogg"
+      ],
+      "editable_paths": [
+        "scripts/builder.gd",
+        "scripts/data_map.gd",
+        "scripts/data_structure.gd",
+        "scripts/",
+        "scenes/main.tscn",
+        "project.godot"
+      ],
+      "required_preservation": [
+        "保留官方素材许可证与字体许可证。",
+        "保留原有15种结构资源及其索引语义，已有地图仍可加载。",
+        "除本任务明确要求外，保留建造、拆除、90度旋转、相机移动/旋转/缩放、F1/F2/F3基本能力。",
+        "任务从加载官方sample map后的城市状态开始，不把空场景或宣传截图当作实际初始地图。",
+        "仍使用user://下的用户存档；保留官方res://sample map/map.res不被覆盖。",
+        "不预生成用户存档，不替测试者提前按下保存或确认。"
+      ],
+      "acceptance_notes": [
+        "从示例城市作出修改并存档，继续修改再次存档，重载确认恢复第二次状态而非缓存中的第一次。",
+        "在独立测试副本里模拟缺失/损坏存档，人工确认城市及余额未丢失且错误提示可理解。",
+        "用F3触发重载流程，确认未保存修改提醒与确认/取消行为均合理。"
+      ],
+      "difficulty": "hard",
+      "initial_state": {
+        "kind": "official_sample_map",
+        "startup": "Use the collection launcher to load the official sample resource automatically; opening upstream project directly requires F3. The adapter populates existing GridMap and cash from that resource without implementing the query.",
+        "default_scene_warning": "上游默认启动为空地图，并非已有小镇。F3加载是任务输入准备，不是任务实现。",
+        "resource": "sample map/map.res",
+        "occupied_cells": 122,
+        "cash": 5860,
+        "bounds_xz": {
+          "x": [
+            -7,
+            9
+          ],
+          "z": [
+            -5,
+            7
+          ]
+        },
+        "fountain_cell": [
+          5,
+          0,
+          4
+        ],
+        "source_evidence": "validation/sample-map-inspection.json"
+      },
+      "schema_version": 1,
+      "base_id": "city-builder",
+      "base_name": "城市建造",
+      "status": "input_ready_task_not_executed",
+      "query_origin": "Authored for this collection; not an upstream dataset annotation",
+      "initial_project": "bases/city-builder/project",
+      "scene_setup": "city-sample",
+      "source_manifest": "bases/city-builder/source.json",
+      "source_manifest_sha256": "8cc2ebde3b2843df602e11e9090136d1a50abcaaa57d5f8ca647c54175609dee",
+      "preview": "previews/city-builder/scene.png",
+      "path_conventions": {
+        "initial_project": "relative to collection root",
+        "available_assets": "relative to initial_project",
+        "editable_paths": "relative to initial_project; annotations specify new files or restrictions"
+      },
+      "evaluation_status": "Acceptance notes are human-authored task requirements, not implemented automatic checkers."
+    },
+    {
+      "id": "city-04-build-palette",
+      "title": "把Q/E轮换变成可读的建筑选择面板",
+      "category": "视觉与交互",
+      "query": "当前示例城市主要靠Q/E轮换结构，玩家很难知道当前要建什么以及价格。加入紧凑的建筑选择面板，将15种现有结构按道路、建筑、地面与景观分组；每个选项有能对应实际模型的名称和价格，当前选择有明显高亮，并显示余额是否足够。鼠标点击面板应只选择项目，不应穿透到地图放置建筑；Q/E与面板选择状态要保持同步。保持城市为视觉主体，不引入外部图片或字体。",
+      "available_assets": [
+        "sprites/coin.png",
+        "sprites/selector.png",
+        "fonts/lilita_one_regular.ttf",
+        "structures/road-straight.tres",
+        "structures/building-small-a.tres",
+        "structures/building-small-b.tres",
+        "structures/building-small-c.tres",
+        "structures/building-small-d.tres",
+        "structures/building-garage.tres",
+        "structures/pavement.tres",
+        "structures/pavement-fountain.tres",
+        "structures/grass.tres",
+        "structures/grass-trees.tres",
+        "structures/grass-trees-tall.tres"
+      ],
+      "editable_paths": [
+        "scenes/",
+        "scripts/",
+        "structures/",
+        "project.godot"
+      ],
+      "required_preservation": [
+        "保留官方素材许可证与字体许可证。",
+        "保留原有15种结构资源及其索引语义，已有地图仍可加载。",
+        "除本任务明确要求外，保留建造、拆除、90度旋转、相机移动/旋转/缩放、F1/F2/F3基本能力。",
+        "任务从加载官方sample map后的城市状态开始，不把空场景或宣传截图当作实际初始地图。",
+        "保留全部15种结构可选，不改变现有价格。",
+        "不得为了展示余额不足而预先耗尽城市资金，初始仍为示例地图的5860。"
+      ],
+      "acceptance_notes": [
+        "人工确认15种结构均能找到，名称和价格对应资源，分组与选中态清楚。",
+        "点击面板多次后检查地图未意外增添格子；通过Q/E切换时高亮与3D预览同步。",
+        "在常用窗口尺寸下确认面板可读且不遮挡整个城市，已有现金显示与相机操作仍可用。"
+      ],
+      "difficulty": "medium",
+      "initial_state": {
+        "kind": "official_sample_map",
+        "startup": "Use the collection launcher to load the official sample resource automatically; opening upstream project directly requires F3. The adapter populates existing GridMap and cash from that resource without implementing the query.",
+        "default_scene_warning": "上游默认启动为空地图，并非已有小镇。F3加载是任务输入准备，不是任务实现。",
+        "resource": "sample map/map.res",
+        "occupied_cells": 122,
+        "cash": 5860,
+        "bounds_xz": {
+          "x": [
+            -7,
+            9
+          ],
+          "z": [
+            -5,
+            7
+          ]
+        },
+        "fountain_cell": [
+          5,
+          0,
+          4
+        ],
+        "source_evidence": "validation/sample-map-inspection.json"
+      },
+      "schema_version": 1,
+      "base_id": "city-builder",
+      "base_name": "城市建造",
+      "status": "input_ready_task_not_executed",
+      "query_origin": "Authored for this collection; not an upstream dataset annotation",
+      "initial_project": "bases/city-builder/project",
+      "scene_setup": "city-sample",
+      "source_manifest": "bases/city-builder/source.json",
+      "source_manifest_sha256": "8cc2ebde3b2843df602e11e9090136d1a50abcaaa57d5f8ca647c54175609dee",
+      "preview": "previews/city-builder/scene.png",
+      "path_conventions": {
+        "initial_project": "relative to collection root",
+        "available_assets": "relative to initial_project",
+        "editable_paths": "relative to initial_project; annotations specify new files or restrictions"
+      },
+      "evaluation_status": "Acceptance notes are human-authored task requirements, not implemented automatic checkers."
+    },
+    {
+      "id": "racing-01",
+      "title": "改成带连续左右弯的林间练习环线",
+      "category": "赛道布局",
+      "query": "把当前赛道改成一条能从黄色卡车出生点连续开完一圈的林间练习环线。保留GridMap拼装方式，使用现有直道、弯道和终点外观砖；在环线中安排一段至少连续三块直道，以及一组先左后右的连续弯道。把帐篷区安排在赛道外侧，森林不要盖住路面或完全遮挡驾驶视角。赛道不应有断口、重叠接缝或需要倒车才能通过的死路。此次只改路线和布景，不添加圈数、计时或检查点玩法。",
+      "initial_state": "scenes/main.tscn使用一个GridMap和已有MeshLibrary铺设场景，默认Vehicle是出生于(3.5,0,5)的黄色卡车，View跟随Vehicle。当前GridMap内有终点外观砖，但没有判圈或计时脚本。现有赛道碰撞保存在MeshLibrary中；装饰项本身没有碰撞形状。",
+      "available_assets": [
+        "models/Library/mesh-library.tres",
+        "models/Library/mesh-library.tscn",
+        "models/track-straight.glb",
+        "models/track-corner.glb",
+        "models/track-finish.glb",
+        "models/decoration-forest.glb",
+        "models/decoration-tents.glb",
+        "models/decoration-empty.glb",
+        "scenes/vehicle.tscn"
+      ],
+      "editable_paths": [
+        "scenes/main.tscn",
+        "models/Library/mesh-library.tscn",
+        "models/Library/mesh-library.tres"
+      ],
+      "required_preservation": [
+        "保留黄色卡车及现有W/S/A/D输入、音效和粒子效果。",
+        "保留View对Vehicle的有效目标引用；不要替换驾驶控制器。",
+        "保留所有上游模型、声音文件及许可证。",
+        "不得以自动驾驶或传送代替可实际驾驶的路线。"
+      ],
+      "acceptance_notes": [
+        "编辑器中检查路线确为闭合环线，并能辨认三块连续直道及左右连续弯。",
+        "人工驾驶一圈，留意接缝碰撞、窄弯卡车通行和树木遮挡。",
+        "确认帐篷在路线外侧且没有新增比赛计时机制。"
+      ],
+      "difficulty": "medium",
+      "schema_version": 1,
+      "base_id": "racing",
+      "base_name": "赛车",
+      "status": "input_ready_task_not_executed",
+      "query_origin": "Authored for this collection; not an upstream dataset annotation",
+      "initial_project": "bases/racing/project",
+      "scene_setup": "default",
+      "source_manifest": "bases/racing/source.json",
+      "source_manifest_sha256": "9965f7d08bf8df51ac6c27d86fb833070b9f994e948d84536447a0e17cf7def3",
+      "preview": "previews/racing/scene.png",
+      "path_conventions": {
+        "initial_project": "relative to collection root",
+        "available_assets": "relative to initial_project",
+        "editable_paths": "relative to initial_project; annotations specify new files or restrictions"
+      },
+      "evaluation_status": "Acceptance notes are human-authored task requirements, not implemented automatic checkers."
+    },
+    {
+      "id": "racing-02",
+      "title": "新增按顺序过检查点的单圈计时挑战",
+      "category": "机制添加",
+      "query": "在现有赛道上新增一个单圈计时挑战。把现有终点外观所在路段设为起终点，在沿赛道不同位置新增三个有清楚编号的检查点。显示3、2、1、GO倒计时，倒计时结束才允许车辆接受驾驶输入并开始计时。玩家必须按1、2、3顺序穿过检查点，再沿正确方向穿过起终点才结束本圈；反向穿过、漏点或在起终点来回倒车不能完成。HUD显示当前用时和下一个检查点，完成后显示最终用时。新增R键重新开始本次挑战，并重置车辆、计时器和检查点状态。",
+      "initial_state": "项目只有vehicle.gd、vehicle-motorcycle.gd、view.gd三个运行脚本；主场景没有HUD、Area3D检查点、计时器或圈数控制器。track-finish.glb及GridMap中的对应砖仅提供终点视觉外观，不是现成比赛触发器。车辆移动的物理载体是Vehicle/Sphere这个RigidBody3D。",
+      "available_assets": [
+        "models/track-finish.glb",
+        "models/track-straight.glb",
+        "models/Library/mesh-library.tres",
+        "scenes/main.tscn",
+        "scenes/vehicle.tscn",
+        "scripts/vehicle.gd",
+        "scripts/view.gd"
+      ],
+      "editable_paths": [
+        "scenes/main.tscn",
+        "scenes/vehicle.tscn",
+        "scripts/vehicle.gd",
+        "project.godot",
+        "scripts/race_manager.gd",
+        "scenes/checkpoint.tscn",
+        "scripts/checkpoint.gd",
+        "scenes/race_hud.tscn",
+        "scripts/race_hud.gd"
+      ],
+      "required_preservation": [
+        "保留原赛道布局、已有模型素材和第三人称跟随相机。",
+        "保留W/S/A/D基本驾驶方式、车辆音效和烟雾。",
+        "检测真正穿越触发区和方向，不以按键或固定等待代替过点。",
+        "保留所有许可证；新增UI和触发器可用Godot内置节点制作。"
+      ],
+      "acceptance_notes": [
+        "启动查看倒计时、输入锁定、GO后计时和HUD。",
+        "按顺序正常驾驶能完成；漏过检查点、逆向过线和起终点反复进出不应完成。",
+        "R后位置、物理速度、计时和已通过检查点全部恢复新一局状态。"
+      ],
+      "difficulty": "hard",
+      "schema_version": 1,
+      "base_id": "racing",
+      "base_name": "赛车",
+      "status": "input_ready_task_not_executed",
+      "query_origin": "Authored for this collection; not an upstream dataset annotation",
+      "initial_project": "bases/racing/project",
+      "scene_setup": "default",
+      "source_manifest": "bases/racing/source.json",
+      "source_manifest_sha256": "9965f7d08bf8df51ac6c27d86fb833070b9f994e948d84536447a0e17cf7def3",
+      "preview": "previews/racing/scene.png",
+      "path_conventions": {
+        "initial_project": "relative to collection root",
+        "available_assets": "relative to initial_project",
+        "editable_paths": "relative to initial_project; annotations specify new files or restrictions"
+      },
+      "evaluation_status": "Acceptance notes are human-authored task requirements, not implemented automatic checkers."
+    },
+    {
+      "id": "racing-03",
+      "title": "让卡车的高速转向和镜头更易控制",
+      "category": "驾驶体验",
+      "query": "调校默认黄色卡车的驾驶手感：低速仍容易转向，高速连续转向时更平稳，不要突然甩头；保留S先制动再倒车的行为，让松开油门后的减速变化自然。把驱动力、低速/高速转向强度和转向响应速度作为清楚命名的Inspector可调参数，并给出适合当前赛道的默认值。调整跟随镜头，使高速时能提前看见前方道路，减速时平滑回到近景，不要出现镜头跳变。不要改赛道、换车或加入自动驾驶。",
+      "initial_state": "vehicle.gd通过RigidBody3D球体驱动车辆外观，转向使用固定系数4和lerp；倒车目标为负向输入的一半。主要驾驶参数没有导出到Inspector。view.gd按linear_speed把相机z从10插值到20，跟随速度也是脚本固定值。项目已经有前轮转向、车身侧倾、烟雾和随速度改变的引擎音效。",
+      "available_assets": [
+        "scripts/vehicle.gd",
+        "scripts/view.gd",
+        "scenes/vehicle.tscn",
+        "scenes/main.tscn",
+        "models/vehicle-truck-yellow.glb",
+        "audio/engine.ogg",
+        "audio/skid.ogg",
+        "sprites/smoke.png"
+      ],
+      "editable_paths": [
+        "scripts/vehicle.gd",
+        "scripts/view.gd",
+        "scenes/vehicle.tscn",
+        "scenes/main.tscn"
+      ],
+      "required_preservation": [
+        "保留现有W/S/A/D与手柄输入映射，不新增自动操控。",
+        "保留车身、车轮、音效、烟雾和地面对齐效果。",
+        "保留RigidBody3D球体驱动的整体结构与现有赛道。",
+        "不得靠降低到近乎不能移动的速度达成稳定效果。"
+      ],
+      "acceptance_notes": [
+        "人工比较静止起步、低速弯、高速连续左右转和S制动再倒车。",
+        "Inspector中可找到参数，改动参数确实影响驾驶而非仅改变显示。",
+        "加速减速时镜头平滑、有前方路况视野且仍跟随玩家。"
+      ],
+      "difficulty": "medium",
+      "schema_version": 1,
+      "base_id": "racing",
+      "base_name": "赛车",
+      "status": "input_ready_task_not_executed",
+      "query_origin": "Authored for this collection; not an upstream dataset annotation",
+      "initial_project": "bases/racing/project",
+      "scene_setup": "default",
+      "source_manifest": "bases/racing/source.json",
+      "source_manifest_sha256": "9965f7d08bf8df51ac6c27d86fb833070b9f994e948d84536447a0e17cf7def3",
+      "preview": "previews/racing/scene.png",
+      "path_conventions": {
+        "initial_project": "relative to collection root",
+        "available_assets": "relative to initial_project",
+        "editable_paths": "relative to initial_project; annotations specify new files or restrictions"
+      },
+      "evaluation_status": "Acceptance notes are human-authored task requirements, not implemented automatic checkers."
+    },
+    {
+      "id": "racing-04",
+      "title": "把摩托车接入主场景并支持停车换车",
+      "category": "车辆适配",
+      "query": "把随包提供的摩托车正式接入主场景，启动时默认驾驶摩托车；同时保留黄色卡车作为可选车辆。新增Tab停车换车功能：只有车辆接近静止时才允许切换；切换后新车出现在同一位置并保持朝向，旧车不再响应输入或继续作为活动物理车存在，镜头立即绑定新车并平滑跟随。屏幕角落显示当前是摩托车还是卡车；行驶中按Tab应提示先停车，不应直接换车。摩托车要保留专用侧倾、前叉/车轮动画和发动机声音。",
+      "initial_state": "scenes/vehicle-motorcycle.tscn和scripts/vehicle-motorcycle.gd已经存在，摩托车脚本继承Vehicle并覆盖车身和车轮效果。主场景实际只实例化可驾驶的黄色卡车Vehicle，View.target固定指向它；其他绿、紫、红色卡车是模型实例而非可驾驶控制器。没有车型选择HUD或Tab切换输入逻辑。",
+      "available_assets": [
+        "scenes/vehicle-motorcycle.tscn",
+        "scenes/vehicle.tscn",
+        "scripts/vehicle-motorcycle.gd",
+        "scripts/vehicle.gd",
+        "scripts/view.gd",
+        "models/vehicle-motorcycle.glb",
+        "models/vehicle-truck-yellow.glb",
+        "audio/engine-motorcycle.ogg",
+        "audio/engine.ogg"
+      ],
+      "editable_paths": [
+        "scenes/main.tscn",
+        "scenes/vehicle-motorcycle.tscn",
+        "scenes/vehicle.tscn",
+        "scripts/vehicle.gd",
+        "scripts/vehicle-motorcycle.gd",
+        "scripts/view.gd",
+        "project.godot",
+        "scripts/vehicle_switcher.gd",
+        "scenes/vehicle_hud.tscn",
+        "scripts/vehicle_hud.gd"
+      ],
+      "required_preservation": [
+        "保留原赛道GridMap和静态场景布景。",
+        "两种车辆都保留W/S/A/D和现有音效；摩托车不得只用卡车模型缩放冒充。",
+        "任何时刻只允许一辆车接受玩家输入，View.target始终有效。",
+        "保留原始资产及许可证。"
+      ],
+      "acceptance_notes": [
+        "初始进入场景驾驶的是摩托车，能看到专用倾斜和前叉/车轮表现。",
+        "停车时可来回切换，位置朝向保持且镜头和HUD跟随正确对象。",
+        "行驶中换车被拒绝并有提示；多次切换后没有幽灵车、双重输入或空相机目标。"
+      ],
+      "difficulty": "hard",
+      "schema_version": 1,
+      "base_id": "racing",
+      "base_name": "赛车",
+      "status": "input_ready_task_not_executed",
+      "query_origin": "Authored for this collection; not an upstream dataset annotation",
+      "initial_project": "bases/racing/project",
+      "scene_setup": "default",
+      "source_manifest": "bases/racing/source.json",
+      "source_manifest_sha256": "9965f7d08bf8df51ac6c27d86fb833070b9f994e948d84536447a0e17cf7def3",
+      "preview": "previews/racing/scene.png",
+      "path_conventions": {
+        "initial_project": "relative to collection root",
+        "available_assets": "relative to initial_project",
+        "editable_paths": "relative to initial_project; annotations specify new files or restrictions"
+      },
+      "evaluation_status": "Acceptance notes are human-authored task requirements, not implemented automatic checkers."
+    }
+  ]
+}

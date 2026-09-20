@@ -1,0 +1,24 @@
+{
+  "request_id": "warehouse-generate-01-001-model",
+  "raw_text": "```json\n{\n  \"moves\": [\n    {\n      \"id\": \"crate_01\",\n      \"position\": [-3, 0, -2]\n    },\n    {\n      \"id\": \"crate_02\",\n      \"position\": [3, 0, -2]\n    },\n    {\n      \"id\": \"crate_03\",\n      \"position\": [-3, 0, 2]\n    },\n    {\n      \"id\": \"crate_04\",\n      \"position\": [3, 0, 2]\n    },\n    {\n      \"id\": \"crate_05\",\n      \"position\": [-1, 0, -4]\n    },\n    {\n      \"id\": \"crate_06\",\n      \"position\": [1, 0, 4]\n    }\n  ],\n  \"reason\": \"This arrangement keeps all six crates within the room bounds, avoids overlapping, and maintains a clear central corridor for movement.\"\n}\n```",
+  "model": {
+    "name": "Qwen/Qwen2.5-Coder-7B-Instruct",
+    "revision": "c03e6d358207e414f1eca0bb1891e29f1db0e242",
+    "source": "https://huggingface.co/Qwen/Qwen2.5-Coder-7B-Instruct",
+    "license": "Apache-2.0",
+    "backend": "transformers",
+    "device": "DSW hjw-rsi GPU5",
+    "role": "public alternative, not paper AWoMo/Cosmos",
+    "weight_bytes": 15231271864,
+    "torch_version": "2.10.0+cu128",
+    "transformers_version": "4.57.6"
+  },
+  "usage": {
+    "input_tokens": 755,
+    "output_tokens": 204
+  },
+  "elapsed_seconds": 4.346545696258545,
+  "finish_reason": "stop",
+  "calls_used": 1,
+  "calls_limit": 5
+}

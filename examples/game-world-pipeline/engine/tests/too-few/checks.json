@@ -1,0 +1,72 @@
+{
+  "checks": [
+    {
+      "details": {
+        "errors": [
+          "At least six objects required"
+        ]
+      },
+      "id": "scene_load",
+      "pass": false,
+      "weight": 0.1
+    },
+    {
+      "details": {
+        "skipped": "Scene schema validation failed"
+      },
+      "id": "bounds",
+      "pass": false,
+      "weight": 0.15
+    },
+    {
+      "details": {
+        "skipped": "Scene schema validation failed"
+      },
+      "id": "no_overlap",
+      "pass": false,
+      "weight": 0.2
+    },
+    {
+      "details": {
+        "skipped": "Scene schema validation failed"
+      },
+      "id": "route_exists",
+      "pass": false,
+      "weight": 0.25
+    },
+    {
+      "details": {
+        "skipped": "Scene schema validation failed"
+      },
+      "id": "rollout_reaches_goal",
+      "pass": false,
+      "weight": 0.3
+    }
+  ],
+  "engine": {
+    "headless": true,
+    "name": "Godot",
+    "renderer": "gl_compatibility",
+    "version": "4.7.2-stable (official)"
+  },
+  "engine_reward": 0.0,
+  "hard_pass": false,
+  "repair_hints": [
+    "Fix schema validation errors, preserve at least six stable object IDs and fixed room/player/goal.",
+    "Move listed objects fully inside room x=[-6,6], z=[-5,5], y=[0,3], accounting for half-width/depth and full height.",
+    "Separate listed pairs of colliders; preserve a margin between their axis-aligned boxes.",
+    "Create a continuous ground corridor from [-4,0,0] to [4,0,0]; keep at least 0.80 m gap for radius-0.30 capsule plus grid/clearance margin. Move boxes blocking the middle barrier, preserve all object IDs.",
+    "Ensure the corridor is wide enough for the real CharacterBody3D capsule and does not block spawn or goal."
+  ],
+  "rollout": {
+    "goal_radius": 0.65,
+    "limitations": "Axis-aligned static boxes; ground-plane walking only; finite grid can conservatively miss narrow routes; overlap probes shrink boxes 4mm total; no aesthetics or human proxy score",
+    "max_steps": 2400,
+    "path": [],
+    "physics_hz": 60,
+    "planner": "4-neighbor BFS on physics-probed 0.25m grid; not NavMesh",
+    "reached_goal": false,
+    "steps": 0
+  },
+  "schema_version": 1
+}

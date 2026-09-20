@@ -1,0 +1,15 @@
+{
+  "command": [
+    "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/work/pipeline-build/runtime/Godot.app/Contents/MacOS/Godot",
+    "--path",
+    "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/outputs/game-world-pipeline/engine",
+    "--",
+    "--spec",
+    "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/outputs/game-world-pipeline/runs/warehouse-repair-01/candidates/001-model/scene.json",
+    "--out",
+    "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/outputs/game-world-pipeline/runs/warehouse-repair-01/candidates/001-model"
+  ],
+  "exit_code": 0,
+  "elapsed_seconds": 4.720948934555054,
+  "scene_sha256": "e1e59dfd7c192efe17f98ca211d446dcaf6218b8949d1159af39bb1a45e7bef7"
+}

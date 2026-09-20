@@ -1,0 +1,60 @@
+{
+  "checks": [
+    {
+      "id": "countdown_input_lock",
+      "pass": true,
+      "summary": "Actual forward Input during countdown leaves frozen body at spawn"
+    },
+    {
+      "id": "countdown_go",
+      "pass": true,
+      "summary": "Real 3 second timer releases controls and starts timing"
+    },
+    {
+      "id": "missing_and_out_of_order",
+      "pass": true,
+      "summary": "Finish and CP2 before CP1 do not finish or advance"
+    },
+    {
+      "id": "reverse_checkpoint",
+      "pass": true,
+      "summary": "Reverse physical crossing of CP1 is rejected"
+    },
+    {
+      "id": "physical_cp1",
+      "pass": true,
+      "summary": "Physics body crossed CP1 forward and progressed"
+    },
+    {
+      "id": "skip_cp2",
+      "pass": true,
+      "summary": "CP3 before CP2 rejected"
+    },
+    {
+      "id": "ordered_cp123",
+      "pass": true,
+      "summary": "Sequential physical crossings advance all three checkpoints"
+    },
+    {
+      "id": "reverse_finish",
+      "pass": true,
+      "summary": "Reverse physical finish crossing does not finish"
+    },
+    {
+      "id": "correct_finish",
+      "pass": true,
+      "summary": "Forward physical finish after123 finishes and stores elapsed"
+    },
+    {
+      "id": "final_timer_stops",
+      "pass": true,
+      "summary": "Final displayed time is stable"
+    },
+    {
+      "id": "r_restart",
+      "pass": true,
+      "summary": "Real R event resets timer, checkpoint state, pose and physical velocities"
+    }
+  ],
+  "fixture": "Body starting pose and velocity injected only in crossing tests; movement through Area3D is actual physics, not direct manager calls."
+}

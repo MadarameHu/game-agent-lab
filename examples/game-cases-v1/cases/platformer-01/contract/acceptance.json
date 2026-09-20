@@ -1,0 +1,31 @@
+{
+  "task_id": "platformer-01",
+  "frozen_before_edits": true,
+  "checks": [
+    {
+      "id": "source_preserved",
+      "criterion": "Only declared scene layout edits; controller/camera/collectibles/falling/brick scripts and assets hashes unchanged."
+    },
+    {
+      "id": "route_layout",
+      "criterion": "14 coins, 3 falling platforms and 3 brick nodes; main route rises from original spawn to flag with no falling platform dependency; branch rejoins."
+    },
+    {
+      "id": "physical_routes",
+      "criterion": "Original CharacterBody3D/Input driver traverses the main route; branch jumps are tested using real physics, with any fixture placement disclosed."
+    },
+    {
+      "id": "native_render",
+      "criterion": "Native Compatibility screenshot saved with actual candidate scene."
+    }
+  ],
+  "human_checks": [
+    "Main route and optional branch are visually clear; challenge pacing and coin rewards feel useful.",
+    "Human play verifies unrestricted traversal and readable landing areas."
+  ],
+  "allowed_product_paths": [
+    "scenes/main.tscn"
+  ],
+  "reward": "All tested hard checks must pass; human_review/combined_reward remain null.",
+  "scope": "Current Codex implements and tests. Root audits separately; no independent reward model."
+}

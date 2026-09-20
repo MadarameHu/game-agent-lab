@@ -1,0 +1,20 @@
+{
+  "changed": [
+    {
+      "path": "sample map/civic-square.tres",
+      "before": null,
+      "after": "9f9facd04db234c0cf79e075cd2794f82ab1607675c45b87097ecb6ef82622bd"
+    },
+    {
+      "path": "scripts/builder.gd",
+      "before": "a43cb68b0a07b1d9524c99d6a1bd3029aa8f12dcc5f739ea7da27785502b3aa9",
+      "after": "6611f7d14cd50109e91f0245a818be180c7ec6bed54dc7c9fed846d452ac32f1"
+    },
+    {
+      "path": "scripts/view.gd",
+      "before": "c92f26e648947fefa0aa3fb7b8433b14997c63667c27566e7b744566c0f9937f",
+      "after": "474489f0af797c82f7938262467f6a134f1d8fc38c15c46e5516a3e904f22b89"
+    }
+  ],
+  "removed": []
+}

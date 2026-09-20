@@ -1,0 +1,184 @@
+{
+  "checks": [
+    {
+      "id": "real_input_lookahead_direction",
+      "pass": true,
+      "summary": "After actual forward Input, camera lookahead points ahead of real physical travel (velocity dot lookahead >1)"
+    },
+    {
+      "id": "actual_input_drive",
+      "pass": true,
+      "summary": "Actual forward Input and real rigidbody move more than 2m in two seconds"
+    },
+    {
+      "id": "brake_before_reverse",
+      "pass": true,
+      "summary": "S first brakes positive drive before settling into half-strength reverse"
+    },
+    {
+      "id": "coast",
+      "pass": true,
+      "summary": "Coast decays continuously and monotonically instead of abrupt loss"
+    },
+    {
+      "id": "speed_sensitive_steering",
+      "pass": true,
+      "summary": "Physical speed gives useful low-speed turning and lower high-speed yaw"
+    },
+    {
+      "id": "continuous_turns",
+      "pass": true,
+      "summary": "Alternating real input at injected high physical speed has bounded smooth yaw response (<0.2 rad/s each 60Hz tick)"
+    },
+    {
+      "id": "parameter_effect",
+      "pass": true,
+      "summary": "Changing Inspector drive force changes applied angular drive; steering parameter changes product gain"
+    },
+    {
+      "id": "camera",
+      "pass": true,
+      "summary": "Measured speed widens camera and advances focus; continuous easing returns to near view"
+    },
+    {
+      "id": "preservation",
+      "pass": true,
+      "summary": "All baseline files outside allowed paths identical; original GridMap block identical.",
+      "details": {
+        "errors": [],
+        "baseline_files": 72
+      }
+    },
+    {
+      "id": "native_render",
+      "pass": true,
+      "summary": "Native Compatibility静止及实际前进120物理帧截图；同时验证前瞻与真实行驶方向点积为正。"
+    },
+    {
+      "id": "execution_health",
+      "pass": true,
+      "summary": "所有本轮导入、行为测试、原生截图进程成功退出，未发生SCRIPT ERROR。"
+    }
+  ],
+  "hard_pass": true,
+  "engine_reward": 1,
+  "human_review": null,
+  "combined_reward": null,
+  "limitations": [
+    "高/低速手感与前方道路可视性仍待人工验收。",
+    "高低速转向与镜头阶跃是控制状态的产品函数fixture，实际起步是完整Input+物理。",
+    "首次导入发现新增函数混用缩进，已修复；保留import.log/behavior-v1.log失败记录。",
+    "交叉审查发现前瞻方向符号错误，先新增真实Input方向断言复现失败，再修复为实际水平速度方向；失败诊断保留behavior-direction-before.json/.log与修复前源码。"
+  ],
+  "commands": [
+    {
+      "command": [
+        "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/work/pipeline-build/runtime/Godot.app/Contents/MacOS/Godot",
+        "--headless",
+        "--editor",
+        "--import",
+        "--quit",
+        "--path",
+        "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/outputs/game-cases-v1/cases/racing-03/project"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "wall_seconds": 2.348,
+      "log": "import-direction-fixed.log",
+      "script_error": false
+    },
+    {
+      "command": [
+        "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/work/pipeline-build/runtime/Godot.app/Contents/MacOS/Godot",
+        "--headless",
+        "--path",
+        "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/outputs/game-cases-v1/cases/racing-03/project",
+        "--fixed-fps",
+        "60",
+        "--script",
+        "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/outputs/game-cases-v1/cases/racing-03/verification/behavior.gd",
+        "--",
+        "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/outputs/game-cases-v1/cases/racing-03/evidence/final/behavior.json"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "wall_seconds": 0.343,
+      "log": "behavior-direction-fixed.log",
+      "script_error": false
+    },
+    {
+      "command": [
+        "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/work/pipeline-build/runtime/Godot.app/Contents/MacOS/Godot",
+        "--path",
+        "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/outputs/game-cases-v1/cases/racing-03/project",
+        "--fixed-fps",
+        "60",
+        "--rendering-method",
+        "gl_compatibility",
+        "--script",
+        "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/outputs/game-cases-v1/cases/racing-03/verification/render.gd",
+        "--",
+        "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/outputs/game-cases-v1/cases/racing-03/evidence/final"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "wall_seconds": 5.191,
+      "log": "native-render-direction-fixed.log",
+      "script_error": false
+    }
+  ],
+  "candidate_hashes": {
+    "icon.png": "d5563c5c53c500c3211b8de5b6e8b8a382509cd072e4456b3923ba12263bfb8d",
+    "LICENSE": "db2c350e96739247706b6b395aae08ac335395eda9cfe2bc80b79636934ecdc2",
+    "TASK.json": "20d9aa26e6eb3bf4366d610d1fec1c70f85544bb7434ccdeef1c849e0849a99f",
+    "START_INPUT.py": "34df33d3d7ced43a022bd353f681cc1255980a04dd39823db5d825b3975d1ad0",
+    "README.md": "b37aa56ea98519356514dd0a45d86cf847d3f62144470250c174eeb44e0d9710",
+    ".gitignore": "0ef0895554da9af8253266aab091aa3b524b602afe8377aef84da70fc30271c5",
+    "QUERY.md": "b3163d4e784760efa60a8cb578c2aa3aebfb9a807997c7c5e2aa46a85f5fa633",
+    "splash-screen.png": "e9c77b962ee6da4f4b0ae709f1db0cc95c47f1f9a0d37dad6b8124f75cf77148",
+    ".gitattributes": "1a1dbe176bc233b499d35a57db7513f2941c99ab9759f177830c9149be99005b",
+    "project.godot": "5c26faf8f3439155a505dd35b9c29a5ad30b6064f8656521dbc70a7ee555c27b",
+    "scenes/main.tscn": "5138d40275304a21644a6fb3500e03a2b734e6761f8dc4c677d08781902f1122",
+    "scenes/main-environment.tres": "4d613e7246c1f204fd193e7dfec2e2922fabbd5b85a86ccdc760128fba4e0d2c",
+    "scenes/vehicle.tscn": "54c20729bafb5b3ac7c436c1a2abcfea997bea8b44412a78923be098687633f6",
+    "scenes/vehicle-motorcycle.tscn": "4763f44645c2b633285383b545bf911c41476762f88afd0ed5bba35791020c7e",
+    "screenshots/screenshot.png": "b31467a6818cfaf6a4a04f25ed2ecb0fb36b6c16ae5ad2919329c5c4836d53ac",
+    "screenshots/.gdignore": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "models/collision-track-straight.fbx": "127d78b05e41627b2f1d5e31907f2f2b36fe4b37c599b2baad5db2814168c45d",
+    "models/decoration-forest.glb": "664a53f0f709fef9096af3bbfb1aa76536527a616b05170c0cf4e27e33358a00",
+    "models/vehicle-truck-red.glb": "eca99bd9ab0a2b02125f915e65d1ec8f1c5a93be7c6d4840efdac6633f47772c",
+    "models/track-tents.glb": "eaf68bbb44e362e291b71d13015fbafc4ce22a9102bda029614972d6cc843c7f",
+    "models/track-corner.glb": "0ffb3d83b60456fc5a2962447111a1a64bfe943f4ad95462e1edba107be81c80",
+    "models/track-straight.glb": "2d8080df1fe27e39981480809f36eba7f239e814f96bff61bb4c99793221b701",
+    "models/track-finish.glb": "2fec3b681658d6e77e20c4342d1e3ceeaab3e8d2fbf340942cde25cc2b21975b",
+    "models/vehicle-truck-purple.glb": "03e32f5abcbbd03da3591f42fdaae2cf7d27ed379df7ce0d1f233bea02998565",
+    "models/vehicle-truck-green.glb": "df362d027a09b19395be0e96abd7cc2dc54608dfb920b592e64357b589f9fcd6",
+    "models/track-bump.glb": "6db020edc53532ebc0971c9d4ad9afb11c4de67c510649ca843db4616514f43c",
+    "models/vehicle-motorcycle.glb": "c97911b8dbc2d5dd9d1961b46eb4d1f132b67a6c5a84f45593fea44e0595dd92",
+    "models/decoration-empty.glb": "3815b26a5274173934d37cf605e320450efad4e0034040868b6aea761cfd74bc",
+    "models/decoration-tents.glb": "19dbf2a778ad75f95c7d61f12866ef7174ab69cad169d3749c5400f5e14db8a3",
+    "models/vehicle-truck-yellow.glb": "1ebd83174eab6d2fdf69eb5d8e32bd06a23a86d9edc4fe915a4160430a7c36a5",
+    "models/collision-track-corner.fbx": "02bd2ee2d3b421dbddf244d3e8953f1fc9220429941fa52ceeba10d9c0c00536",
+    "models/Textures/colormap.png": "02bb3fb87365927d16e265d27caae405aeef5819b6bde5a989ff5e435318de4d",
+    "models/Library/mesh-library.tres": "c6bad9e41b76be1e9a55597b1d67d2499c3412927ac8a8625247b796d00687af",
+    "models/Library/mesh-library.tscn": "9fb9bc07b2ac3bbfc8efbac29f4e288c056a84ebe6dff52da1b6cd8fd3c1583d",
+    ".input/source.json": "9965f7d08bf8df51ac6c27d86fb833070b9f994e948d84536447a0e17cf7def3",
+    ".input/start.gd": "a25248c6161cc739e9db8c4196254bd5ada8c6827a8f5e11c2dbab8a2a5b74b3",
+    "audio/skid.ogg": "e62a42c0a4af29ed69b37cfc80d088a6808c59f8f725285ebcc3f409267965a0",
+    "audio/impact.ogg": "964c5fcfb91e7710e2af25c2243c8b7160756b223b0984bacc9eb25bfeea057b",
+    "audio/engine.ogg": "6d665dfc961e2d522c866bdcf12fc0ac56c885c0c7117e830df84ba8eecd655c",
+    "audio/engine-motorcycle.ogg": "aed3b357bf885d5390a517ee6da2a55f3a17307d8d094175215fb60669f98ef7",
+    "scripts/vehicle-motorcycle.gd": "9715892351516c39631f89b6ced657b8ff7bfceb358e3252f06d2bf6411f82ff",
+    "scripts/view.gd": "d4c1b744fd0f3c871f1ecf5e3f62168df26e416a991fa33bb2f0a72388ed854e",
+    "scripts/vehicle.gd": "ad9c91eae22653f438cae25f2ae2544b01ba82015d7816916d063a03f89ea2ef",
+    "sprites/smoke.png": "371590cb06875916ee1ab783217a2b8680ef792fbc358937e917afdfa413a1f1",
+    "vector/.gdignore": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "vector/particles.fla": "256a7fd45354419b56e58b586d24e7865c0b709aeb6bc59ce2e2d12083ef5d18"
+  },
+  "contract_sha256": "11c3885356120d80a38ab0c1afb70d0682de733df844164a41771e6a19e78b22",
+  "verification_hashes": {
+    "verification/preservation.py": "3ce6170a7edc881153eebb84244bf6d09d35481733ac6e3ca0b155df7eca7ded",
+    "verification/behavior.gd": "873fc9b2646988eaead953640d0484a66904d4252ea96a9fab1d0afdb6207eb0",
+    "verification/render.gd": "d146fb1eb1b2e7f8daf86eb70e4460076709503af9ba6daf91b06d311e053c6c"
+  }
+}

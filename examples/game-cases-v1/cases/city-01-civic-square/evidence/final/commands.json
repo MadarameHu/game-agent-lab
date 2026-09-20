@@ -1,0 +1,53 @@
+[
+  {
+    "name": "import",
+    "command": [
+      "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/work/pipeline-build/runtime/Godot.app/Contents/MacOS/Godot",
+      "--path",
+      "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/work/game-batch-11/city/city-01-civic-square-attempt01-ffcc047a",
+      "--rendering-method",
+      "gl_compatibility",
+      "--headless",
+      "--editor",
+      "--import",
+      "--quit"
+    ],
+    "returncode": 0,
+    "pass_check": true
+  },
+  {
+    "name": "behavior",
+    "command": [
+      "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/work/pipeline-build/runtime/Godot.app/Contents/MacOS/Godot",
+      "--path",
+      "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/work/game-batch-11/city/city-01-civic-square-attempt01-ffcc047a",
+      "--rendering-method",
+      "gl_compatibility",
+      "--headless",
+      "--script",
+      "res://.verification/test.gd",
+      "--",
+      "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/outputs/game-cases-v1/cases/city-01-civic-square/evidence/attempt01"
+    ],
+    "returncode": 0,
+    "pass_check": true
+  },
+  {
+    "name": "render",
+    "command": [
+      "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/work/pipeline-build/runtime/Godot.app/Contents/MacOS/Godot",
+      "--path",
+      "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/work/game-batch-11/city/city-01-civic-square-attempt01-ffcc047a",
+      "--rendering-method",
+      "gl_compatibility",
+      "--resolution",
+      "1280x900",
+      "--script",
+      "res://.verification/render.gd",
+      "--",
+      "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/outputs/game-cases-v1/cases/city-01-civic-square/evidence/attempt01"
+    ],
+    "returncode": 0,
+    "pass_check": true
+  }
+]

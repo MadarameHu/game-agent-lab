@@ -1,0 +1,12 @@
+{
+  "id": "protected_gameplay",
+  "pass": true,
+  "details": {
+    "protected_file_count": 48,
+    "changed_files": [],
+    "outside_gridmap_unchanged": true,
+    "main_changed": true,
+    "main_sha256": "c1b7d4c3964d10a88d41536fc1df590be4be6d8173455d06734f58fab69f3ed1",
+    "baseline_sha256": "5138d40275304a21644a6fb3500e03a2b734e6761f8dc4c677d08781902f1122"
+  }
+}

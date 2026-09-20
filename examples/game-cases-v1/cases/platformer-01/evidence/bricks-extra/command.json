@@ -1,0 +1,16 @@
+{
+  "command": [
+    "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/work/pipeline-build/runtime/Godot.app/Contents/MacOS/Godot",
+    "--headless",
+    "--path",
+    "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/outputs/game-cases-v1/cases/platformer-01/project",
+    "--script",
+    "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/outputs/game-cases-v1/cases/platformer-01/verification/bricks.gd",
+    "--",
+    "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/outputs/game-cases-v1/cases/platformer-01/evidence/bricks-extra/checks.json"
+  ],
+  "exit_code": 0,
+  "elapsed_seconds": 4.464,
+  "script_error_free": true,
+  "timeout_seconds": 20
+}

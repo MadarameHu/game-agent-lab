@@ -1,0 +1,72 @@
+{
+  "cases": [
+    {
+      "id": "city-01-civic-square",
+      "title": "把喷泉旁扩成可辨认的社区广场",
+      "base_id": "city-builder",
+      "path": "cases/city-01-civic-square"
+    },
+    {
+      "id": "city-02-road-stroke",
+      "title": "为道路增加可取消的拖拽连续铺设",
+      "base_id": "city-builder",
+      "path": "cases/city-02-road-stroke"
+    },
+    {
+      "id": "city-03-save-safety",
+      "title": "让存读档能可靠反馈并保护当前城市",
+      "base_id": "city-builder",
+      "path": "cases/city-03-save-safety"
+    },
+    {
+      "id": "city-04-build-palette",
+      "title": "把Q/E轮换变成可读的建筑选择面板",
+      "base_id": "city-builder",
+      "path": "cases/city-04-build-palette"
+    },
+    {
+      "id": "platformer-01",
+      "title": "把悬空群岛改造成主线与挑战支路",
+      "base_id": "platformer",
+      "path": "cases/platformer-01"
+    },
+    {
+      "id": "platformer-02",
+      "title": "给装饰旗帜加入金币门槛与通关流程",
+      "base_id": "platformer",
+      "path": "cases/platformer-02"
+    },
+    {
+      "id": "platformer-03",
+      "title": "改善平台边缘起跳与落地连跳手感",
+      "base_id": "platformer",
+      "path": "cases/platformer-03"
+    },
+    {
+      "id": "platformer-04",
+      "title": "把明亮玩具群岛改为清晰可读的黄昏关卡",
+      "base_id": "platformer",
+      "path": "cases/platformer-04"
+    },
+    {
+      "id": "racing-02",
+      "title": "新增按顺序过检查点的单圈计时挑战",
+      "base_id": "racing",
+      "path": "cases/racing-02"
+    },
+    {
+      "id": "racing-03",
+      "title": "让卡车的高速转向和镜头更易控制",
+      "base_id": "racing",
+      "path": "cases/racing-03"
+    },
+    {
+      "id": "racing-04",
+      "title": "把摩托车接入主场景并支持停车换车",
+      "base_id": "racing",
+      "path": "cases/racing-04"
+    }
+  ],
+  "previous_case": "../racing-01-run",
+  "human_review": null
+}

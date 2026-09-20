@@ -1,0 +1,51 @@
+{
+  "task_count": 12,
+  "base_count": 3,
+  "referenced_resources_checked": 103,
+  "bases": [
+    {
+      "base_id": "platformer",
+      "native_start": "passed",
+      "scene_setup": "default",
+      "node_count": 209,
+      "screenshot_sha256": "222eaa2090760061405fab8b664d048188db66ded6c5fe7b5b400f872003a628",
+      "script_errors": 0,
+      "warning_or_error_lines": [
+        "ERROR: 1 RID allocations of type 'N5GLES36ShaderE' were leaked at exit.",
+        "WARNING: Screen-space AA is only available when using the Forward+ or Mobile renderer.",
+        "WARNING: Image format BPTC_RGBA not supported by hardware, converting to RGBA8.",
+        "ERROR: 1 shaders of type ParticlesShaderGLES3 were never freed"
+      ],
+      "source_file_count": 100
+    },
+    {
+      "base_id": "city-builder",
+      "native_start": "passed",
+      "scene_setup": "city-sample",
+      "node_count": 31,
+      "screenshot_sha256": "9c351630fea02bc5997529f9fc7197289f8379b0a2a6ace893efa71de299b880",
+      "script_errors": 0,
+      "warning_or_error_lines": [],
+      "source_file_count": 110
+    },
+    {
+      "base_id": "racing",
+      "native_start": "passed",
+      "scene_setup": "default",
+      "node_count": 46,
+      "screenshot_sha256": "d16dee930ef6897c2b9f89ca5790131dfbfd6803163f1a1e76dce0879483e2b1",
+      "script_errors": 0,
+      "warning_or_error_lines": [
+        "WARNING: Screen-space indirect lighting (SSIL) is only available when using the Forward+ renderer."
+      ],
+      "source_file_count": 67
+    }
+  ],
+  "scope": "Import/start/render and input integrity only; the twelve requested tasks have not been executed or scored.",
+  "city_compatibility_patch": "Mouse ray/ground plane null guard, tracked under bases/city-builder/patches",
+  "native_previews": "Actual local Godot 4.7.2, gl_compatibility; 120 frames each",
+  "independent_preparation": {
+    "city-builder": "passed: fresh import and 180 frames; 122 cells/5860 cash",
+    "platformer": "passed: fresh import and 180 frames"
+  }
+}

@@ -1,0 +1,118 @@
+{
+  "schema_version": 1,
+  "brief": "布置一个可穿行的仓库房间，保留六个箱子，玩家从西侧绿色出生点走到东侧金色出口。箱子不得越墙、相互穿透或堵住唯一通路。",
+  "room": {
+    "width": 12,
+    "depth": 10,
+    "height": 3
+  },
+  "player": {
+    "position": [
+      -4,
+      0,
+      0
+    ],
+    "radius": 0.3,
+    "height": 1.6
+  },
+  "goal": {
+    "position": [
+      4,
+      0,
+      0
+    ],
+    "radius": 0.65
+  },
+  "objects": [
+    {
+      "id": "crate_01",
+      "asset": "crate",
+      "position": [
+        0,
+        0,
+        -4
+      ],
+      "size": [
+        1.2,
+        1.2,
+        2.0
+      ],
+      "rotation_y": 0
+    },
+    {
+      "id": "crate_02",
+      "asset": "crate",
+      "position": [
+        0,
+        0,
+        -2
+      ],
+      "size": [
+        1.2,
+        1.2,
+        2.0
+      ],
+      "rotation_y": 0
+    },
+    {
+      "id": "crate_03",
+      "asset": "crate",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.2,
+        1.2,
+        2.0
+      ],
+      "rotation_y": 0
+    },
+    {
+      "id": "crate_04",
+      "asset": "crate",
+      "position": [
+        0,
+        0,
+        2
+      ],
+      "size": [
+        1.2,
+        1.2,
+        2.0
+      ],
+      "rotation_y": 0
+    },
+    {
+      "id": "crate_05",
+      "asset": "crate",
+      "position": [
+        0,
+        0,
+        4
+      ],
+      "size": [
+        1.2,
+        1.2,
+        2.0
+      ],
+      "rotation_y": 0
+    },
+    {
+      "id": "crate_06",
+      "asset": "crate",
+      "position": [
+        -3,
+        0,
+        3
+      ],
+      "size": [
+        1.2,
+        1.2,
+        1.2
+      ],
+      "rotation_y": 0
+    }
+  ]
+}

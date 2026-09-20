@@ -1,0 +1,49 @@
+{
+  "checks": [
+    {
+      "details": {
+        "user_directory": "/Users/hjw/Library/Application Support/CodexCityTests/city-03-save-safety-attempt01-3096558b"
+      },
+      "id": "startup",
+      "pass": true,
+      "summary": "Exact122-cell official startup,5860cash,no save pre-created,nonblocking status"
+    },
+    {
+      "details": {
+        "cached_old_cash": 5810,
+        "first_cash": 5810,
+        "loaded_cash": 5750,
+        "second_cash": 5750
+      },
+      "id": "latest-save",
+      "pass": true,
+      "summary": "Two real ResourceSaver writes; F2 bypasses deliberately retained old cached resource; exact second positions/items/rotations/cash restored"
+    },
+    {
+      "details": {},
+      "id": "save-failure",
+      "pass": true,
+      "summary": "Unwritable temporary target reports failure; city,dirty flag and existing saved bytes preserved"
+    },
+    {
+      "details": {
+        "corrupt": true,
+        "invalid_type": true,
+        "missing": true
+      },
+      "id": "failed-load-preserves",
+      "pass": true,
+      "summary": "Missing/corrupt/invalid structure saves preserve entire grid and cash with specific explanations"
+    },
+    {
+      "details": {
+        "cancel": false,
+        "confirm": true,
+        "prompt": true
+      },
+      "id": "sample-reset",
+      "pass": false,
+      "summary": "F3 displays confirmation for unsaved changes; actual dialog button signals cancel/confirm preserve or restore correctly; user save untouched"
+    }
+  ]
+}

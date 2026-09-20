@@ -1,0 +1,75 @@
+{
+  "repo": "https://github.com/KenneyNL/Starter-Kit-City-Builder",
+  "commit": "4535092b740b378b700efd9df9e27a631815b84a",
+  "default_branch_at_download": "main",
+  "archive_url": "https://codeload.github.com/KenneyNL/Starter-Kit-City-Builder/zip/4535092b740b378b700efd9df9e27a631815b84a",
+  "archive_sha256": "5cddddf7c887b84023780c47ffcdc6007848e91fba25ec57c4d0c2fa829a1a15",
+  "archive_bytes": 1685144,
+  "downloaded_at_utc": "2026-09-19T10:01:10.700160+00:00",
+  "snapshot_modifications": [
+    {
+      "path": "project/scripts/builder.gd",
+      "reason": "Input-baseline compatibility fix: plane.intersects_ray may return null when pointer ray does not intersect build plane; skip only placement/removal processing in that frame. Not implementation of any of the four briefs.",
+      "upstream_copy": "patches/builder.gd.upstream",
+      "patch": "patches/0001-ignore-nonintersecting-pointer-ray.patch",
+      "upstream_sha256": "4fdf906ed15124c257a464b955be2d85cc99a7fa24419de094c1c775cc00bdbb",
+      "effective_sha256": "a43cb68b0a07b1d9524c99d6a1bd3029aa8f12dcc5f739ea7da27785502b3aa9"
+    }
+  ],
+  "project_name": "Starter Kit City Builder",
+  "upstream_engine_version": "Godot 4.6 (project.godot and upstream README)",
+  "validated_engine_version": "Godot 4.7.2.stable.official.ed1daf0bf",
+  "main_scene": "scenes/main.tscn",
+  "licenses": [
+    {
+      "scope": "code / project",
+      "license": "MIT",
+      "path": "project/LICENSE.md",
+      "attribution": "Copyright (c) 2026 Kenney"
+    },
+    {
+      "scope": "2D sprites, 3D models and sound effects",
+      "license": "CC0-1.0",
+      "path": "project/README.md",
+      "declaration": "Assets included in this package (2D sprites, 3D models and sound effects) are CC0 licensed",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+    },
+    {
+      "scope": "Lilita One font",
+      "license": "SIL-OFL-1.1",
+      "path": "project/fonts/license.txt",
+      "attribution": "Copyright (c) 2011 Juan Montoreano; Reserved Font Name Lilita"
+    }
+  ],
+  "input_preparation": {
+    "default_state": "Empty GridMap, cash 10000",
+    "task_state": "Load official sample map using F3; 122 occupied cells, cash 5860",
+    "map": "project/sample map/map.res",
+    "upstream_source_edits": true,
+    "source_edit_scope": "Only null guard in builder.gd; no brief features implemented"
+  },
+  "validation": "validation/results.json",
+  "validation_side_effects": {
+    "importer_rewritten_files_restored": [
+      "models/building-garage.glb.import",
+      "models/building-small-a.glb.import",
+      "models/building-small-b.glb.import",
+      "models/building-small-c.glb.import",
+      "models/building-small-d.glb.import",
+      "models/grass-trees-tall.glb.import",
+      "models/grass-trees.glb.import",
+      "models/grass.glb.import",
+      "models/pavement-fountain.glb.import",
+      "models/pavement.glb.import",
+      "models/road-corner.glb.import",
+      "models/road-intersection.glb.import",
+      "models/road-split.glb.import",
+      "models/road-straight-lightposts.glb.import",
+      "models/road-straight.glb.import"
+    ],
+    "cache_relocated_to_work": false,
+    "note": "Initial import metadata was restored. Root subsequently restored the .godot cache for native preview. The only intentional source patch is recorded in snapshot_modifications."
+  },
+  "effective_hash_manifest": "effective-files.sha256",
+  "upstream_hash_manifest": "source-files.sha256"
+}

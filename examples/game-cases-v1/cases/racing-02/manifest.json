@@ -1,0 +1,144 @@
+{
+  "id": "racing-02",
+  "title": "新增按顺序过检查点的单圈计时挑战",
+  "status": "awaiting_human",
+  "human_review": null,
+  "engine_reward": 1,
+  "agent_system": "Current Codex agents; no separate reward model",
+  "attempts": [
+    {
+      "command": [
+        "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/work/pipeline-build/runtime/Godot.app/Contents/MacOS/Godot",
+        "--headless",
+        "--editor",
+        "--import",
+        "--quit",
+        "--path",
+        "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/outputs/game-cases-v1/cases/racing-02/project"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "wall_seconds": 2.248,
+      "log": "import.log",
+      "script_error": false
+    },
+    {
+      "command": [
+        "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/work/pipeline-build/runtime/Godot.app/Contents/MacOS/Godot",
+        "--headless",
+        "--path",
+        "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/outputs/game-cases-v1/cases/racing-02/project",
+        "--fixed-fps",
+        "60",
+        "--script",
+        "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/outputs/game-cases-v1/cases/racing-02/verification/behavior.gd",
+        "--",
+        "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/outputs/game-cases-v1/cases/racing-02/evidence/final/behavior.json"
+      ],
+      "exit_code": 2,
+      "timed_out": false,
+      "wall_seconds": 0.433,
+      "log": "behavior-v1.log",
+      "script_error": false
+    },
+    {
+      "command": [
+        "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/work/pipeline-build/runtime/Godot.app/Contents/MacOS/Godot",
+        "--headless",
+        "--path",
+        "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/outputs/game-cases-v1/cases/racing-02/project",
+        "--fixed-fps",
+        "60",
+        "--script",
+        "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/outputs/game-cases-v1/cases/racing-02/verification/behavior.gd",
+        "--",
+        "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/outputs/game-cases-v1/cases/racing-02/evidence/final/behavior.json"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "wall_seconds": 0.441,
+      "log": "behavior-v2.log",
+      "script_error": false
+    },
+    {
+      "command": [
+        "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/work/pipeline-build/runtime/Godot.app/Contents/MacOS/Godot",
+        "--headless",
+        "--path",
+        "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/outputs/game-cases-v1/cases/racing-02/project",
+        "--fixed-fps",
+        "60",
+        "--script",
+        "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/outputs/game-cases-v1/cases/racing-02/verification/drive.gd",
+        "--",
+        "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/outputs/game-cases-v1/cases/racing-02/verification/route.json",
+        "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/outputs/game-cases-v1/cases/racing-02/evidence/final"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "wall_seconds": 0.92,
+      "log": "actual-drive-v1.log",
+      "script_error": false
+    },
+    {
+      "command": [
+        "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/work/pipeline-build/runtime/Godot.app/Contents/MacOS/Godot",
+        "--headless",
+        "--editor",
+        "--import",
+        "--quit",
+        "--path",
+        "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/outputs/game-cases-v1/cases/racing-02/project"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "wall_seconds": 1.913,
+      "log": "import-final.log",
+      "script_error": false
+    },
+    {
+      "command": [
+        "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/work/pipeline-build/runtime/Godot.app/Contents/MacOS/Godot",
+        "--headless",
+        "--path",
+        "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/outputs/game-cases-v1/cases/racing-02/project",
+        "--fixed-fps",
+        "60",
+        "--script",
+        "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/outputs/game-cases-v1/cases/racing-02/verification/behavior.gd",
+        "--",
+        "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/outputs/game-cases-v1/cases/racing-02/evidence/final/behavior.json"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "wall_seconds": 0.449,
+      "log": "behavior-final.log",
+      "script_error": false
+    },
+    {
+      "command": [
+        "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/work/pipeline-build/runtime/Godot.app/Contents/MacOS/Godot",
+        "--path",
+        "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/outputs/game-cases-v1/cases/racing-02/project",
+        "--rendering-method",
+        "gl_compatibility",
+        "--script",
+        "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/outputs/game-cases-v1/cases/racing-02/verification/render.gd",
+        "--",
+        "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/outputs/game-cases-v1/cases/racing-02/evidence/final"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "wall_seconds": 3.64,
+      "log": "native-render-final.log",
+      "script_error": false
+    }
+  ],
+  "contract_sha256": "f0eec8562f5751aeb5773851e616da056cd7d250f15924358917a1af0129fada",
+  "final_evidence": "evidence/final",
+  "checks": "evidence/final/result.json",
+  "play": {
+    "mode": "project"
+  },
+  "summary": "单圈计时与三个顺序方向检查点通过真实输入整圈；标记尺寸经审查缩小。"
+}

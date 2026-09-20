@@ -1,0 +1,4 @@
+{"event": "input_prepared", "task": "city-04-build-palette", "input_source": "outputs/game-inputs-v1/tasks/city-04-build-palette/task.json"}
+{"timestamp": "2026-09-19T11:01:39.793933+00:00", "event": "contract_frozen", "contract_sha256": "3341fe189ff17a0c4b8a2fcf3cb55e1b4ab71530419250b2a03266baaa4840c7"}
+{"timestamp": "2026-09-19T11:02:22.995047+00:00", "event": "verification_attempt", "attempt": "attempt01", "passed": true, "evidence": "evidence/attempt01"}
+{"timestamp": "2026-09-19T11:03:14.635793+00:00", "event": "finalized", "hard_pass": true, "engine_reward": 1, "human_review": null}

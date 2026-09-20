@@ -1,0 +1,81 @@
+# 为道路增加可取消的拖拽连续铺设
+
+任务ID：`city-02-road-stroke` · 类型：新增编辑功能 · 难度：hard
+
+## 用户需求
+
+当前示例城市一次点击只能放一个结构。为道路类型增加拖拽连续铺设：按住左键沿网格拖动时给出整段预览，松开后一次提交；按Esc可取消而不改变地图或资金。同一格在一次拖动中只收费一次，且不能无提示地覆盖已有非道路结构。保留建筑和绿地的原有单格放置方式，并让用户在开始拖拽前知道当前是否处于道路编辑模式。无需模拟车辆或交通。
+
+## 初始状态
+
+{
+  "kind": "official_sample_map",
+  "startup": "Use the collection launcher to load the official sample resource automatically; opening upstream project directly requires F3. The adapter populates existing GridMap and cash from that resource without implementing the query.",
+  "default_scene_warning": "上游默认启动为空地图，并非已有小镇。F3加载是任务输入准备，不是任务实现。",
+  "resource": "sample map/map.res",
+  "occupied_cells": 122,
+  "cash": 5860,
+  "bounds_xz": {
+    "x": [
+      -7,
+      9
+    ],
+    "z": [
+      -5,
+      7
+    ]
+  },
+  "fountain_cell": [
+    5,
+    0,
+    4
+  ],
+  "source_evidence": "validation/sample-map-inspection.json"
+}
+
+## 可用素材与代码资源
+
+- models/road-straight.glb
+- models/road-straight-lightposts.glb
+- models/road-corner.glb
+- models/road-split.glb
+- models/road-intersection.glb
+- sprites/selector.png
+- sounds/placement-a.ogg
+- structures/road-straight.tres
+- structures/road-corner.tres
+
+## 允许修改范围
+
+- scripts/
+- scenes/main.tscn
+- project.godot
+- structures/
+
+## 需要保留
+
+- 保留官方素材许可证与字体许可证。
+- 保留原有15种结构资源及其索引语义，已有地图仍可加载。
+- 除本任务明确要求外，保留建造、拆除、90度旋转、相机移动/旋转/缩放、F1/F2/F3基本能力。
+- 任务从加载官方sample map后的城市状态开始，不把空场景或宣传截图当作实际初始地图。
+- 未确认拖动前不得修改示例地图或余额；取消后恢复原状态。
+- 不要事先替用户在输入地图中铺好道路来冒充新增工具。
+
+## 交付审阅要点（尚未实现自动校验器）
+
+- 人工拖出一段含转向的道路，观察预览、提交与收费是否一致。
+- 拖动经过同一格、经过现有住宅并按Esc取消，检查不会重复收费或静默拆除住宅。
+- 切换住宅后确认普通单格放置、右键旋转和Q/E切换仍可用。
+
+## 使用
+
+本任务从共享基础工程 `bases/city-builder/project` 开始，资源路径均相对于该工程。
+
+在集合根目录运行：
+
+```bash
+python3 tools/inputs.py play city-02-road-stroke
+python3 tools/inputs.py prepare city-02-road-stroke --dest /absolute/path/to/new-workspace
+```
+
+这里只准备初始输入；需求尚未执行。修改前请复制到独立目录，保留共享基线。

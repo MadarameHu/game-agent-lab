@@ -1,0 +1,6 @@
+{"event": "input_prepared", "task": "city-03-save-safety", "input_source": "outputs/game-inputs-v1/tasks/city-03-save-safety/task.json"}
+{"timestamp": "2026-09-19T10:59:01.927952+00:00", "event": "contract_frozen", "contract_sha256": "592b0b0d0b8368e87063674034e2818e4bfe3d5b72d973af14a51160f6182ed2"}
+{"timestamp": "2026-09-19T10:59:34.893212+00:00", "event": "verification_attempt", "attempt": "attempt01", "passed": false, "evidence": "evidence/attempt01"}
+{"timestamp": "2026-09-19T11:00:07.384231+00:00", "event": "test_investigation", "reason": "All save/load failure cases pass; investigate dialog cancel status timing"}
+{"timestamp": "2026-09-19T11:00:13.063924+00:00", "event": "verification_attempt", "attempt": "attempt02", "passed": true, "evidence": "evidence/attempt02"}
+{"timestamp": "2026-09-19T11:00:58.502453+00:00", "event": "finalized", "hard_pass": true, "engine_reward": 1, "human_review": null}

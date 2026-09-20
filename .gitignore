@@ -1,0 +1,18 @@
+# Runtime and local configuration
+.DS_Store
+__pycache__/
+*.pyc
+.godot/
+.venv/
+.env
+.env.*
+!.env.example
+runtime.json
+integrity-baseline.json
+sessions/
+play_sessions/
+reviews/
+rechecks/
+/work/
+*.pid
+# Retain historical logs and .import/.uid metadata bound into evidence.

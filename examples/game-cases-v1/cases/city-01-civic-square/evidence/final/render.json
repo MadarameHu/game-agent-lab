@@ -1,0 +1,10 @@
+{
+  "cash": 5860,
+  "cells": 149,
+  "frames": 100,
+  "height": 900,
+  "renderer": "gl_compatibility",
+  "screenshot_error": 0,
+  "startup": "normal main scene, no fixture injection",
+  "width": 1280
+}

@@ -1,0 +1,9 @@
+{
+  "changed": {
+    "scenes/main.tscn": {
+      "before": "4c77a5bd35a8c8c19e0b3f95e9ad034a36a7fea1f959ba220031b4e02de0dfaf",
+      "after": "dce98d275931b26b5ac7f03009d92843a5b031ef77ac46472521d747aa21a838"
+    }
+  },
+  "removed": []
+}

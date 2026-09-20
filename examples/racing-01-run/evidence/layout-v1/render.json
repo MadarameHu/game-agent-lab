@@ -1,0 +1,10 @@
+{
+  "bounds": {
+    "max": "(18.73125, 0.0, 26.22375)",
+    "min": "(-26.22375, 0.0, -26.22375)"
+  },
+  "engine": "4.7.2-stable (official)",
+  "frames": 123,
+  "overview_camera": "evidence-only orthographic camera, not product modification",
+  "source": "actual main scene"
+}

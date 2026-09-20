@@ -1,0 +1,30 @@
+{
+  "id": "platformer-04",
+  "title": "把明亮玩具群岛改为清晰可读的黄昏关卡",
+  "status": "awaiting_human",
+  "human_review": null,
+  "engine_reward": 1,
+  "agent_system": "Current Codex agents; no separate reward model",
+  "attempts": [
+    {
+      "evidence": "evidence/native-attempt1",
+      "exit_code": 0
+    },
+    {
+      "evidence": "evidence/native-final",
+      "exit_code": 0
+    },
+    {
+      "evidence": "evidence/import",
+      "exit_code": 0
+    }
+  ],
+  "contract_sha256": "676d1fd08e3fe63d7c1512362c24b0970098d1d5cca240401dacee9ae60b579a",
+  "combined_reward": null,
+  "final_evidence": "evidence/final",
+  "checks": "evidence/final/result.json",
+  "play": {
+    "mode": "project"
+  },
+  "summary": "原布局与玩法不变，加入橙紫黄昏天空、暖云、下坠平台警示斜纹和协调金币HUD。"
+}

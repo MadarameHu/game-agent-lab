@@ -1,0 +1,13 @@
+{
+  "moves": [
+    {
+      "id": "crate_03",
+      "position": [
+        2,
+        0,
+        0
+      ]
+    }
+  ],
+  "reason": "Moved crate_03 to create a continuous path from player start to goal."
+}

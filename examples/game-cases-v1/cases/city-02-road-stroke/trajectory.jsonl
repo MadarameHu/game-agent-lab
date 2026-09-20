@@ -1,0 +1,10 @@
+{"event": "input_prepared", "task": "city-02-road-stroke", "input_source": "outputs/game-inputs-v1/tasks/city-02-road-stroke/task.json"}
+{"timestamp": "2026-09-19T10:55:44.346606+00:00", "event": "contract_frozen", "contract_sha256": "419141f12d50f3a51dfa73b5c26c5c152f15b3da9e520c9ffcbc925d0f5e727b"}
+{"timestamp": "2026-09-19T10:56:16.585486+00:00", "event": "verification_attempt", "attempt": "attempt01", "passed": false, "evidence": "evidence/attempt01"}
+{"timestamp": "2026-09-19T10:56:45.002198+00:00", "event": "repair", "reason": "Product parser rejected mixed indentation; normalize appended functions to tabs"}
+{"timestamp": "2026-09-19T10:56:48.199882+00:00", "event": "verification_attempt", "attempt": "attempt02", "passed": false, "evidence": "evidence/attempt02"}
+{"timestamp": "2026-09-19T10:57:23.750828+00:00", "event": "test_repair", "reason": "Camera interpolation is wall-time based; fix test camera at intended settled default before projected mouse input"}
+{"timestamp": "2026-09-19T10:57:27.291379+00:00", "event": "verification_attempt", "attempt": "attempt03", "passed": false, "evidence": "evidence/attempt03"}
+{"timestamp": "2026-09-19T10:57:58.920330+00:00", "event": "test_repair", "reason": "Headless viewport defaults64x64, overlapping HUD swallowed intended scene clicks. Set real1280x900 test viewport explicitly."}
+{"timestamp": "2026-09-19T10:58:05.670158+00:00", "event": "verification_attempt", "attempt": "attempt04", "passed": true, "evidence": "evidence/attempt04"}
+{"timestamp": "2026-09-19T10:58:28.826357+00:00", "event": "finalized", "hard_pass": true, "engine_reward": 1, "human_review": null}

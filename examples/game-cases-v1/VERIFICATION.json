@@ -1,0 +1,182 @@
+{
+  "timestamp": "2026-09-19T11:13:09.454192+00:00",
+  "pass": true,
+  "case_count": 11,
+  "automatic_pass_count": 11,
+  "top_level_check_count": 95,
+  "human_review_count": 0,
+  "original_input_file_count": 308,
+  "original_inputs_unchanged": true,
+  "cases": [
+    {
+      "id": "city-01-civic-square",
+      "title": "把喷泉旁扩成可辨认的社区广场",
+      "pass": true,
+      "top_level_checks": 7,
+      "engine_reward": 1,
+      "human_review": null,
+      "result": "cases/city-01-civic-square/evidence/final/result.json",
+      "root_review": "cases/city-01-civic-square/evidence/root-review.json",
+      "errors": []
+    },
+    {
+      "id": "city-02-road-stroke",
+      "title": "为道路增加可取消的拖拽连续铺设",
+      "pass": true,
+      "top_level_checks": 7,
+      "engine_reward": 1,
+      "human_review": null,
+      "result": "cases/city-02-road-stroke/evidence/final/result.json",
+      "root_review": "cases/city-02-road-stroke/evidence/root-review.json",
+      "errors": []
+    },
+    {
+      "id": "city-03-save-safety",
+      "title": "让存读档能可靠反馈并保护当前城市",
+      "pass": true,
+      "top_level_checks": 8,
+      "engine_reward": 1,
+      "human_review": null,
+      "result": "cases/city-03-save-safety/evidence/final/result.json",
+      "root_review": "cases/city-03-save-safety/evidence/root-review.json",
+      "errors": []
+    },
+    {
+      "id": "city-04-build-palette",
+      "title": "把Q/E轮换变成可读的建筑选择面板",
+      "pass": true,
+      "top_level_checks": 8,
+      "engine_reward": 1,
+      "human_review": null,
+      "result": "cases/city-04-build-palette/evidence/final/result.json",
+      "root_review": "cases/city-04-build-palette/evidence/root-review.json",
+      "errors": []
+    },
+    {
+      "id": "platformer-01",
+      "title": "把悬空群岛改造成主线与挑战支路",
+      "pass": true,
+      "top_level_checks": 7,
+      "engine_reward": 1,
+      "human_review": null,
+      "result": "cases/platformer-01/evidence/final/result.json",
+      "root_review": "cases/platformer-01/evidence/root-review.json",
+      "errors": []
+    },
+    {
+      "id": "platformer-02",
+      "title": "给装饰旗帜加入金币门槛与通关流程",
+      "pass": true,
+      "top_level_checks": 10,
+      "engine_reward": 1,
+      "human_review": null,
+      "result": "cases/platformer-02/evidence/final/result.json",
+      "root_review": "cases/platformer-02/evidence/root-review.json",
+      "errors": []
+    },
+    {
+      "id": "platformer-03",
+      "title": "改善平台边缘起跳与落地连跳手感",
+      "pass": true,
+      "top_level_checks": 6,
+      "engine_reward": 1,
+      "human_review": null,
+      "result": "cases/platformer-03/evidence/final/result.json",
+      "root_review": "cases/platformer-03/evidence/root-review.json",
+      "errors": []
+    },
+    {
+      "id": "platformer-04",
+      "title": "把明亮玩具群岛改为清晰可读的黄昏关卡",
+      "pass": true,
+      "top_level_checks": 5,
+      "engine_reward": 1,
+      "human_review": null,
+      "result": "cases/platformer-04/evidence/final/result.json",
+      "root_review": "cases/platformer-04/evidence/root-review.json",
+      "errors": []
+    },
+    {
+      "id": "racing-02",
+      "title": "新增按顺序过检查点的单圈计时挑战",
+      "pass": true,
+      "top_level_checks": 15,
+      "engine_reward": 1,
+      "human_review": null,
+      "result": "cases/racing-02/evidence/final/result.json",
+      "root_review": "cases/racing-02/evidence/root-review.json",
+      "errors": []
+    },
+    {
+      "id": "racing-03",
+      "title": "让卡车的高速转向和镜头更易控制",
+      "pass": true,
+      "top_level_checks": 11,
+      "engine_reward": 1,
+      "human_review": null,
+      "result": "cases/racing-03/evidence/final/result.json",
+      "root_review": "cases/racing-03/evidence/root-review.json",
+      "errors": []
+    },
+    {
+      "id": "racing-04",
+      "title": "把摩托车接入主场景并支持停车换车",
+      "pass": true,
+      "top_level_checks": 11,
+      "engine_reward": 1,
+      "human_review": null,
+      "result": "cases/racing-04/evidence/final/result.json",
+      "root_review": "cases/racing-04/evidence/root-review.json",
+      "errors": []
+    }
+  ],
+  "review_endpoint_tests": {
+    "fixture_only": true,
+    "reject_unknown_case": true,
+    "reject_changed_candidate": true,
+    "store_eligible_review": true,
+    "reject_duplicate_review": true,
+    "real_cases_untouched": true
+  },
+  "launcher_test": {
+    "case": "city-01-civic-square",
+    "source_copy_matches_except_runtime_user_settings_and_engine_import_descriptors": true,
+    "engine_rewritten_import_descriptors": [
+      "models/road-corner.glb.import",
+      "models/building-garage.glb.import",
+      "models/road-straight-lightposts.glb.import",
+      "models/road-straight.glb.import",
+      "models/grass-trees.glb.import",
+      "models/building-small-b.glb.import",
+      "models/pavement-fountain.glb.import",
+      "models/road-split.glb.import",
+      "models/grass-trees-tall.glb.import",
+      "models/building-small-a.glb.import",
+      "models/road-intersection.glb.import",
+      "models/grass.glb.import",
+      "models/building-small-d.glb.import",
+      "models/building-small-c.glb.import",
+      "models/pavement.glb.import"
+    ],
+    "native_window_observed": "Starter Kit City Builder (DEBUG)",
+    "import_success": true,
+    "human_review": null
+  },
+  "limitations": [
+    "Checks are specific to each task contract; equal rewards do not imply equal quality or difficulty.",
+    "Boundary tests can use explicit starting-position or state fixtures, as disclosed in each case README.",
+    "Native screenshots are actual engine renders; extra overview cameras are identified.",
+    "Visual quality, controller comfort and final acceptance remain for the human reviewer.",
+    "Current Codex coding agents authored implementations and verifier rules; no separate reward model or training run."
+  ],
+  "errors": [],
+  "review_ui_final_check": {
+    "url": "http://127.0.0.1:8768/",
+    "visible_total": 11,
+    "visible_verified": 11,
+    "visible_human_reviewed": 0,
+    "all_case_cards_present": true,
+    "extra_native_captures_expand": true,
+    "browser_tab_preserved": true
+  }
+}

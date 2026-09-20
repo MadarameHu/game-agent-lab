@@ -1,0 +1,9 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+OpenGL API 4.1 Metal - 90.5 - Compatibility - Using Device: Apple - Apple M5
+
+PREVIEW_COMPLETE {"collision_shapes":2,"engine_version":"4.7.2-stable (official)","initial_setup":"default","main_scene":"res://scenes/main.tscn","mesh_instances":24,"node_count":46,"observation":"120 process frames; no requested task changes executed","rendering_method":"gl_compatibility","screenshot_error":0}
+
+WARNING: Screen-space indirect lighting (SSIL) is only available when using the Forward+ renderer.
+     at: environment_set_ssil (servers/rendering/storage/environment_storage.cpp:775)
+     GDScript backtrace (most recent call first):
+         [0] capture (/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/outputs/game-inputs-v1/tools/capture_preview.gd:14)

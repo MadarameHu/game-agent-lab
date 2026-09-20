@@ -1,0 +1,37 @@
+{
+  "checks": [
+    {
+      "details": {},
+      "id": "startup",
+      "pass": true,
+      "summary": "122 unchanged original cells,5860 cash,visible road mode"
+    },
+    {
+      "details": {
+        "built": true,
+        "cash": 5735,
+        "corner_preview": true,
+        "preview": true
+      },
+      "id": "stroke-preview-commit",
+      "pass": true,
+      "summary": "Mouse drag turns and revisits:5 unique ghosts, no mutation before release,one125 charge,auto corner"
+    },
+    {
+      "details": {
+        "cancelled": true,
+        "conflict_visible": true,
+        "refused": true
+      },
+      "id": "stroke-cancel-conflict",
+      "pass": true,
+      "summary": "Esc preserves complete grid/cash; house conflict visible and whole stroke refused"
+    },
+    {
+      "details": {},
+      "id": "single-build-controls",
+      "pass": true,
+      "summary": "Q/E mode switch,right rotation,house and grass single-cell placement retained"
+    }
+  ]
+}

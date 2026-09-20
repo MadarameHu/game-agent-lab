@@ -1,0 +1,36 @@
+{
+  "task_id": "platformer-02",
+  "frozen_before_edits": true,
+  "checks": [
+    {
+      "id": "preservation",
+      "criterion": "Original world layout, 14 coin transforms, player controller/view script and licensed assets remain unchanged."
+    },
+    {
+      "id": "goal_gate",
+      "criterion": "Real Area3D body enters with 0 and7 coins are rejected, 8 coins completes once and freezes player only after success."
+    },
+    {
+      "id": "coin_single_count",
+      "criterion": "Actual coin Area pickup increments once, repeated contact does not duplicate."
+    },
+    {
+      "id": "restart",
+      "criterion": "Product restart button signal reloads scene and restores player, zero coins, 14 collectibles,3 falling platforms,3 bricks."
+    },
+    {
+      "id": "native_render",
+      "criterion": "Native gameplay screenshot shows objective progress and render succeeds."
+    }
+  ],
+  "human_checks": [
+    "Goal objective, remaining count, success count and replay button are legible and usable.",
+    "Unrestricted human exploration and gameplay completion pending."
+  ],
+  "allowed_product_paths": [
+    "scripts/main.gd",
+    "scripts/hud.gd"
+  ],
+  "reward": "All tested hard checks must pass; human_review/combined_reward remain null.",
+  "scope": "Current Codex implements and tests. Root audits separately; no independent reward model."
+}

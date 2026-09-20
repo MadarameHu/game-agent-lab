@@ -1,0 +1,21 @@
+{
+  "height": 720,
+  "lookahead": [
+    0.000000204481636956189,
+    0.0,
+    3.11617493629456
+  ],
+  "moving_image": "scene-moving.png",
+  "moving_input_physics_frames": 120,
+  "moving_save_error": 0,
+  "native": true,
+  "renderer": "gl_compatibility",
+  "save_error": 0,
+  "velocity": [
+    -0.0000000518327070153646,
+    0.0,
+    9.35390281677246
+  ],
+  "velocity_dot_lookahead": 29.1483974456787,
+  "width": 1280
+}

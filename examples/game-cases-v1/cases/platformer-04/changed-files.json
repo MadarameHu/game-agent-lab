@@ -1,0 +1,33 @@
+{
+  "changed": {
+    "scenes/main.tscn": {
+      "before": "4c77a5bd35a8c8c19e0b3f95e9ad034a36a7fea1f959ba220031b4e02de0dfaf",
+      "after": "5413457c7fe59670d1063c4fdb68ac3fc6fb4180c075c19077ba852bbc6fa7fb"
+    },
+    "scenes/main-environment.tres": {
+      "before": "659037a411c08d28eb8b1f20d4dfc8778bcaac57a91b70f85cb9292d5a233622",
+      "after": "ec539f7e7808733c580e317b2c0decc3cad562e726389f0e26fd8dccfbf3c72b"
+    },
+    "materials/dusk_hazard.gdshader.uid": {
+      "before": null,
+      "after": "46e29ca1429f65183c342ec9bc03efac9061d2cea999ed7e38a07f8d54263e16"
+    },
+    "materials/dusk_hazard.tres": {
+      "before": null,
+      "after": "ca78e9c2efba2a66af474d658820fab2a5c19e207ad27744b0a8ef1339c3b5ad"
+    },
+    "materials/dusk_hazard.gdshader": {
+      "before": null,
+      "after": "422ffc736d65b572f3f6232c588c330d1ea533d7beed13494ea8b647af1a0d8a"
+    },
+    "objects/cloud.tscn": {
+      "before": "76edd4dff242af30dcbb6a578efd8c76641d233b3e5f2005bd234203f109f09b",
+      "after": "cfc1df66d713cbaa638489af9707b5ad9f9e0f03ef0e4d893de051777c1c47dc"
+    },
+    "scripts/main.gd": {
+      "before": "eef797d13a90e9def9e56057b323801ea9f33abd3ff857b18943698ce4d5d564",
+      "after": "babe0d1181c2e05cf540ebc23c85229aca868d10e510afea1770067de99803e0"
+    }
+  },
+  "removed": []
+}

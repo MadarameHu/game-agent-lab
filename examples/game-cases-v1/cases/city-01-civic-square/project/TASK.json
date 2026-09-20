@@ -1,0 +1,80 @@
+{
+  "id": "city-01-civic-square",
+  "title": "把喷泉旁扩成可辨认的社区广场",
+  "category": "布局与场景扩建",
+  "query": "加载官方示例城市后，以现有喷泉广场为中心，在相邻空地扩建一个紧凑的社区休闲区。加入有层次的树木绿地、可辨认的人行铺装，以及至少两种现有住宅模型，让新增建筑的朝向与道路关系合理。保留原有喷泉、所有既有建筑和道路；新区域应有清晰入口接到原有道路，不能靠覆盖现有街区腾地。玩家进入任务版本时能直接看到扩建后的城市，并仍然可以继续正常建造。只使用随工程提供的素材。",
+  "available_assets": [
+    "sample map/map.res",
+    "models/pavement-fountain.glb",
+    "models/pavement.glb",
+    "models/grass.glb",
+    "models/grass-trees.glb",
+    "models/grass-trees-tall.glb",
+    "models/building-small-a.glb",
+    "models/building-small-b.glb",
+    "models/building-small-c.glb",
+    "models/building-small-d.glb",
+    "models/road-straight.glb",
+    "models/road-corner.glb"
+  ],
+  "editable_paths": [
+    "scenes/",
+    "scripts/",
+    "structures/",
+    "sample map/"
+  ],
+  "required_preservation": [
+    "保留官方素材许可证与字体许可证。",
+    "保留原有15种结构资源及其索引语义，已有地图仍可加载。",
+    "除本任务明确要求外，保留建造、拆除、90度旋转、相机移动/旋转/缩放、F1/F2/F3基本能力。",
+    "任务从加载官方sample map后的城市状态开始，不把空场景或宣传截图当作实际初始地图。",
+    "保留初始122个格子的类型、位置与朝向；新增内容放在未占用格子，不能修改官方sample map原件，扩建版另存新资源。"
+  ],
+  "acceptance_notes": [
+    "人工从总体视角确认喷泉与新增区域形成连贯空间，而非散落道具。",
+    "对照原始示例地图，检查既有城市未被抹掉，新增区域入口与道路关系可理解。",
+    "打开任务版本确认扩建布局可见，切换结构并试放一次，原建造功能仍可用。",
+    "这些是交付审阅要求，不是现成引擎奖励或自动评分器。"
+  ],
+  "difficulty": "medium",
+  "initial_state": {
+    "kind": "official_sample_map",
+    "startup": "Use the collection launcher to load the official sample resource automatically; opening upstream project directly requires F3. The adapter populates existing GridMap and cash from that resource without implementing the query.",
+    "default_scene_warning": "上游默认启动为空地图，并非已有小镇。F3加载是任务输入准备，不是任务实现。",
+    "resource": "sample map/map.res",
+    "occupied_cells": 122,
+    "cash": 5860,
+    "bounds_xz": {
+      "x": [
+        -7,
+        9
+      ],
+      "z": [
+        -5,
+        7
+      ]
+    },
+    "fountain_cell": [
+      5,
+      0,
+      4
+    ],
+    "source_evidence": "validation/sample-map-inspection.json"
+  },
+  "schema_version": 1,
+  "base_id": "city-builder",
+  "base_name": "城市建造",
+  "status": "input_ready_task_not_executed",
+  "query_origin": "Authored for this collection; not an upstream dataset annotation",
+  "initial_project": "bases/city-builder/project",
+  "scene_setup": "city-sample",
+  "source_manifest": "bases/city-builder/source.json",
+  "source_manifest_sha256": "8cc2ebde3b2843df602e11e9090136d1a50abcaaa57d5f8ca647c54175609dee",
+  "preview": "previews/city-builder/scene.png",
+  "path_conventions": {
+    "initial_project": "relative to collection root",
+    "available_assets": "relative to initial_project",
+    "editable_paths": "relative to initial_project; annotations specify new files or restrictions"
+  },
+  "evaluation_status": "Acceptance notes are human-authored task requirements, not implemented automatic checkers."
+}

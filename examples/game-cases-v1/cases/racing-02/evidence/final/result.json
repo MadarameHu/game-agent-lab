@@ -1,0 +1,225 @@
+{
+  "checks": [
+    {
+      "id": "countdown_input_lock",
+      "pass": true,
+      "summary": "Actual forward Input during countdown leaves frozen body at spawn"
+    },
+    {
+      "id": "countdown_go",
+      "pass": true,
+      "summary": "Real 3 second timer releases controls and starts timing"
+    },
+    {
+      "id": "missing_and_out_of_order",
+      "pass": true,
+      "summary": "Finish and CP2 before CP1 do not finish or advance"
+    },
+    {
+      "id": "reverse_checkpoint",
+      "pass": true,
+      "summary": "Reverse physical crossing of CP1 is rejected"
+    },
+    {
+      "id": "physical_cp1",
+      "pass": true,
+      "summary": "Physics body crossed CP1 forward and progressed"
+    },
+    {
+      "id": "skip_cp2",
+      "pass": true,
+      "summary": "CP3 before CP2 rejected"
+    },
+    {
+      "id": "ordered_cp123",
+      "pass": true,
+      "summary": "Sequential physical crossings advance all three checkpoints"
+    },
+    {
+      "id": "reverse_finish",
+      "pass": true,
+      "summary": "Reverse physical finish crossing does not finish"
+    },
+    {
+      "id": "correct_finish",
+      "pass": true,
+      "summary": "Forward physical finish after123 finishes and stores elapsed"
+    },
+    {
+      "id": "final_timer_stops",
+      "pass": true,
+      "summary": "Final displayed time is stable"
+    },
+    {
+      "id": "r_restart",
+      "pass": true,
+      "summary": "Real R event resets timer, checkpoint state, pose and physical velocities"
+    },
+    {
+      "id": "actual_input_lap",
+      "pass": true,
+      "summary": "实际Input驾驶119.74米，顺序通过CP1/2/3并完成；最大中心线误差1.90米。"
+    },
+    {
+      "id": "preservation",
+      "pass": true,
+      "summary": "All baseline files outside allowed paths identical; original GridMap block identical.",
+      "details": {
+        "errors": [],
+        "baseline_files": 72
+      }
+    },
+    {
+      "id": "execution_health",
+      "pass": true,
+      "summary": "所有本轮导入、行为测试、原生截图进程成功退出，未发生SCRIPT ERROR。"
+    },
+    {
+      "id": "native_render",
+      "pass": true,
+      "summary": "Native Compatibility1280x720 screenshot generated; checkpoint label sizing visually reviewed by implementation agent."
+    }
+  ],
+  "hard_pass": true,
+  "engine_reward": 1,
+  "human_review": null,
+  "combined_reward": null,
+  "limitations": [
+    "人工驾驶与视觉可读性待审。",
+    "最初fixture一次失败保留于behavior-v1；修复测试等待时序后behavior-v2通过。"
+  ],
+  "commands": [
+    {
+      "command": [
+        "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/work/pipeline-build/runtime/Godot.app/Contents/MacOS/Godot",
+        "--headless",
+        "--path",
+        "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/outputs/game-cases-v1/cases/racing-02/project",
+        "--fixed-fps",
+        "60",
+        "--script",
+        "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/outputs/game-cases-v1/cases/racing-02/verification/drive.gd",
+        "--",
+        "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/outputs/game-cases-v1/cases/racing-02/verification/route.json",
+        "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/outputs/game-cases-v1/cases/racing-02/evidence/final"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "wall_seconds": 0.92,
+      "log": "actual-drive-v1.log",
+      "script_error": false
+    },
+    {
+      "command": [
+        "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/work/pipeline-build/runtime/Godot.app/Contents/MacOS/Godot",
+        "--headless",
+        "--editor",
+        "--import",
+        "--quit",
+        "--path",
+        "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/outputs/game-cases-v1/cases/racing-02/project"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "wall_seconds": 1.913,
+      "log": "import-final.log",
+      "script_error": false
+    },
+    {
+      "command": [
+        "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/work/pipeline-build/runtime/Godot.app/Contents/MacOS/Godot",
+        "--headless",
+        "--path",
+        "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/outputs/game-cases-v1/cases/racing-02/project",
+        "--fixed-fps",
+        "60",
+        "--script",
+        "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/outputs/game-cases-v1/cases/racing-02/verification/behavior.gd",
+        "--",
+        "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/outputs/game-cases-v1/cases/racing-02/evidence/final/behavior.json"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "wall_seconds": 0.449,
+      "log": "behavior-final.log",
+      "script_error": false
+    },
+    {
+      "command": [
+        "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/work/pipeline-build/runtime/Godot.app/Contents/MacOS/Godot",
+        "--path",
+        "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/outputs/game-cases-v1/cases/racing-02/project",
+        "--rendering-method",
+        "gl_compatibility",
+        "--script",
+        "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/outputs/game-cases-v1/cases/racing-02/verification/render.gd",
+        "--",
+        "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/outputs/game-cases-v1/cases/racing-02/evidence/final"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "wall_seconds": 3.64,
+      "log": "native-render-final.log",
+      "script_error": false
+    }
+  ],
+  "candidate_hashes": {
+    "icon.png": "d5563c5c53c500c3211b8de5b6e8b8a382509cd072e4456b3923ba12263bfb8d",
+    "LICENSE": "db2c350e96739247706b6b395aae08ac335395eda9cfe2bc80b79636934ecdc2",
+    "TASK.json": "e2c0dbf147871197622fb14a7d4f8cd730db1e8f272db2e832f6178d32ed2cae",
+    "START_INPUT.py": "34df33d3d7ced43a022bd353f681cc1255980a04dd39823db5d825b3975d1ad0",
+    "README.md": "b37aa56ea98519356514dd0a45d86cf847d3f62144470250c174eeb44e0d9710",
+    ".gitignore": "0ef0895554da9af8253266aab091aa3b524b602afe8377aef84da70fc30271c5",
+    "QUERY.md": "1b842d28a9a7b5eabb95bcf7202d5507bc00667914ef2afea4685623390b5a63",
+    "splash-screen.png": "e9c77b962ee6da4f4b0ae709f1db0cc95c47f1f9a0d37dad6b8124f75cf77148",
+    ".gitattributes": "1a1dbe176bc233b499d35a57db7513f2941c99ab9759f177830c9149be99005b",
+    "project.godot": "5c26faf8f3439155a505dd35b9c29a5ad30b6064f8656521dbc70a7ee555c27b",
+    "scenes/main.tscn": "34cd91449dd801d2da3b446f26dda336a36aa705f6b3165e0eddcf32be5dad0b",
+    "scenes/main-environment.tres": "4d613e7246c1f204fd193e7dfec2e2922fabbd5b85a86ccdc760128fba4e0d2c",
+    "scenes/vehicle.tscn": "54c20729bafb5b3ac7c436c1a2abcfea997bea8b44412a78923be098687633f6",
+    "scenes/vehicle-motorcycle.tscn": "4763f44645c2b633285383b545bf911c41476762f88afd0ed5bba35791020c7e",
+    "screenshots/screenshot.png": "b31467a6818cfaf6a4a04f25ed2ecb0fb36b6c16ae5ad2919329c5c4836d53ac",
+    "screenshots/.gdignore": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "models/collision-track-straight.fbx": "127d78b05e41627b2f1d5e31907f2f2b36fe4b37c599b2baad5db2814168c45d",
+    "models/decoration-forest.glb": "664a53f0f709fef9096af3bbfb1aa76536527a616b05170c0cf4e27e33358a00",
+    "models/vehicle-truck-red.glb": "eca99bd9ab0a2b02125f915e65d1ec8f1c5a93be7c6d4840efdac6633f47772c",
+    "models/track-tents.glb": "eaf68bbb44e362e291b71d13015fbafc4ce22a9102bda029614972d6cc843c7f",
+    "models/track-corner.glb": "0ffb3d83b60456fc5a2962447111a1a64bfe943f4ad95462e1edba107be81c80",
+    "models/track-straight.glb": "2d8080df1fe27e39981480809f36eba7f239e814f96bff61bb4c99793221b701",
+    "models/track-finish.glb": "2fec3b681658d6e77e20c4342d1e3ceeaab3e8d2fbf340942cde25cc2b21975b",
+    "models/vehicle-truck-purple.glb": "03e32f5abcbbd03da3591f42fdaae2cf7d27ed379df7ce0d1f233bea02998565",
+    "models/vehicle-truck-green.glb": "df362d027a09b19395be0e96abd7cc2dc54608dfb920b592e64357b589f9fcd6",
+    "models/track-bump.glb": "6db020edc53532ebc0971c9d4ad9afb11c4de67c510649ca843db4616514f43c",
+    "models/vehicle-motorcycle.glb": "c97911b8dbc2d5dd9d1961b46eb4d1f132b67a6c5a84f45593fea44e0595dd92",
+    "models/decoration-empty.glb": "3815b26a5274173934d37cf605e320450efad4e0034040868b6aea761cfd74bc",
+    "models/decoration-tents.glb": "19dbf2a778ad75f95c7d61f12866ef7174ab69cad169d3749c5400f5e14db8a3",
+    "models/vehicle-truck-yellow.glb": "1ebd83174eab6d2fdf69eb5d8e32bd06a23a86d9edc4fe915a4160430a7c36a5",
+    "models/collision-track-corner.fbx": "02bd2ee2d3b421dbddf244d3e8953f1fc9220429941fa52ceeba10d9c0c00536",
+    "models/Textures/colormap.png": "02bb3fb87365927d16e265d27caae405aeef5819b6bde5a989ff5e435318de4d",
+    "models/Library/mesh-library.tres": "c6bad9e41b76be1e9a55597b1d67d2499c3412927ac8a8625247b796d00687af",
+    "models/Library/mesh-library.tscn": "9fb9bc07b2ac3bbfc8efbac29f4e288c056a84ebe6dff52da1b6cd8fd3c1583d",
+    ".input/source.json": "9965f7d08bf8df51ac6c27d86fb833070b9f994e948d84536447a0e17cf7def3",
+    ".input/start.gd": "a25248c6161cc739e9db8c4196254bd5ada8c6827a8f5e11c2dbab8a2a5b74b3",
+    "audio/skid.ogg": "e62a42c0a4af29ed69b37cfc80d088a6808c59f8f725285ebcc3f409267965a0",
+    "audio/impact.ogg": "964c5fcfb91e7710e2af25c2243c8b7160756b223b0984bacc9eb25bfeea057b",
+    "audio/engine.ogg": "6d665dfc961e2d522c866bdcf12fc0ac56c885c0c7117e830df84ba8eecd655c",
+    "audio/engine-motorcycle.ogg": "aed3b357bf885d5390a517ee6da2a55f3a17307d8d094175215fb60669f98ef7",
+    "scripts/vehicle-motorcycle.gd": "9715892351516c39631f89b6ced657b8ff7bfceb358e3252f06d2bf6411f82ff",
+    "scripts/view.gd": "bd01a3fed163547b71e2a0820eed9729b04a5aeeef780696b7f050eb3c92483c",
+    "scripts/race_manager.gd": "83171d8454a15ab58173fe8b339f4b65cd3d52767667c8c4e77ab10d752e5faf",
+    "scripts/checkpoint.gd": "b2b417657732a477718c594773496f088318ce68565f392e025e2d5e99239832",
+    "scripts/race_hud.gd": "d0d8463c8f34e2c483ac5b8da09eeab73a5c602c3f2cd90fef3d30cc33b94ea4",
+    "scripts/vehicle.gd": "62e93dfb82aff38e0ebcd03dabe40b5cd1f732fb5bbfad17312f906232089de1",
+    "sprites/smoke.png": "371590cb06875916ee1ab783217a2b8680ef792fbc358937e917afdfa413a1f1",
+    "vector/.gdignore": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "vector/particles.fla": "256a7fd45354419b56e58b586d24e7865c0b709aeb6bc59ce2e2d12083ef5d18"
+  },
+  "contract_sha256": "f0eec8562f5751aeb5773851e616da056cd7d250f15924358917a1af0129fada",
+  "verification_hashes": {
+    "verification/drive.gd": "e90f39cb5c74e57a512b6c7363b70311fb1ac13fdf09ec71f2a85482afd6aa26",
+    "verification/preservation.py": "3ce6170a7edc881153eebb84244bf6d09d35481733ac6e3ca0b155df7eca7ded",
+    "verification/behavior.gd": "f0894000d37bad7a62dcd75fd6d5b686cd4bab44659e90740f7c321b5d702b7c",
+    "verification/render.gd": "c8ecd2366112631e2009cfc81df0ca355cef771c408d99e5ef6b0cd0661e320f",
+    "verification/route.json": "8a462daa08f6b3b49582895f9bb674be5f6c0f13651903b0d3bcbc11d385fec9"
+  }
+}

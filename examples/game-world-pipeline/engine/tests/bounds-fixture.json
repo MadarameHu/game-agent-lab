@@ -1,0 +1,118 @@
+{
+  "schema_version": 1,
+  "brief": "\u5e03\u7f6e\u4e00\u4e2a\u53ef\u7a7f\u884c\u7684\u4ed3\u5e93\u623f\u95f4\uff0c\u4fdd\u7559\u516d\u4e2a\u7bb1\u5b50\uff0c\u73a9\u5bb6\u4ece\u897f\u4fa7\u7eff\u8272\u51fa\u751f\u70b9\u8d70\u5230\u4e1c\u4fa7\u91d1\u8272\u51fa\u53e3\u3002\u7bb1\u5b50\u4e0d\u5f97\u8d8a\u5899\u3001\u76f8\u4e92\u7a7f\u900f\u6216\u5835\u4f4f\u552f\u4e00\u901a\u8def\u3002",
+  "room": {
+    "width": 12,
+    "depth": 10,
+    "height": 3
+  },
+  "player": {
+    "position": [
+      -4,
+      0,
+      0
+    ],
+    "radius": 0.3,
+    "height": 1.6
+  },
+  "goal": {
+    "position": [
+      4,
+      0,
+      0
+    ],
+    "radius": 0.65
+  },
+  "objects": [
+    {
+      "id": "crate_01",
+      "asset": "crate",
+      "position": [
+        0,
+        0,
+        -4
+      ],
+      "size": [
+        1.2,
+        1.2,
+        2.0
+      ],
+      "rotation_y": 0
+    },
+    {
+      "id": "crate_02",
+      "asset": "crate",
+      "position": [
+        0,
+        0,
+        -2
+      ],
+      "size": [
+        1.2,
+        1.2,
+        2.0
+      ],
+      "rotation_y": 0
+    },
+    {
+      "id": "crate_03",
+      "asset": "crate",
+      "position": [
+        -5.8,
+        0,
+        -2
+      ],
+      "size": [
+        1.2,
+        1.2,
+        2.0
+      ],
+      "rotation_y": 0
+    },
+    {
+      "id": "crate_04",
+      "asset": "crate",
+      "position": [
+        0,
+        0,
+        2
+      ],
+      "size": [
+        1.2,
+        1.2,
+        2.0
+      ],
+      "rotation_y": 0
+    },
+    {
+      "id": "crate_05",
+      "asset": "crate",
+      "position": [
+        0,
+        0,
+        4
+      ],
+      "size": [
+        1.2,
+        1.2,
+        2.0
+      ],
+      "rotation_y": 0
+    },
+    {
+      "id": "crate_06",
+      "asset": "crate",
+      "position": [
+        -3,
+        0,
+        3
+      ],
+      "size": [
+        1.2,
+        1.2,
+        1.2
+      ],
+      "rotation_y": 0
+    }
+  ]
+}

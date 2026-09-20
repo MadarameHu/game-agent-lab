@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "case_id": "racing-04",
+  "frozen_at": "2026-09-19T10:57:26.600045+00:00",
+  "hard_checks": [
+    {
+      "id": "default_motorcycle",
+      "criterion": "Main boots with real motorcycle scene, fork/wheel/lean script and motorcycle engine sound."
+    },
+    {
+      "id": "stopped_switch",
+      "criterion": "Actual Tab event while physical speed<0.5m/s and drive state<.08 swaps to other scene with same sphere position/model heading; camera target valid; only1 Vehicle/Sphere active."
+    },
+    {
+      "id": "moving_rejected",
+      "criterion": "Tab at speed>=.5m/s or active drive rejected with visible stop-first text; no vehicle replacement."
+    },
+    {
+      "id": "repeat_and_drive",
+      "criterion": "Repeated alternating switches leave one active vehicle; both vehicles move with actual forward input; motorcycle effects exercised."
+    },
+    {
+      "id": "preservation",
+      "criterion": "Original track GridMap, static models, license/assets/input mappings retained."
+    }
+  ],
+  "human_checks": [
+    "Human compares motorcycle handling/lean and camera continuity after switching; HUD readability."
+  ],
+  "human_review": null,
+  "limits": "Developer implementation and scripted verification; root separately reviews. Test setup injection is labeled, never claimed human play."
+}

@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "task_id": "racing-01",
+  "frozen_before_candidate_edit": true,
+  "scope": "GridMap track and decoration layout only; original gameplay remains unchanged",
+  "objective_checks": [
+    {"id":"project_loads","criterion":"Main scene loads with original resources and no script errors."},
+    {"id":"protected_gameplay","criterion":"All protected file hashes match; outside GridMap data, main scene nodes including Vehicle spawn, View target, camera, ground and static vehicles remain unchanged."},
+    {"id":"closed_track","criterion":"All supported road cells form one connected cycle, each road port has exactly one matching adjacent port; no dangling branches or disconnected road islands."},
+    {"id":"required_geometry","criterion":"At least three consecutive plain straight road tiles, and at least one adjacent pair of opposite-signed turns while traversing the cycle from the original spawn forward direction."},
+    {"id":"spawn_and_decor","criterion":"Original spawn lies on the road; road tiles stay within original ground extents; at least one tents tile outside the route polygon; forest/tents occupy no road cell. Native views are also retained for human visual review."},
+    {"id":"physical_lap","criterion":"External test driver supplies only original driving Input actions. The stock rigid-body vehicle traverses the full ordered route and returns within 2m of its physical starting point; no externally written transforms, velocity or controller state; no reverse shortcut.","physics_hz":60,"max_steps":18000,"max_centerline_distance_m":2.5,"return_radius_m":2.0}
+  ],
+  "human_checks": [
+    "Actual handling through joins and S bends feels usable, with no need to reverse out of a dead end.",
+    "Tent area is visually outside the circuit; forest does not cover the road or completely block the original following camera.",
+    "The revised circuit and scenery meet the requested woodland practice-track intent."
+  ],
+  "reward": {"type":"binary_objective_gate","engine_reward":"1 only when all objective checks pass; otherwise 0; per-check results retained","human_review":null,"combined_reward":null},
+  "driver_policy": "Test driver is outside product project. Original controller angular-velocity updates remain enabled. Driver may be debugged with reasons and version hashes recorded; acceptance criteria cannot be relaxed to obtain a pass.",
+  "verification_limits": "One bounded successful test-driver lap demonstrates a traversable route, not all driver skill levels or speeds. Decor lacks colliders; visual quality/occlusion remains a human check. No automatic human acceptance."
+}

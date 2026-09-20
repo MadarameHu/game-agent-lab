@@ -1,0 +1,22 @@
+{
+  "id": "city-04-build-palette",
+  "title": "把Q/E轮换变成可读的建筑选择面板",
+  "status": "awaiting_human",
+  "human_review": null,
+  "engine_reward": 1,
+  "agent_system": "Current Codex agents; no separate reward model",
+  "attempts": [
+    {
+      "id": "attempt01",
+      "passed": true,
+      "evidence": "evidence/attempt01"
+    }
+  ],
+  "contract_sha256": "3341fe189ff17a0c4b8a2fcf3cb55e1b4ab71530419250b2a03266baaa4840c7",
+  "final_evidence": "evidence/final",
+  "checks": "evidence/final/result.json",
+  "play": {
+    "mode": "project"
+  },
+  "summary": "新增紧凑的三分组15项建筑面板，显示名称/原价、选中高亮与资金状态；鼠标选项不穿透建造，Q/E与面板和3D模型同步。"
+}

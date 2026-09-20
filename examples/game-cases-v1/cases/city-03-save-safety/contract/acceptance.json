@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "task_id": "city-03-save-safety",
+  "task_sha256": "bac11aeda1f80837b801fbd458fcac7d34fcfd59351a106ce6aefc1aafe101bc",
+  "frozen_before_product_edits": true,
+  "hard_checks": [
+    {
+      "id": "startup",
+      "expect": "Direct boot exact official122 cells,cash5860, no user save created; status nonblocking"
+    },
+    {
+      "id": "latest-save",
+      "expect": "F1 twice with distinct positions/types/orientations/cash; F2 bypasses populated resource cache and restores second exact state"
+    },
+    {
+      "id": "failed-load-preserves",
+      "expect": "Missing, corrupt and semantically invalid save leave entire grid/cash intact and show reason"
+    },
+    {
+      "id": "save-failure",
+      "expect": "ResourceSaver failure reported without mutation, existing saved file preserved"
+    },
+    {
+      "id": "sample-reset",
+      "expect": "Unsaved changes trigger F3 confirmation; cancel retains exact state, confirm restores official122/cash5860 independently of user save"
+    },
+    {
+      "id": "preservation-files",
+      "expect": "Official sample,15model resources,prices,licenses unchanged"
+    },
+    {
+      "id": "native-render",
+      "expect": "Native normal startup and nonblocking save/load guidance visible"
+    }
+  ],
+  "human_checks": [
+    "Human confirm clear error/success notices and safe F3 flow; long-term disk/power-loss resilience not claimed"
+  ],
+  "preservation": [
+    "保留官方素材许可证与字体许可证。",
+    "保留原有15种结构资源及其索引语义，已有地图仍可加载。",
+    "除本任务明确要求外，保留建造、拆除、90度旋转、相机移动/旋转/缩放、F1/F2/F3基本能力。",
+    "任务从加载官方sample map后的城市状态开始，不把空场景或宣传截图当作实际初始地图。",
+    "仍使用user://下的用户存档；保留官方res://sample map/map.res不被覆盖。",
+    "不预生成用户存档，不替测试者提前按下保存或确认。"
+  ],
+  "reward": "1 iff all hard checks pass, human review remains null",
+  "scope": "Implementer behavioral verification; independent root audit pending"
+}

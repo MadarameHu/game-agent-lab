@@ -1,0 +1,11 @@
+{
+  "collision_shapes": 0,
+  "engine_version": "4.7.2-stable (official)",
+  "initial_setup": "city-sample",
+  "main_scene": "res://scenes/main.tscn",
+  "mesh_instances": 1,
+  "node_count": 31,
+  "observation": "120 process frames; no requested task changes executed",
+  "rendering_method": "gl_compatibility",
+  "screenshot_error": 0
+}

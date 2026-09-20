@@ -1,0 +1,58 @@
+{
+  "timestamp": "2026-09-20T06:56:06.853087+00:00",
+  "demo_url": "http://127.0.0.1:8769/",
+  "case_count": 12,
+  "category_counts": {
+    "platformer": 4,
+    "city-builder": 4,
+    "racing": 4
+  },
+  "existing_game_checks_displayed": 101,
+  "existing_game_checks_rerun": false,
+  "all_candidate_integrity_verified": true,
+  "human_reviews_submitted_by_agent": 0,
+  "actual_human_review_count": 0,
+  "data_validation": {
+    "local_links_existing": 259,
+    "initial_state_strings": true
+  },
+  "backend_tests": {
+    "command": "python3 outputs/game-trajectory-demo/tests_backend.py",
+    "tests_passed": 6,
+    "scope": [
+      "state and diff",
+      "registered paths and host/origin",
+      "stale or changed project/checker/contract/evidence",
+      "isolated async launcher fixture",
+      "original reviews preserved",
+      "immutable fixture-only review submission"
+    ]
+  },
+  "frontend": {
+    "javascript_syntax_check": true,
+    "all_12_detail_sections_observed": true,
+    "city_object_text_issue_fixed_and_4_cases_retested": true,
+    "racing_category_count": 4,
+    "racing01_search_result": 1,
+    "racing04_check_drawer_observed": true,
+    "racing04_added_script_diff_observed": true,
+    "racing03_failure_and_repair_observed": true,
+    "desktop_1280_and_narrow_649_visual_observed": true,
+    "browser_deliverable_marked": true
+  },
+  "native_launcher_smoke": {
+    "case": "racing-04",
+    "browser_button_used": true,
+    "real_engine_process_and_log_verified": true,
+    "runtime_script_error": false,
+    "native_window_targeting": "App automation resolved an older City Builder window; launch is verified by new process, startup log and server state, not an attributed native screenshot.",
+    "evidence": "sessions/991d56f5d5b9422bbe095e91d6f0ff69/smoke-verification.json",
+    "test_process_closed_by_root": true
+  },
+  "limitations": [
+    "Historical complete candidates and exact model call records are not reconstructed.",
+    "3D assets use file links; inline 3D preview and video capture are not implemented.",
+    "New human decisions are stored in this demo only; no automatic repair execution.",
+    "racing-01 historical integrity covers recorded files; full fingerprint starts at demo initialization."
+  ]
+}

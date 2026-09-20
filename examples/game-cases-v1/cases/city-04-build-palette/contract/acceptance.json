@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "task_id": "city-04-build-palette",
+  "task_sha256": "bc0d3a51b0acbd310881fa010d83b3c4cfd2c0598b82c690472d73f85f253dc3",
+  "frozen_before_product_edits": true,
+  "hard_checks": [
+    {
+      "id": "startup",
+      "expect": "Direct startup122 exact sample cells,cash5860,no balance demonstration mutation"
+    },
+    {
+      "id": "palette-content",
+      "expect": "All15 structures with real model-corresponding names and original prices,grouped roads/buildings/ground-landscape; selected clearly highlighted"
+    },
+    {
+      "id": "gui-no-clickthrough",
+      "expect": "Real viewport clicks on each palette item select it and never add/change map cells or cash; world click still builds"
+    },
+    {
+      "id": "keyboard-preview-sync",
+      "expect": "Q/E changes selected highlight and 3D model in original index order"
+    },
+    {
+      "id": "affordability-layout",
+      "expect": "Current balance sufficient/insufficient status and per-item color refresh correctly; panel remains compact at1280x900 and1024x768"
+    },
+    {
+      "id": "preservation-files",
+      "expect": "15 original resource indices/prices,assets/licenses andsample map unchanged"
+    },
+    {
+      "id": "native-render",
+      "expect": "Normal native startup rendered with city as main subject"
+    }
+  ],
+  "human_checks": [
+    "Panel readability, model-name mapping and city prominence at common window sizes; mouse/keyboard usability pending human review"
+  ],
+  "preservation": [
+    "保留官方素材许可证与字体许可证。",
+    "保留原有15种结构资源及其索引语义，已有地图仍可加载。",
+    "除本任务明确要求外，保留建造、拆除、90度旋转、相机移动/旋转/缩放、F1/F2/F3基本能力。",
+    "任务从加载官方sample map后的城市状态开始，不把空场景或宣传截图当作实际初始地图。",
+    "保留全部15种结构可选，不改变现有价格。",
+    "不得为了展示余额不足而预先耗尽城市资金，初始仍为示例地图的5860。"
+  ],
+  "reward": "1 iff all hard checks pass, human review remains null",
+  "scope": "Implementer behavioral verification; independent root audit pending"
+}

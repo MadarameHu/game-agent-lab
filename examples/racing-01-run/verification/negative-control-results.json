@@ -1,0 +1,56 @@
+{
+  "metadata_source": "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/work/racing-01/validator/dev002/scene_metadata.json",
+  "product_mutated": false,
+  "tests": [
+    {
+      "case": "remove_one_road_tile",
+      "expected": "closed_track false",
+      "observed": false,
+      "errors": [
+        "Unmatched port (-3, 0, -2)->(-2, 0, -2)",
+        "Unmatched port (-1, 0, -2)->(-2, 0, -2)"
+      ],
+      "passed": true
+    },
+    {
+      "case": "replace_finish_with_plain_straight",
+      "expected": "closed loop still valid, required_geometry false",
+      "observed": {
+        "closed_track": true,
+        "required_geometry": false,
+        "finish_tiles": 0
+      },
+      "passed": true
+    },
+    {
+      "case": "valid_rectangle_without_adjacent_opposite_turns",
+      "expected": "closed_track true, straights true, finish present, required_geometry false",
+      "observed": {
+        "closed_track": true,
+        "plain_three_straights": true,
+        "turns": [
+          0,
+          0,
+          0,
+          -1,
+          0,
+          0,
+          -1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          -1,
+          0,
+          0,
+          -1,
+          0,
+          0
+        ],
+        "required_geometry": false
+      },
+      "passed": true
+    }
+  ]
+}

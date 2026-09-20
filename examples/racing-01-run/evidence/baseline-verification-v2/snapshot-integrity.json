@@ -1,0 +1,6 @@
+{
+  "snapshot_main_sha256": "5138d40275304a21644a6fb3500e03a2b734e6761f8dc4c677d08781902f1122",
+  "reported_source_main_sha256": "5138d40275304a21644a6fb3500e03a2b734e6761f8dc4c677d08781902f1122",
+  "match": true,
+  "note": "Supplementary post-run read-only integrity check; original result.json preserved."
+}

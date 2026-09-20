@@ -1,0 +1,30 @@
+{
+  "height": 720,
+  "human_review": null,
+  "native": true,
+  "renderer": "gl_compatibility",
+  "save_error": 0,
+  "view": "Actual success state after fixture contacts with real coin/goal Areas; no direct success function call",
+  "width": 1280,
+  "root_ui_fix": "Centered panel after parenting; native containment and mouse click verified",
+  "success_command": {
+    "command": [
+      "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/work/pipeline-build/runtime/Godot.app/Contents/MacOS/Godot",
+      "--path",
+      "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/outputs/game-cases-v1/cases/platformer-02/project",
+      "--rendering-method",
+      "gl_compatibility",
+      "--resolution",
+      "1280x720",
+      "--fixed-fps",
+      "60",
+      "--script",
+      "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/outputs/game-cases-v1/cases/platformer-02/verification/behavior.gd",
+      "--",
+      "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/outputs/game-cases-v1/cases/platformer-02/evidence/root-ui-fix/checks.json"
+    ],
+    "exit_code": 0,
+    "seconds": 5.884772958,
+    "script_error_free": true
+  }
+}

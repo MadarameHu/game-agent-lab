@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "base_id": "racing",
+  "title": "Kenney Starter Kit Racing",
+  "repository": "https://github.com/KenneyNL/Starter-Kit-Racing",
+  "commit": "2f2e5f2646dda89cb21d4e8539bab60c6e955dc8",
+  "archive_url": "https://codeload.github.com/KenneyNL/Starter-Kit-Racing/zip/2f2e5f2646dda89cb21d4e8539bab60c6e955dc8",
+  "archive_sha256": "f51fcbe845c391d041f94b561455c2d947e77ebbc62bdf0b426b037c5be16c63",
+  "archive_bytes": 1538996,
+  "retrieved_date": "2026-09-19",
+  "license": {
+    "code": "MIT",
+    "code_evidence": "project/LICENSE",
+    "assets": "CC0-1.0",
+    "assets_evidence": "project/README.md",
+    "assets_license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "notes": "Upstream README explicitly covers 2D sprites, 3D models and sound effects; skid sound credited to Landeplage. LICENSE says 2023 while README says 2026; both original files preserved."
+  },
+  "version": {
+    "declared_godot": "4.6",
+    "validated_godot": "4.7.2.stable.official.ed1daf0bf",
+    "physics": "Jolt Physics",
+    "renderer_declared": "Forward Plus"
+  },
+  "main_scene": "res://scenes/main.tscn",
+  "project_path": "project",
+  "snapshot_source_files": 67,
+  "source_files_changed_by_import": [
+    "models/collision-track-corner.fbx.import",
+    "models/collision-track-straight.fbx.import",
+    "models/decoration-empty.glb.import",
+    "models/decoration-forest.glb.import",
+    "models/decoration-tents.glb.import",
+    "models/track-bump.glb.import",
+    "models/track-corner.glb.import",
+    "models/track-finish.glb.import",
+    "models/track-straight.glb.import",
+    "models/track-tents.glb.import",
+    "models/vehicle-motorcycle.glb.import",
+    "models/vehicle-truck-green.glb.import",
+    "models/vehicle-truck-purple.glb.import",
+    "models/vehicle-truck-red.glb.import",
+    "models/vehicle-truck-yellow.glb.import"
+  ],
+  "source_modifications": "No intentional gameplay/source changes. Godot import cache and regenerated import metadata may be present. No embedded .git directory.",
+  "validation": "validation/results.json"
+}

@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "case_id": "racing-03",
+  "frozen_at": "2026-09-19T10:55:31.240706+00:00",
+  "hard_checks": [
+    {
+      "id": "preserve",
+      "criterion": "Only vehicle.gd and view.gd change; original track, truck, effects, inputs intact."
+    },
+    {
+      "id": "steering",
+      "criterion": "Measured physical speed reduces steering gain; smooth bounded response to alternating input. Exported drive_force,low_speed_steering,high_speed_steering,steering_response affect real functions."
+    },
+    {
+      "id": "drive_brake_coast",
+      "criterion": "Actual Input starts vehicle and advances >2m within 2 seconds; S first decays positive throttle then becomes negative; coast exponential decay is monotonic."
+    },
+    {
+      "id": "camera",
+      "criterion": "Measured speed causes lookahead and zoom; speed step has no immediate jump and each frame interpolates; slow speed smoothly returns toward near position."
+    }
+  ],
+  "human_checks": [
+    "Human compares low/high speed corner feel and forward-road visibility."
+  ],
+  "human_review": null,
+  "limits": "Developer implementation and scripted verification; root separately reviews. Test setup injection is labeled, never claimed human play."
+}

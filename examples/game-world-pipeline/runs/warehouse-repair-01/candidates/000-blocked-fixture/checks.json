@@ -1,0 +1,130 @@
+{
+  "checks": [
+    {
+      "details": {
+        "collision_authority": "Axis-aligned BoxShape3D fitted to declared size",
+        "object_count": 6,
+        "positions": "object/player y is ground-based",
+        "schema_version": 1,
+        "visual_assets": [
+          {
+            "asset": "crate",
+            "license": "CC0 1.0 / Kenney Survival Kit (see project assets manifest)",
+            "mode": "glb",
+            "object_id": "crate_01",
+            "path": "res://assets/crate.glb"
+          },
+          {
+            "asset": "crate",
+            "license": "CC0 1.0 / Kenney Survival Kit (see project assets manifest)",
+            "mode": "glb",
+            "object_id": "crate_02",
+            "path": "res://assets/crate.glb"
+          },
+          {
+            "asset": "crate",
+            "license": "CC0 1.0 / Kenney Survival Kit (see project assets manifest)",
+            "mode": "glb",
+            "object_id": "crate_03",
+            "path": "res://assets/crate.glb"
+          },
+          {
+            "asset": "crate",
+            "license": "CC0 1.0 / Kenney Survival Kit (see project assets manifest)",
+            "mode": "glb",
+            "object_id": "crate_04",
+            "path": "res://assets/crate.glb"
+          },
+          {
+            "asset": "crate",
+            "license": "CC0 1.0 / Kenney Survival Kit (see project assets manifest)",
+            "mode": "glb",
+            "object_id": "crate_05",
+            "path": "res://assets/crate.glb"
+          },
+          {
+            "asset": "crate",
+            "license": "CC0 1.0 / Kenney Survival Kit (see project assets manifest)",
+            "mode": "glb",
+            "object_id": "crate_06",
+            "path": "res://assets/crate.glb"
+          }
+        ]
+      },
+      "id": "scene_load",
+      "pass": true,
+      "weight": 0.1
+    },
+    {
+      "details": {
+        "height_limit": 3.0,
+        "outside_object_ids": [],
+        "room_inner_bounds": [
+          -6.0,
+          6.0,
+          -5.0,
+          5.0
+        ],
+        "tolerance_m": 0.001
+      },
+      "id": "bounds",
+      "pass": true,
+      "weight": 0.15
+    },
+    {
+      "details": {
+        "overlapping_pairs": [],
+        "probe_total_shrink_m": 0.004,
+        "query": "PhysicsDirectSpaceState3D.intersect_shape over BoxShape3D colliders"
+      },
+      "id": "no_overlap",
+      "pass": true,
+      "weight": 0.2
+    },
+    {
+      "details": {
+        "algorithm": "4-neighbor grid BFS with actual PhysicsDirectSpaceState3D capsule occupancy",
+        "blocked_cells": 652,
+        "capsule_radius_m": 0.3,
+        "clearance_margin_m": 0.02,
+        "grid_m": 0.25,
+        "path_nodes": 0,
+        "probed_cells": 2009
+      },
+      "id": "route_exists",
+      "pass": false,
+      "weight": 0.25
+    },
+    {
+      "details": {
+        "reason": "No collision-free BFS route; rollout not attempted"
+      },
+      "id": "rollout_reaches_goal",
+      "pass": false,
+      "weight": 0.3
+    }
+  ],
+  "engine": {
+    "headless": false,
+    "name": "Godot",
+    "renderer": "gl_compatibility",
+    "version": "4.7.2-stable (official)"
+  },
+  "engine_reward": 0.45,
+  "hard_pass": false,
+  "repair_hints": [
+    "Create a continuous ground corridor from [-4,0,0] to [4,0,0]; keep at least 0.80 m gap for radius-0.30 capsule plus grid/clearance margin. Move boxes blocking the middle barrier, preserve all object IDs.",
+    "Ensure the corridor is wide enough for the real CharacterBody3D capsule and does not block spawn or goal."
+  ],
+  "rollout": {
+    "goal_radius": 0.65,
+    "limitations": "Axis-aligned static boxes; ground-plane walking only; finite grid can conservatively miss narrow routes; overlap probes shrink boxes 4mm total; no aesthetics or human proxy score",
+    "max_steps": 2400,
+    "path": [],
+    "physics_hz": 60,
+    "planner": "4-neighbor BFS on physics-probed 0.25m grid; not NavMesh",
+    "reached_goal": false,
+    "steps": 0
+  },
+  "schema_version": 1
+}

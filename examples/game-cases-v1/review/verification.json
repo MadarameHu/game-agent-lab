@@ -1,0 +1,8 @@
+{
+  "fixture_only": true,
+  "reject_unknown_case": true,
+  "reject_changed_candidate": true,
+  "store_eligible_review": true,
+  "reject_duplicate_review": true,
+  "real_cases_untouched": true
+}

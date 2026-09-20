@@ -1,0 +1,17 @@
+{
+  "command": [
+    "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/work/pipeline-build/runtime/Godot.app/Contents/MacOS/Godot",
+    "--rendering-method",
+    "gl_compatibility",
+    "--path",
+    "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/outputs/game-cases-v1/cases/platformer-02/project",
+    "--script",
+    "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/outputs/game-cases-v1/cases/platformer-02/verification/render.gd",
+    "--",
+    "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/outputs/game-cases-v1/cases/platformer-02/evidence/final"
+  ],
+  "exit_code": 0,
+  "elapsed_seconds": 2.226,
+  "script_error_free": true,
+  "timeout_seconds": 30
+}

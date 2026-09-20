@@ -1,0 +1,27 @@
+[
+  {
+    "path": "scenes/main.tscn",
+    "baseline_sha256": "5138d40275304a21644a6fb3500e03a2b734e6761f8dc4c677d08781902f1122",
+    "sha256": "34cd91449dd801d2da3b446f26dda336a36aa705f6b3165e0eddcf32be5dad0b"
+  },
+  {
+    "path": "scripts/race_manager.gd",
+    "baseline_sha256": null,
+    "sha256": "83171d8454a15ab58173fe8b339f4b65cd3d52767667c8c4e77ab10d752e5faf"
+  },
+  {
+    "path": "scripts/checkpoint.gd",
+    "baseline_sha256": null,
+    "sha256": "b2b417657732a477718c594773496f088318ce68565f392e025e2d5e99239832"
+  },
+  {
+    "path": "scripts/race_hud.gd",
+    "baseline_sha256": null,
+    "sha256": "d0d8463c8f34e2c483ac5b8da09eeab73a5c602c3f2cd90fef3d30cc33b94ea4"
+  },
+  {
+    "path": "scripts/vehicle.gd",
+    "baseline_sha256": "fd33d1bb4ed3e473cab4110d64cee0ec1112ba4cf505b0d29577a1b1719e02bb",
+    "sha256": "62e93dfb82aff38e0ebcd03dabe40b5cd1f732fb5bbfad17312f906232089de1"
+  }
+]

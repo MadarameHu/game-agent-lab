@@ -1,0 +1,34 @@
+{
+  "task_id": "platformer-04",
+  "frozen_before_edits": true,
+  "checks": [
+    {
+      "id": "preservation",
+      "criterion": "All world transforms, meshes, collision resources, gameplay scripts, 14 coins and 3 falling platforms equal original; only allowed visual paths modified."
+    },
+    {
+      "id": "runtime_visuals",
+      "criterion": "Native Compatibility loads warm layered sky, warm clouds, distinct striped falling platforms, unchanged coin collection/falling mechanism and HUD."
+    },
+    {
+      "id": "hud",
+      "criterion": "1280x720 padded coin panel with original font; HUD coin update still functions; no world layout edits."
+    },
+    {
+      "id": "native_render",
+      "criterion": "Capture original spawn camera plus remote review camera; no shader errors and native 1280x720 pixels."
+    }
+  ],
+  "human_checks": [
+    "Human review dusk depth, foreground recognition, ordinary vs falling platform distinction and landing-edge clarity at spawn and remote view."
+  ],
+  "allowed_product_paths": [
+    "scenes/main-environment.tres",
+    "scenes/main.tscn",
+    "scripts/main.gd",
+    "objects/cloud.tscn",
+    "materials/"
+  ],
+  "reward": "All tested hard checks must pass; human_review/combined_reward remain null.",
+  "scope": "Current Codex implements and tests. Root audits separately; no independent reward model."
+}

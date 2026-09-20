@@ -1,0 +1,24 @@
+{
+  "case": "city-01-civic-square",
+  "source_copy_matches_except_runtime_user_settings_and_engine_import_descriptors": true,
+  "engine_rewritten_import_descriptors": [
+    "models/road-corner.glb.import",
+    "models/building-garage.glb.import",
+    "models/road-straight-lightposts.glb.import",
+    "models/road-straight.glb.import",
+    "models/grass-trees.glb.import",
+    "models/building-small-b.glb.import",
+    "models/pavement-fountain.glb.import",
+    "models/road-split.glb.import",
+    "models/grass-trees-tall.glb.import",
+    "models/building-small-a.glb.import",
+    "models/road-intersection.glb.import",
+    "models/grass.glb.import",
+    "models/building-small-d.glb.import",
+    "models/building-small-c.glb.import",
+    "models/pavement.glb.import"
+  ],
+  "native_window_observed": "Starter Kit City Builder (DEBUG)",
+  "import_success": true,
+  "human_review": null
+}

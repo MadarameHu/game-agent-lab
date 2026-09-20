@@ -1,0 +1,67 @@
+{
+  "godot_version": "4.7.2.stable.official.ed1daf0bf",
+  "checks": [
+    {
+      "name": "import",
+      "command": [
+        "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/work/pipeline-build/runtime/Godot.app/Contents/MacOS/Godot",
+        "--headless",
+        "--path",
+        "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/outputs/game-inputs-v1/bases/city-builder/project",
+        "--editor",
+        "--import"
+      ],
+      "timeout_seconds": 60,
+      "timed_out": false,
+      "returncode": 0,
+      "elapsed_seconds": 3.514,
+      "log": "import.log",
+      "error_lines": []
+    },
+    {
+      "name": "startup-180-frames",
+      "command": [
+        "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/work/pipeline-build/runtime/Godot.app/Contents/MacOS/Godot",
+        "--headless",
+        "--path",
+        "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/outputs/game-inputs-v1/bases/city-builder/project",
+        "--quit-after",
+        "180"
+      ],
+      "timeout_seconds": 60,
+      "timed_out": false,
+      "returncode": 0,
+      "elapsed_seconds": 1.392,
+      "log": "startup-180-frames.log",
+      "error_lines": [
+        "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+      ],
+      "classification": "completed_with_upstream_shutdown_resource_warnings"
+    }
+  ],
+  "scope": "Headless import and unmodified main scene startup only; no gameplay/visual certification.",
+  "sample_map_validation": {
+    "report": "sample-map-inspection.json",
+    "log": "sample-map-inspection.log",
+    "method": "External SceneTree harness loaded main.tscn and pressed load_resources for one frame",
+    "returncode": 0,
+    "default_used_cells": 0,
+    "sample_used_cells": 122,
+    "sample_cash": 5860
+  },
+  "null_ray_guard_validation": {
+    "command": [
+      "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/work/pipeline-build/runtime/Godot.app/Contents/MacOS/Godot",
+      "--headless",
+      "--path",
+      "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/outputs/game-inputs-v1/bases/city-builder/project",
+      "--script",
+      "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/work/input-build/city-builder/check_null_ray.gd"
+    ],
+    "returncode": 0,
+    "timeout_seconds": 60,
+    "log": "null-ray-guard.log",
+    "scope": "180 forced non-intersecting-ray process calls; no SCRIPT ERROR and GridMap unchanged; does not implement any brief",
+    "known_shutdown_warnings": "Upstream ObjectDB/resource cleanup warnings remain"
+  }
+}

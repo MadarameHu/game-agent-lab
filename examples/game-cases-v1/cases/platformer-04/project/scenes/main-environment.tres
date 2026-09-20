@@ -1,0 +1,22 @@
+[gd_resource type="Environment" load_steps=3 format=3 uid="uid://bqnqgflivjvue"]
+[sub_resource type="ProceduralSkyMaterial" id="Dusk"]
+sky_top_color = Color(0.25, 0.18, 0.43, 1)
+sky_horizon_color = Color(1, 0.59, 0.38, 1)
+sky_curve = 0.22
+ground_bottom_color = Color(0.34, 0.27, 0.48, 1)
+ground_horizon_color = Color(1, 0.59, 0.38, 1)
+ground_curve = 0.32
+sun_angle_max = 12.0
+sun_curve = 0.1
+[sub_resource type="Sky" id="Sky"]
+sky_material = SubResource("Dusk")
+[resource]
+background_mode = 2
+sky = SubResource("Sky")
+background_energy_multiplier = 0.8
+ambient_light_source = 2
+ambient_light_color = Color(0.82, 0.84, 1, 1)
+ambient_light_energy = 0.8
+reflected_light_source = 2
+tonemap_mode = 0
+adjustment_enabled = false

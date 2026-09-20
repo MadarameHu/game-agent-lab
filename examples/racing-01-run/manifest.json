@@ -1,0 +1,66 @@
+{
+  "task_id": "racing-01",
+  "title": "林间练习环线重排",
+  "status": "awaiting_human",
+  "agent_system": "Current Codex coding agents; not the Qwen warehouse layout service",
+  "roles": {
+    "execution": "generation_audit",
+    "verification": "generalization_audit",
+    "contract_review": "embodied_audit",
+    "orchestration": "root"
+  },
+  "human_review": null,
+  "attempts": [
+    {
+      "id": "baseline",
+      "kind": "initial_state_check",
+      "status": "requirements_not_met",
+      "evidence": "evidence/baseline-verification-v2",
+      "physical_lap": "not_run"
+    },
+    {
+      "id": "layout-v1",
+      "origin": "coding_agent",
+      "status": "automatic_checks_passed",
+      "main_sha256": "c1b7d4c3964d10a88d41536fc1df590be4be6d8173455d06734f58fab69f3ed1",
+      "evidence": "evidence/layout-v1"
+    },
+    {
+      "id": "driver-development",
+      "kind": "test_tool_correction",
+      "status": "failed_driver_then_fixed_same_scene",
+      "evidence": "verification/driver-development",
+      "note": "Waypoint detection defect corrected; no candidate scene repair or relaxed thresholds"
+    },
+    {
+      "id": "formal-final",
+      "kind": "independent_verification",
+      "status": "6_of_6_passed",
+      "evidence": "evidence/final-verification-v2",
+      "physics_steps": 3519
+    }
+  ],
+  "initial_project": "../game-inputs-v1/bases/racing/project",
+  "product_project": "project",
+  "created_at": "2026-09-19T10:23:29.077372+00:00",
+  "contract_sha256": "75eab0e5fedd27387acd3a3bb166f20eff7bc67cfe7a6a78cb03ea5542711e71",
+  "contract_history": [
+    {
+      "version": 1,
+      "sha256": "9f0850a8a52cf13bbdf765103f4b26c42e00cc569be15091faaad3e335d4fc92",
+      "before_layout_v1": true
+    },
+    {
+      "version": 2,
+      "sha256": "75eab0e5fedd27387acd3a3bb166f20eff7bc67cfe7a6a78cb03ea5542711e71",
+      "before_layout_v1": false,
+      "reason": "Task-required finish visual check omission corrected; no relaxation"
+    }
+  ],
+  "final_evidence": "evidence/layout-v1",
+  "final_verification": "evidence/final-verification-v2",
+  "trace_preview": "evidence/final/trace-preview.json",
+  "final_main_sha256": "c1b7d4c3964d10a88d41536fc1df590be4be6d8173455d06734f58fab69f3ed1",
+  "engine_reward": 1,
+  "combined_reward": null
+}

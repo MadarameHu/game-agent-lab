@@ -1,0 +1,55 @@
+[
+  {
+    "command": [
+      "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/work/pipeline-build/runtime/Godot.app/Contents/MacOS/Godot",
+      "--headless",
+      "--editor",
+      "--import",
+      "--quit",
+      "--path",
+      "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/outputs/game-cases-v1/cases/racing-04/project"
+    ],
+    "exit_code": 0,
+    "timed_out": false,
+    "wall_seconds": 2.784,
+    "log": "import-v1.log",
+    "script_error": false
+  },
+  {
+    "command": [
+      "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/work/pipeline-build/runtime/Godot.app/Contents/MacOS/Godot",
+      "--headless",
+      "--path",
+      "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/outputs/game-cases-v1/cases/racing-04/project",
+      "--fixed-fps",
+      "60",
+      "--script",
+      "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/outputs/game-cases-v1/cases/racing-04/verification/behavior.gd",
+      "--",
+      "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/outputs/game-cases-v1/cases/racing-04/evidence/final/behavior.json"
+    ],
+    "exit_code": 0,
+    "timed_out": false,
+    "wall_seconds": 0.437,
+    "log": "behavior-v1.log",
+    "script_error": false
+  },
+  {
+    "command": [
+      "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/work/pipeline-build/runtime/Godot.app/Contents/MacOS/Godot",
+      "--path",
+      "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/outputs/game-cases-v1/cases/racing-04/project",
+      "--rendering-method",
+      "gl_compatibility",
+      "--script",
+      "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/outputs/game-cases-v1/cases/racing-04/verification/render.gd",
+      "--",
+      "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/outputs/game-cases-v1/cases/racing-04/evidence/final"
+    ],
+    "exit_code": 0,
+    "timed_out": false,
+    "wall_seconds": 2.205,
+    "log": "native-render.log",
+    "script_error": false
+  }
+]

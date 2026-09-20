@@ -1,0 +1,240 @@
+{
+  "checks": [
+    {
+      "details": {
+        "fixture": "Original product player and original collider; test-only flat floor",
+        "position": "(0.0, -0.048872, 0.0)"
+      },
+      "id": "fixture_grounded",
+      "pass": true
+    },
+    {
+      "details": {
+        "coyote_at_press": 0.0533333333333333,
+        "delay_ticks_after_walkoff": 4,
+        "first_gravity": -6.58333333333333,
+        "remaining_air_jump": true,
+        "second_gravity": -6.58333333333333,
+        "seconds_after_walkoff": 0.0833333333333333,
+        "third_gravity": -4.91666666666667,
+        "walk_off_ticks": 37
+      },
+      "id": "coyote_inside",
+      "pass": true
+    },
+    {
+      "details": {
+        "fixture": "Original product player and original collider; test-only flat floor",
+        "position": "(0.0, -0.048872, 0.0)"
+      },
+      "id": "fixture_grounded",
+      "pass": true
+    },
+    {
+      "details": {
+        "coyote_at_press": 0.0,
+        "delay_ticks_after_walkoff": 9,
+        "first_gravity": -6.58333333333333,
+        "remaining_air_jump": false,
+        "second_gravity": -4.91666666666667,
+        "seconds_after_walkoff": 0.166666666666667,
+        "third_gravity": -3.25,
+        "walk_off_ticks": 37
+      },
+      "id": "coyote_outside",
+      "pass": true
+    },
+    {
+      "details": {
+        "fixture": "Original product player and original collider; test-only flat floor",
+        "position": "(0.0, -0.048872, 0.0)"
+      },
+      "id": "fixture_grounded",
+      "pass": true
+    },
+    {
+      "details": {
+        "coyote_at_press": 0.02,
+        "delay_ticks_after_walkoff": 6,
+        "first_gravity": -6.58333333333333,
+        "remaining_air_jump": true,
+        "second_gravity": -6.58333333333333,
+        "seconds_after_walkoff": 0.116666666666667,
+        "third_gravity": -4.91666666666667,
+        "walk_off_ticks": 37
+      },
+      "id": "coyote_inside",
+      "pass": true
+    },
+    {
+      "details": {
+        "fixture": "Original product player and original collider; test-only flat floor",
+        "position": "(0.0, -0.048872, 0.0)"
+      },
+      "id": "fixture_grounded",
+      "pass": true
+    },
+    {
+      "details": {
+        "coyote_at_press": 0.00333333333333335,
+        "delay_ticks_after_walkoff": 7,
+        "first_gravity": -6.58333333333333,
+        "remaining_air_jump": false,
+        "second_gravity": -4.91666666666667,
+        "seconds_after_walkoff": 0.133333333333333,
+        "third_gravity": -3.25,
+        "walk_off_ticks": 37
+      },
+      "id": "coyote_outside",
+      "pass": true
+    },
+    {
+      "details": {
+        "fixture": "Original product player and original collider; test-only flat floor",
+        "position": "(0.0, -0.048872, 0.0)"
+      },
+      "id": "fixture_grounded",
+      "pass": true
+    },
+    {
+      "details": {
+        "gravity": -6.58333333333333
+      },
+      "id": "normal_double_jump",
+      "pass": true
+    },
+    {
+      "details": {
+        "gravity": -7,
+        "input": "fresh Input press after exhausting both actual jumps",
+        "landing_jump": true,
+        "processed_press_to_landing_seconds": 0.0666666666666667,
+        "target_flight_seconds": 0.1
+      },
+      "id": "buffer_inside",
+      "pass": true
+    },
+    {
+      "details": {
+        "after": -4.91666666666667,
+        "gravity_before": -5.33333333333333
+      },
+      "id": "buffer_no_third_jump",
+      "pass": true
+    },
+    {
+      "details": {
+        "fixture": "Original product player and original collider; test-only flat floor",
+        "position": "(0.0, -0.048872, 0.0)"
+      },
+      "id": "fixture_grounded",
+      "pass": true
+    },
+    {
+      "details": {
+        "gravity": -6.58333333333333
+      },
+      "id": "normal_double_jump",
+      "pass": true
+    },
+    {
+      "details": {
+        "gravity": 8.41666666666667,
+        "input": "fresh Input press after exhausting both actual jumps",
+        "landing_jump": false,
+        "processed_press_to_landing_seconds": 0.2,
+        "target_flight_seconds": 0.23
+      },
+      "id": "buffer_outside",
+      "pass": true
+    },
+    {
+      "details": {
+        "fixture": "Original product player and original collider; test-only flat floor",
+        "position": "(0.0, -0.048872, 0.0)"
+      },
+      "id": "fixture_grounded",
+      "pass": true
+    },
+    {
+      "details": {
+        "gravity": -6.58333333333333
+      },
+      "id": "normal_double_jump",
+      "pass": true
+    },
+    {
+      "details": {
+        "gravity": -7,
+        "input": "fresh Input press after exhausting both actual jumps",
+        "landing_jump": true,
+        "processed_press_to_landing_seconds": 0.116666666666667,
+        "target_flight_seconds": 0.145
+      },
+      "id": "buffer_inside",
+      "pass": true
+    },
+    {
+      "details": {
+        "after": -4.91666666666667,
+        "gravity_before": -5.33333333333333
+      },
+      "id": "buffer_no_third_jump",
+      "pass": true
+    },
+    {
+      "details": {
+        "fixture": "Original product player and original collider; test-only flat floor",
+        "position": "(0.0, -0.048872, 0.0)"
+      },
+      "id": "fixture_grounded",
+      "pass": true
+    },
+    {
+      "details": {
+        "gravity": -6.58333333333333
+      },
+      "id": "normal_double_jump",
+      "pass": true
+    },
+    {
+      "details": {
+        "gravity": 8.41666666666667,
+        "input": "fresh Input press after exhausting both actual jumps",
+        "landing_jump": false,
+        "processed_press_to_landing_seconds": 0.183333333333333,
+        "target_flight_seconds": 0.205
+      },
+      "id": "buffer_outside",
+      "pass": true
+    },
+    {
+      "details": {
+        "fixture": "Original product player and original collider; test-only flat floor",
+        "position": "(0.0, -0.048872, 0.0)"
+      },
+      "id": "fixture_grounded",
+      "pass": true
+    },
+    {
+      "details": {
+        "gravity": 0,
+        "held_seconds": 1.66666666666667,
+        "on_floor": true
+      },
+      "id": "hold_no_autojump",
+      "pass": true
+    },
+    {
+      "details": {
+        "jump": 7,
+        "speed": 250
+      },
+      "id": "parameters",
+      "pass": true
+    }
+  ],
+  "note": "Input.action_press/release drives original product physics; fixture changes only test floor and spawn.",
+  "pass": true,
+  "physics_ticks_per_second": 60
+}

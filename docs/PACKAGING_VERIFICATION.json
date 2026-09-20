@@ -1,0 +1,30 @@
+{
+  "date": "2026-09-20",
+  "scope": "Repository packaging and portability, not full behavioral re-evaluation",
+  "staged_export": {
+    "cases": 12,
+    "historical_checks_referenced": 101,
+    "local_links": 259,
+    "historical_integrity": "verified",
+    "viewer_backend_tests_passed": 6,
+    "warehouse_review_tests_passed": 9
+  },
+  "javascript_syntax": "passed",
+  "godot_smoke": {
+    "version": "4.7.2",
+    "case": "racing-04",
+    "isolated_copy": true,
+    "import_exit_code": 0,
+    "runtime_frames": 180,
+    "runtime_exit_code": 0,
+    "script_errors": false,
+    "limitation": "At exit, Godot reports 8 leaked ObjectDB instances and 4 resources still in use. Not treated as a clean full gameplay regression."
+  },
+  "packaging": {
+    "credential_pattern_scan": "No matches for private-key, GitHub-token or OpenAI-key patterns; not a guarantee against every secret format",
+    "files_over_50MB": 0,
+    "runtime_caches_sessions_weights_excluded": true
+  },
+  "remote_deployment_tested": false,
+  "new_model_calls": 0
+}

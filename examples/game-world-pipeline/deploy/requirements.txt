@@ -1,0 +1,5 @@
+# Task-local overrides. Reuses host torch 2.10.0+cu128 with --system-site-packages.
+transformers==4.57.6
+huggingface-hub==0.36.0
+tokenizers==0.22.2
+numpy==1.26.4

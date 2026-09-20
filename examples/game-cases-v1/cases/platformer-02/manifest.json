@@ -1,0 +1,44 @@
+{
+  "id": "platformer-02",
+  "title": "给装饰旗帜加入金币门槛与通关流程",
+  "status": "awaiting_human",
+  "human_review": null,
+  "engine_reward": 1,
+  "agent_system": "Current Codex agents; no separate reward model",
+  "attempts": [
+    {
+      "evidence": "evidence/native-success",
+      "exit_code": 0
+    },
+    {
+      "evidence": "evidence/behavior-02",
+      "exit_code": 0
+    },
+    {
+      "evidence": "evidence/native-final",
+      "exit_code": 0
+    },
+    {
+      "evidence": "evidence/import",
+      "exit_code": 0
+    },
+    {
+      "evidence": "evidence/behavior-01",
+      "exit_code": 0
+    },
+    {
+      "id": "root-ui-fix",
+      "status": "passed",
+      "issue": "Success panel was clipped; centered and verified actual click",
+      "evidence": "evidence/root-ui-fix"
+    }
+  ],
+  "contract_sha256": "5f2ef68a89f06f956dc30e47abf464848b43e0e9d734f060438bde7d458f5330",
+  "combined_reward": null,
+  "final_evidence": "evidence/final",
+  "checks": "evidence/final/result.json",
+  "play": {
+    "mode": "project"
+  },
+  "summary": "8币解锁旗帜目标、实时进度、一次性结算及完整重开均已完成。"
+}

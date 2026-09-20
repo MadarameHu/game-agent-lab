@@ -1,0 +1,50 @@
+{
+  "verified_at": "2026-09-19",
+  "runs": [
+    {
+      "run_id": "warehouse-generate-01",
+      "candidate_id": "001-model",
+      "origin": "model",
+      "engine_reward": 1.0,
+      "hard_pass": true,
+      "physics_steps": 128,
+      "scene_sha256": "46fddfec5d196f6d9eaa47d28bc715d245d96e6763e60487b3e34a46a59e0a23"
+    },
+    {
+      "run_id": "warehouse-repair-01",
+      "candidate_id": "000-blocked-fixture",
+      "origin": "fixture",
+      "engine_reward": 0.45,
+      "hard_pass": false,
+      "physics_steps": 0,
+      "scene_sha256": "de6472efd68186f61ade2e6dffe76d03f735403c0eaff7c6b3d7ffdc4b1bed93"
+    },
+    {
+      "run_id": "warehouse-repair-01",
+      "candidate_id": "001-model",
+      "origin": "model",
+      "engine_reward": 1.0,
+      "hard_pass": true,
+      "physics_steps": 176,
+      "scene_sha256": "e1e59dfd7c192efe17f98ca211d446dcaf6218b8949d1159af39bb1a45e7bef7"
+    }
+  ],
+  "review_unit_tests": {
+    "passed": 9,
+    "real_human_reviews_submitted": 0
+  },
+  "native_play_ui": {
+    "launch_button": "pass",
+    "short_key_movement": "pass",
+    "reset_to_spawn": "pass",
+    "escape_exit": "pass"
+  },
+  "human_status": "pending",
+  "training_updates": 0,
+  "headless_recheck": {
+    "path": "runs/warehouse-repair-01/rechecks/20260919-172136-843255/checks.json",
+    "hard_pass": true,
+    "engine_reward": 1.0,
+    "physics_steps": 176
+  }
+}

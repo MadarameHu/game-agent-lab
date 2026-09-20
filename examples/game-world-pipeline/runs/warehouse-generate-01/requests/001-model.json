@@ -1,0 +1,15 @@
+{
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are a spatial layout assistant editing a small executable 3D warehouse scene.\nReturn ONLY a JSON object: {\"moves\":[{\"id\":\"crate_03\",\"position\":[x,0,z]}],\"reason\":\"short explanation\"}.\nDo not emit code or markdown. You may only move existing objects; do not resize, delete, add or rotate them.\nCoordinates are meters; X east/west, Z north/south, Y vertical. position Y is bottom and must remain zero.\nRoom inner rectangle: X [-6,6], Z [-5,5]. Player center starts at [-4,0,0] and must WALK to [4,0,0].\nUse the object's entire box dimensions for boundaries and overlaps. Leave at least 0.8m wide continuous paths\nfor a radius .30m capsule. Keep start/goal clear. Avoid placing crates on top of each other.\nThe engine, not you, determines success. A smaller change is preferable when repairing.\n"
+    },
+    {
+      "role": "user",
+      "content": "{\"operation\": \"generate\", \"brief\": \"布置一个可穿行的仓库房间，保留六个箱子，玩家从西侧绿色出生点走到东侧金色出口。箱子不得越墙、相互穿透或堵住唯一通路。\", \"scene\": {\"schema_version\": 1, \"brief\": \"布置一个可穿行的仓库房间，保留六个箱子，玩家从西侧绿色出生点走到东侧金色出口。箱子不得越墙、相互穿透或堵住唯一通路。\", \"room\": {\"width\": 12, \"depth\": 10, \"height\": 3}, \"player\": {\"position\": [-4, 0, 0], \"radius\": 0.3, \"height\": 1.6}, \"goal\": {\"position\": [4, 0, 0], \"radius\": 0.65}, \"objects\": [{\"id\": \"crate_01\", \"asset\": \"crate\", \"position\": [0, 0, 0], \"size\": [1.2, 1.2, 2.0], \"rotation_y\": 0}, {\"id\": \"crate_02\", \"asset\": \"crate\", \"position\": [0, 0, 0], \"size\": [1.2, 1.2, 2.0], \"rotation_y\": 0}, {\"id\": \"crate_03\", \"asset\": \"crate\", \"position\": [0, 0, 0], \"size\": [1.2, 1.2, 2.0], \"rotation_y\": 0}, {\"id\": \"crate_04\", \"asset\": \"crate\", \"position\": [0, 0, 0], \"size\": [1.2, 1.2, 2.0], \"rotation_y\": 0}, {\"id\": \"crate_05\", \"asset\": \"crate\", \"position\": [0, 0, 0], \"size\": [1.2, 1.2, 2.0], \"rotation_y\": 0}, {\"id\": \"crate_06\", \"asset\": \"crate\", \"position\": [0, 0, 0], \"size\": [1.2, 1.2, 1.2], \"rotation_y\": 0}]}, \"instruction\": \"Generate a fresh arrangement: return a position for ALL SIX objects. Catalogue positions are placeholders. Keep a clear central east-west corridor. Arrange storage along the room perimeter with space between boxes.\"}"
+    }
+  ],
+  "max_new_tokens": 2048,
+  "temperature": 0,
+  "request_id": "warehouse-generate-01-001-model"
+}

@@ -1,0 +1,31 @@
+{
+  "checks": [
+    {
+      "details": {},
+      "id": "startup",
+      "pass": true,
+      "summary": "Direct startup loads149 cells and unchanged5860 balance"
+    },
+    {
+      "details": {},
+      "id": "original-cells",
+      "pass": true,
+      "summary": "All122 original cells and orientations preserved"
+    },
+    {
+      "details": {
+        "added": 27,
+        "connected": 27
+      },
+      "id": "layout",
+      "pass": true,
+      "summary": "27 connected additions, two house types, layered planting and paved entry"
+    },
+    {
+      "details": {},
+      "id": "build-controls",
+      "pass": true,
+      "summary": "Q/E selection,90-degree rotation,build with exact charge,demolish,F3 sample reset"
+    }
+  ]
+}

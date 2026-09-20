@@ -1,0 +1,53 @@
+{
+  "moves": [
+    {
+      "id": "crate_01",
+      "position": [
+        -3,
+        0,
+        -2
+      ]
+    },
+    {
+      "id": "crate_02",
+      "position": [
+        3,
+        0,
+        -2
+      ]
+    },
+    {
+      "id": "crate_03",
+      "position": [
+        -3,
+        0,
+        2
+      ]
+    },
+    {
+      "id": "crate_04",
+      "position": [
+        3,
+        0,
+        2
+      ]
+    },
+    {
+      "id": "crate_05",
+      "position": [
+        -1,
+        0,
+        -4
+      ]
+    },
+    {
+      "id": "crate_06",
+      "position": [
+        1,
+        0,
+        4
+      ]
+    }
+  ],
+  "reason": "This arrangement keeps all six crates within the room bounds, avoids overlapping, and maintains a clear central corridor for movement."
+}

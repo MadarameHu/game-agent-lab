@@ -1,0 +1,77 @@
+{
+  "checks": {
+    "project_loads": true,
+    "protected_gameplay": true,
+    "closed_track": true,
+    "required_geometry": true,
+    "spawn_and_decor": true,
+    "physical_lap": true
+  },
+  "engine_reward": 1,
+  "human_review": null,
+  "combined_reward": null,
+  "protected_file_differences": [],
+  "main_outside_gridmap_unchanged": true,
+  "physical_lap_status": "stock_physics_lap_pass",
+  "source_main_sha256": "c1b7d4c3964d10a88d41536fc1df590be4be6d8173455d06734f58fab69f3ed1",
+  "driver_sha256": "f10cde1068171691ca366efbe75086161f879832b7895af9b5dd3847161ff079",
+  "checker_sha256": "db2056780497e5f1991fb4e0efa2e6a3674d7595d76b16dffc6c649327101d6a",
+  "contract_sha256": "9f0850a8a52cf13bbdf765103f4b26c42e00cc569be15091faaad3e335d4fc92",
+  "snapshot": "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/work/racing-01/validator/cases/dev002/project_1789813791756888000",
+  "commands": [
+    {
+      "command": [
+        "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/work/pipeline-build/runtime/Godot.app/Contents/MacOS/Godot",
+        "--headless",
+        "--editor",
+        "--import",
+        "--path",
+        "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/work/racing-01/validator/cases/dev002/project_1789813791756888000"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "wall_seconds": 2.9232155,
+      "log": "import.log"
+    },
+    {
+      "command": [
+        "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/work/pipeline-build/runtime/Godot.app/Contents/MacOS/Godot",
+        "--headless",
+        "--path",
+        "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/work/racing-01/validator/cases/dev002/project_1789813791756888000",
+        "--quit-after",
+        "5",
+        "--script",
+        "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/outputs/racing-01-run/verification/inspect_scene.gd",
+        "--",
+        "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/work/racing-01/validator/dev002/scene_metadata.json"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "wall_seconds": 0.29249550000000024,
+      "log": "inspect.log"
+    },
+    {
+      "command": [
+        "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/work/pipeline-build/runtime/Godot.app/Contents/MacOS/Godot",
+        "--headless",
+        "--path",
+        "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/work/racing-01/validator/cases/dev002/project_1789813791756888000",
+        "--fixed-fps",
+        "60",
+        "--quit-after",
+        "18100",
+        "--script",
+        "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/outputs/racing-01-run/verification/drive_lap.gd",
+        "--",
+        "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/work/racing-01/validator/dev002/route.json",
+        "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/work/racing-01/validator/dev002"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "wall_seconds": 0.9196245420000002,
+      "log": "drive.log"
+    }
+  ],
+  "note": "Failure of one bounded input-only test driver is not proof that a human cannot drive the course."
+}

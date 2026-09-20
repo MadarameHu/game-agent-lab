@@ -1,0 +1,48 @@
+{
+  "godot_version": "4.7.2.stable.official.ed1daf0bf",
+  "runs": [
+    {
+      "name": "import",
+      "command": [
+        "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/work/pipeline-build/runtime/Godot.app/Contents/MacOS/Godot",
+        "--headless",
+        "--editor",
+        "--import",
+        "--path",
+        "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/outputs/game-inputs-v1/bases/racing/project"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "seconds": 2.512,
+      "log": "validation/import.log",
+      "errors": [
+        "ERROR: 1 RID allocations of type 'N13RendererDummy15MaterialStorage11DummyShaderE' were leaked at exit."
+      ]
+    },
+    {
+      "name": "runtime_180_frames",
+      "command": [
+        "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/work/pipeline-build/runtime/Godot.app/Contents/MacOS/Godot",
+        "--headless",
+        "--path",
+        "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/outputs/game-inputs-v1/bases/racing/project",
+        "--quit-after",
+        "180",
+        "--fixed-fps",
+        "60"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "seconds": 0.247,
+      "log": "validation/runtime_180_frames.log",
+      "errors": [
+        "ERROR: 1 RID allocations of type 'N13RendererDummy15MaterialStorage11DummyShaderE' were leaked at exit.",
+        "ERROR: 6 resources still in use at exit (run with --verbose for details)."
+      ]
+    }
+  ],
+  "limitations": [
+    "headless only; no visual inspection or human driving test",
+    "180 process frames with fixed fps 60, no synthetic inputs"
+  ]
+}

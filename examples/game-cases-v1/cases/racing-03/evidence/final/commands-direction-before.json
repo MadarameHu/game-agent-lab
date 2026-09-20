@@ -1,0 +1,21 @@
+[
+  {
+    "command": [
+      "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/work/pipeline-build/runtime/Godot.app/Contents/MacOS/Godot",
+      "--headless",
+      "--path",
+      "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/outputs/game-cases-v1/cases/racing-03/project",
+      "--fixed-fps",
+      "60",
+      "--script",
+      "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/outputs/game-cases-v1/cases/racing-03/verification/behavior.gd",
+      "--",
+      "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/outputs/game-cases-v1/cases/racing-03/evidence/final/behavior-direction-before.json"
+    ],
+    "exit_code": 2,
+    "timed_out": false,
+    "wall_seconds": 0.369,
+    "log": "behavior-direction-before.log",
+    "script_error": false
+  }
+]

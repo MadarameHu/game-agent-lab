@@ -1,0 +1,70 @@
+{
+  "id": "racing-04",
+  "title": "把摩托车接入主场景并支持停车换车",
+  "status": "awaiting_human",
+  "human_review": null,
+  "engine_reward": 1,
+  "agent_system": "Current Codex agents; no separate reward model",
+  "attempts": [
+    {
+      "command": [
+        "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/work/pipeline-build/runtime/Godot.app/Contents/MacOS/Godot",
+        "--headless",
+        "--editor",
+        "--import",
+        "--quit",
+        "--path",
+        "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/outputs/game-cases-v1/cases/racing-04/project"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "wall_seconds": 2.784,
+      "log": "import-v1.log",
+      "script_error": false
+    },
+    {
+      "command": [
+        "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/work/pipeline-build/runtime/Godot.app/Contents/MacOS/Godot",
+        "--headless",
+        "--path",
+        "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/outputs/game-cases-v1/cases/racing-04/project",
+        "--fixed-fps",
+        "60",
+        "--script",
+        "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/outputs/game-cases-v1/cases/racing-04/verification/behavior.gd",
+        "--",
+        "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/outputs/game-cases-v1/cases/racing-04/evidence/final/behavior.json"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "wall_seconds": 0.437,
+      "log": "behavior-v1.log",
+      "script_error": false
+    },
+    {
+      "command": [
+        "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/work/pipeline-build/runtime/Godot.app/Contents/MacOS/Godot",
+        "--path",
+        "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/outputs/game-cases-v1/cases/racing-04/project",
+        "--rendering-method",
+        "gl_compatibility",
+        "--script",
+        "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/outputs/game-cases-v1/cases/racing-04/verification/render.gd",
+        "--",
+        "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/outputs/game-cases-v1/cases/racing-04/evidence/final"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "wall_seconds": 2.205,
+      "log": "native-render.log",
+      "script_error": false
+    }
+  ],
+  "contract_sha256": "cf2bc6a3109bac76836bfb1d64180bb7ae061aec6e58223a2353c8ec7ce16c21",
+  "final_evidence": "evidence/final",
+  "checks": "evidence/final/result.json",
+  "play": {
+    "mode": "project"
+  },
+  "summary": "默认摩托车，Tab停车切换黄色卡车，镜头/HUD绑定及行驶拒绝提示。"
+}

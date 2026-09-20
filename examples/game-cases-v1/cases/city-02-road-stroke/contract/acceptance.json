@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "task_id": "city-02-road-stroke",
+  "task_sha256": "f1e6cf6bad31ba4a64f11592efc7665efe36969320c815f7a43866324f5ad544",
+  "frozen_before_product_edits": true,
+  "hard_checks": [
+    {
+      "id": "startup",
+      "expect": "122 exact official cells, cash5860; road mode visible before drag"
+    },
+    {
+      "id": "stroke-preview-commit",
+      "expect": "Real left-down/motion/release creates full connected turning preview without mutation until release; once committed price charges each new cell once"
+    },
+    {
+      "id": "stroke-cancel-conflict",
+      "expect": "Esc cancels no grid/cash mutation; any occupied nonroad cell blocks entire stroke with visible explanation"
+    },
+    {
+      "id": "single-build-controls",
+      "expect": "Buildings/landscape retain single-cell building; Q/E selection and right rotation available"
+    },
+    {
+      "id": "preservation-files",
+      "expect": "Official map,15 model prices/indexes/licenses unmodified"
+    },
+    {
+      "id": "native-render",
+      "expect": "Normal122-cell startup and visible road mode captured"
+    }
+  ],
+  "human_checks": [
+    "Human drag a turn, assess ghost preview clarity, confirm controls feel familiar"
+  ],
+  "preservation": [
+    "保留官方素材许可证与字体许可证。",
+    "保留原有15种结构资源及其索引语义，已有地图仍可加载。",
+    "除本任务明确要求外，保留建造、拆除、90度旋转、相机移动/旋转/缩放、F1/F2/F3基本能力。",
+    "任务从加载官方sample map后的城市状态开始，不把空场景或宣传截图当作实际初始地图。",
+    "未确认拖动前不得修改示例地图或余额；取消后恢复原状态。",
+    "不要事先替用户在输入地图中铺好道路来冒充新增工具。"
+  ],
+  "reward": "1 iff all hard checks pass, human review remains null",
+  "scope": "Implementer behavioral verification; independent root audit pending"
+}

@@ -1,0 +1,203 @@
+{
+  "Starter-Kit-Match-3": {
+    "summary": {
+      "repo": "Starter-Kit-Match-3",
+      "commit": "4ddb3d2a50cbf247c79cafe9e7884d7d8f99c012",
+      "files": 47,
+      "scripts": [
+        "scripts/audio.gd",
+        "scripts/main.gd",
+        "scripts/particles.gd",
+        "scripts/tile.gd"
+      ],
+      "scenes": [
+        "scenes/main.tscn",
+        "scenes/sparkles.tscn",
+        "scenes/tile.tscn"
+      ],
+      "assets": [
+        "icon.png",
+        "screenshots/screenshot.png",
+        "sounds/tile-land.ogg",
+        "sounds/tile-match.ogg",
+        "sounds/tile-swap.ogg",
+        "splash-screen.png",
+        "sprites/backgrounds/background.png",
+        "sprites/cursors/cursor-hand-closed.png",
+        "sprites/cursors/cursor-hand-open.png",
+        "sprites/particles/sparkle.png",
+        "sprites/tiles/tile-gem.png",
+        "sprites/tiles/tile-godot.png",
+        "sprites/tiles/tile-grass.png",
+        "sprites/tiles/tile-kenney.png",
+        "sprites/tiles/tile-spikes.png"
+      ],
+      "license_files": [
+        "LICENSE"
+      ]
+    },
+    "inspected_files": [
+      {
+        "path": "LICENSE",
+        "sha256": "00e5cd803d4d48086b0e698597aa17e3cceb2020be3fe5c7baf24cb8a92d44af",
+        "url": "https://github.com/KenneyNL/Starter-Kit-Match-3/blob/4ddb3d2a50cbf247c79cafe9e7884d7d8f99c012/LICENSE"
+      },
+      {
+        "path": "README.md",
+        "sha256": "c1e10c2f603c7cd44180ac3a0107961b300d413c1572c0c6653a88253d1fe271",
+        "url": "https://github.com/KenneyNL/Starter-Kit-Match-3/blob/4ddb3d2a50cbf247c79cafe9e7884d7d8f99c012/README.md"
+      },
+      {
+        "path": "project.godot",
+        "sha256": "ce09e380a54e66dff1f87bb1d59942daf27de74397c13d9b7c8fbe0bf91754b4",
+        "url": "https://github.com/KenneyNL/Starter-Kit-Match-3/blob/4ddb3d2a50cbf247c79cafe9e7884d7d8f99c012/project.godot"
+      },
+      {
+        "path": "scripts/particles.gd",
+        "sha256": "9a501366d3e806fcafc3cbabdf48394855e476f38fd38b91a6e35aea6bf48c37",
+        "url": "https://github.com/KenneyNL/Starter-Kit-Match-3/blob/4ddb3d2a50cbf247c79cafe9e7884d7d8f99c012/scripts/particles.gd"
+      },
+      {
+        "path": "scripts/audio.gd",
+        "sha256": "fd380aec02dae9f59144bb159c3af7c56abd9c2a9bea76b0e1fd3581a550aeee",
+        "url": "https://github.com/KenneyNL/Starter-Kit-Match-3/blob/4ddb3d2a50cbf247c79cafe9e7884d7d8f99c012/scripts/audio.gd"
+      },
+      {
+        "path": "scripts/main.gd",
+        "sha256": "e6220c0651194dd8d66909ddc97c5f13d014e43de1e1a370aff8d2eb6ea2222d",
+        "url": "https://github.com/KenneyNL/Starter-Kit-Match-3/blob/4ddb3d2a50cbf247c79cafe9e7884d7d8f99c012/scripts/main.gd"
+      },
+      {
+        "path": "scripts/tile.gd",
+        "sha256": "ff2c9f1e1033267991a19e0319e29dbec074e09bd97ec423f4c65ea2116b3f52",
+        "url": "https://github.com/KenneyNL/Starter-Kit-Match-3/blob/4ddb3d2a50cbf247c79cafe9e7884d7d8f99c012/scripts/tile.gd"
+      }
+    ],
+    "main_scene_uid_verified": true,
+    "runtime_tested": false
+  },
+  "Starter-Kit-FPS": {
+    "summary": {
+      "repo": "Starter-Kit-FPS",
+      "commit": "185fd2326d74a5cf858cffc616f87cf9696f9cc0",
+      "files": 102,
+      "scripts": [
+        "objects/cloud.gd",
+        "objects/enemy.gd",
+        "objects/impact.gd",
+        "objects/player.gd",
+        "scripts/audio.gd",
+        "scripts/hud.gd",
+        "scripts/weapon.gd"
+      ],
+      "scenes": [
+        "objects/blaster.tscn",
+        "objects/cloud.tscn",
+        "objects/enemy.tscn",
+        "objects/impact.tscn",
+        "objects/platform.tscn",
+        "objects/platform_large_grass.tscn",
+        "objects/player.tscn",
+        "objects/wall_high.tscn",
+        "objects/wall_low.tscn",
+        "scenes/main.tscn"
+      ],
+      "assets": [
+        "icon.png",
+        "models/Textures/colormap.png",
+        "models/blaster-repeater.glb",
+        "models/blaster.glb",
+        "models/cloud.glb",
+        "models/enemy-flying.glb",
+        "models/grass-small.glb",
+        "models/grass.glb",
+        "models/platform-large-grass.glb",
+        "models/platform.glb",
+        "models/wall-high.glb",
+        "models/wall-low.glb",
+        "screenshots/screenshot.png",
+        "sounds/blaster.ogg",
+        "sounds/blaster_repeater.ogg",
+        "sounds/enemy_attack.ogg",
+        "sounds/enemy_destroy.ogg",
+        "sounds/enemy_hurt.ogg",
+        "sounds/jump_a.ogg",
+        "sounds/jump_b.ogg",
+        "sounds/jump_c.ogg",
+        "sounds/land.ogg",
+        "sounds/walking.ogg",
+        "sounds/weapon_change.ogg",
+        "splash-screen.png",
+        "sprites/blob_shadow.png",
+        "sprites/burst.png",
+        "sprites/crosshair-repeater.png",
+        "sprites/crosshair.png",
+        "sprites/hit.png",
+        "sprites/skybox.png"
+      ],
+      "license_files": [
+        "LICENSE.md",
+        "fonts/license.txt"
+      ]
+    },
+    "inspected_files": [
+      {
+        "path": "LICENSE.md",
+        "sha256": "8e99e4045f71bb96d77a1765c815511c63c9f9185bfada2b8917e041ced00754",
+        "url": "https://github.com/KenneyNL/Starter-Kit-FPS/blob/185fd2326d74a5cf858cffc616f87cf9696f9cc0/LICENSE.md"
+      },
+      {
+        "path": "README.md",
+        "sha256": "69d77c39c3c05692b6a0ddbc626615d403421ab3c7b884b0a5ad4ae90368c02a",
+        "url": "https://github.com/KenneyNL/Starter-Kit-FPS/blob/185fd2326d74a5cf858cffc616f87cf9696f9cc0/README.md"
+      },
+      {
+        "path": "project.godot",
+        "sha256": "c5a7d4c134b386edaccdfb2ec9abf59d4086ef0c6773957f06e6e5c71052c41c",
+        "url": "https://github.com/KenneyNL/Starter-Kit-FPS/blob/185fd2326d74a5cf858cffc616f87cf9696f9cc0/project.godot"
+      },
+      {
+        "path": "objects/player.gd",
+        "sha256": "1ec541ac2fdb9c85f6d5327ba68fda119a6db95826b5eb1633f2dc6fa314e6c3",
+        "url": "https://github.com/KenneyNL/Starter-Kit-FPS/blob/185fd2326d74a5cf858cffc616f87cf9696f9cc0/objects/player.gd"
+      },
+      {
+        "path": "objects/enemy.gd",
+        "sha256": "77a893496781de3d04c0b4fbda77ea26474f850cf5d9378f8eeca15cc1499b49",
+        "url": "https://github.com/KenneyNL/Starter-Kit-FPS/blob/185fd2326d74a5cf858cffc616f87cf9696f9cc0/objects/enemy.gd"
+      },
+      {
+        "path": "objects/impact.gd",
+        "sha256": "e59d8e0c5f1f6f47aa3bb58c3967a496c0aaed79cfe7e483bb5e6b26298c7541",
+        "url": "https://github.com/KenneyNL/Starter-Kit-FPS/blob/185fd2326d74a5cf858cffc616f87cf9696f9cc0/objects/impact.gd"
+      },
+      {
+        "path": "objects/cloud.gd",
+        "sha256": "56506ee2963aa9046e6a285f333d5a222821ad59b674215af7704db25c66a18c",
+        "url": "https://github.com/KenneyNL/Starter-Kit-FPS/blob/185fd2326d74a5cf858cffc616f87cf9696f9cc0/objects/cloud.gd"
+      },
+      {
+        "path": "scripts/hud.gd",
+        "sha256": "7ed154c436f33091360ae5431c1ff54c30b5af259b6c387a0239a19012d5b0e2",
+        "url": "https://github.com/KenneyNL/Starter-Kit-FPS/blob/185fd2326d74a5cf858cffc616f87cf9696f9cc0/scripts/hud.gd"
+      },
+      {
+        "path": "scripts/weapon.gd",
+        "sha256": "747fedb31c73db5c131435729247b5ac1c6ac2d3882d3d1811c5c48f89a8a04f",
+        "url": "https://github.com/KenneyNL/Starter-Kit-FPS/blob/185fd2326d74a5cf858cffc616f87cf9696f9cc0/scripts/weapon.gd"
+      },
+      {
+        "path": "scripts/audio.gd",
+        "sha256": "bc2d980d12a7d6f6cd3b23b18d5e1d24234ae44af75484a2068be98c7409c709",
+        "url": "https://github.com/KenneyNL/Starter-Kit-FPS/blob/185fd2326d74a5cf858cffc616f87cf9696f9cc0/scripts/audio.gd"
+      },
+      {
+        "path": "fonts/license.txt",
+        "sha256": "31d45880a38de46bc81835329c0c7d964609751e65add92769ea0095ad92c05b",
+        "url": "https://github.com/KenneyNL/Starter-Kit-FPS/blob/185fd2326d74a5cf858cffc616f87cf9696f9cc0/fonts/license.txt"
+      }
+    ],
+    "main_scene_uid_verified": true,
+    "runtime_tested": false
+  }
+}

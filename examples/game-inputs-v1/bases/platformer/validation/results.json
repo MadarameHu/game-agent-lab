@@ -1,0 +1,61 @@
+[
+  {
+    "name": "import",
+    "command": [
+      "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/work/pipeline-build/runtime/Godot.app/Contents/MacOS/Godot",
+      "--headless",
+      "--editor",
+      "--import",
+      "--path",
+      "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/outputs/game-inputs-v1/bases/platformer/project",
+      "--quit"
+    ],
+    "timeout_seconds": 60,
+    "exit_code": 0,
+    "elapsed_seconds": 14.689,
+    "log": "validation/import.log",
+    "error_lines": [
+      "ERROR: 1 RID allocations of type 'N13RendererDummy15MaterialStorage11DummyShaderE' were leaked at exit."
+    ]
+  },
+  {
+    "name": "startup_180_frames",
+    "command": [
+      "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/work/pipeline-build/runtime/Godot.app/Contents/MacOS/Godot",
+      "--headless",
+      "--path",
+      "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/outputs/game-inputs-v1/bases/platformer/project",
+      "--quit-after",
+      "180"
+    ],
+    "timeout_seconds": 60,
+    "exit_code": 0,
+    "elapsed_seconds": 1.654,
+    "log": "validation/startup_180_frames.log",
+    "error_lines": [
+      "ERROR: 1 RID allocations of type 'N13RendererDummy15MaterialStorage11DummyShaderE' were leaked at exit.",
+      "WARNING: 4 ObjectDB instances were leaked at exit (run with `--verbose` for details).",
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ]
+  },
+  {
+    "name": "startup_after_restoring_original_source",
+    "command": [
+      "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/work/pipeline-build/runtime/Godot.app/Contents/MacOS/Godot",
+      "--headless",
+      "--path",
+      "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/outputs/game-inputs-v1/bases/platformer/project",
+      "--quit-after",
+      "180"
+    ],
+    "timeout_seconds": 60,
+    "elapsed_seconds": 1.845,
+    "exit_code": 0,
+    "log": "validation/startup_restored_180_frames.log",
+    "error_lines": [
+      "ERROR: 1 RID allocations of type 'N13RendererDummy15MaterialStorage11DummyShaderE' were leaked at exit.",
+      "WARNING: 4 ObjectDB instances were leaked at exit (run with `--verbose` for details).",
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ]
+  }
+]

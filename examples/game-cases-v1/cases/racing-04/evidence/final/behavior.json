@@ -1,0 +1,49 @@
+{
+  "checks": [
+    {
+      "id": "default_motorcycle",
+      "pass": true,
+      "summary": "Initial scene is actual motorcycle, dedicated engine audio and valid camera target"
+    },
+    {
+      "id": "moving_tab_rejected",
+      "pass": true,
+      "summary": "Actual driving then Tab does not switch and shows stop-first message"
+    },
+    {
+      "id": "motorcycle_drives",
+      "pass": true,
+      "summary": "Actual input moves motorcycle physics more than1.5m"
+    },
+    {
+      "id": "motorcycle_effects",
+      "pass": true,
+      "summary": "Actual input triggers dedicated motorcycle lean, fork steering and wheel rotation"
+    },
+    {
+      "id": "stopped_tab_switch",
+      "pass": true,
+      "summary": "Stopped Tab replaces motorcycle by real yellow truck at same body position and heading"
+    },
+    {
+      "id": "camera_and_single_vehicle",
+      "pass": true,
+      "summary": "Old vehicle freed, only1 controller, HUD updated and camera immediately rebound without jump"
+    },
+    {
+      "id": "truck_drives",
+      "pass": true,
+      "summary": "New truck responds to actual forward input and moves its real rigidbody"
+    },
+    {
+      "id": "ten_repeated_switches",
+      "pass": true,
+      "summary": "10 actual Tab cycles each preserve pose and leave exactly1 vehicle and valid camera"
+    }
+  ],
+  "fixture": "Driving and Tab events are real Input. Stopped-switch checks inject zero speed; truck drive fixture resets to original road position.",
+  "metrics": {
+    "motorcycle_distance_1_5s": 7.36410903930664,
+    "truck_distance_1_5s": 7.36410617828369
+  }
+}

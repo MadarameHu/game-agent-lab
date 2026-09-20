@@ -1,0 +1,927 @@
+{
+  "version": "0.1",
+  "date": "2026-09-20",
+  "purpose": "1200-task计划的基础工程与任务类型清单；不是已生成的1200条数据",
+  "counts": {
+    "primary_candidates": 10,
+    "locally_validated_bases": 3,
+    "source_only_new_bases": 7,
+    "base_task_directions": 35,
+    "reserve_bases": 2
+  },
+  "bases": [
+    {
+      "id": "platformer",
+      "name": "3D平台跳跃",
+      "repository": "https://github.com/KenneyNL/Starter-Kit-3D-Platformer",
+      "commit": "3fa8a04b1c01ab23db43123d4ce814a34c3fc7f0",
+      "source_url": "https://github.com/KenneyNL/Starter-Kit-3D-Platformer/tree/3fa8a04b1c01ab23db43123d4ce814a34c3fc7f0",
+      "project_path": "project.godot",
+      "status": "existing_locally_validated",
+      "maturity": "现有可运行任务基础工程",
+      "engine": "本机Godot4.7.2已有验证记录",
+      "assets": "原工程随附角色、地图、模型、声音或界面素材；详细许可沿用现有source.json",
+      "source_record": "../game-inputs-v1/bases/platformer/source.json",
+      "priority": "现有基线",
+      "task_families": [
+        {
+          "name": "路线与可达性",
+          "example_requirement": "修改主线及挑战支路，保留金币与原控制器",
+          "verification_plan": "原Input驱动角色走路线；校验实体数量及碰撞",
+          "difficulty_prior": "中",
+          "status": "reference_case_exists"
+        },
+        {
+          "name": "目标与重开",
+          "example_requirement": "金币门槛通关并完整重置",
+          "verification_plan": "真实Area接触、阈值两侧及真实按钮重开",
+          "difficulty_prior": "中",
+          "status": "reference_case_exists"
+        },
+        {
+          "name": "跳跃状态机",
+          "example_requirement": "离台宽容和落地输入缓冲",
+          "verification_plan": "按物理帧输入，检查窗口内外及双跳上限",
+          "difficulty_prior": "难",
+          "status": "reference_case_exists"
+        },
+        {
+          "name": "检查点与复活",
+          "example_requirement": "激活检查点，掉落后从最近检查点恢复",
+          "verification_plan": "真实触发+掉落，验证位置、金币策略和状态重置",
+          "difficulty_prior": "中",
+          "status": "proposed_not_implemented"
+        }
+      ],
+      "next_gate": "新增任务仍需正解、负例与检查器校准；已有12case不等于自动生成器。"
+    },
+    {
+      "id": "city-builder",
+      "name": "城市建造",
+      "repository": "https://github.com/KenneyNL/Starter-Kit-City-Builder",
+      "commit": "4535092b740b378b700efd9df9e27a631815b84a",
+      "source_url": "https://github.com/KenneyNL/Starter-Kit-City-Builder/tree/4535092b740b378b700efd9df9e27a631815b84a",
+      "project_path": "project.godot",
+      "status": "existing_locally_validated",
+      "maturity": "现有可运行任务基础工程",
+      "engine": "本机Godot4.7.2已有验证记录",
+      "assets": "原工程随附角色、地图、模型、声音或界面素材；详细许可沿用现有source.json",
+      "source_record": "../game-inputs-v1/bases/city-builder/source.json",
+      "priority": "现有基线",
+      "task_families": [
+        {
+          "name": "地图扩建与保留",
+          "example_requirement": "保留既有街区并接入新社区",
+          "verification_plan": "格子ID和朝向保留、入口连通、建造回归",
+          "difficulty_prior": "中",
+          "status": "reference_case_exists"
+        },
+        {
+          "name": "连续铺路",
+          "example_requirement": "拖拽预览，松开提交，冲突取消",
+          "verification_plan": "实际鼠标路径、去重计费、冲突和取消状态",
+          "difficulty_prior": "难",
+          "status": "reference_case_exists"
+        },
+        {
+          "name": "存读档可靠性",
+          "example_requirement": "异常读取不破坏当前地图",
+          "verification_plan": "真实文件I/O、损坏负例、原状态及旧存档字节保留",
+          "difficulty_prior": "难",
+          "status": "reference_case_exists"
+        },
+        {
+          "name": "选择面板与输入隔离",
+          "example_requirement": "点击面板选择建筑但不穿透建造",
+          "verification_plan": "真实点击、Q/E同步、资金状态与窗口边界",
+          "difficulty_prior": "中",
+          "status": "reference_case_exists"
+        }
+      ],
+      "next_gate": "新增任务仍需正解、负例与检查器校准；已有12case不等于自动生成器。"
+    },
+    {
+      "id": "racing",
+      "name": "赛车",
+      "repository": "https://github.com/KenneyNL/Starter-Kit-Racing",
+      "commit": "2f2e5f2646dda89cb21d4e8539bab60c6e955dc8",
+      "source_url": "https://github.com/KenneyNL/Starter-Kit-Racing/tree/2f2e5f2646dda89cb21d4e8539bab60c6e955dc8",
+      "project_path": "project.godot",
+      "status": "existing_locally_validated",
+      "maturity": "现有可运行任务基础工程",
+      "engine": "本机Godot4.7.2已有验证记录",
+      "assets": "原工程随附角色、地图、模型、声音或界面素材；详细许可沿用现有source.json",
+      "source_record": "../game-inputs-v1/bases/racing/source.json",
+      "priority": "现有基线",
+      "task_families": [
+        {
+          "name": "道路拓扑",
+          "example_requirement": "重排闭环并保留出发点",
+          "verification_plan": "图连通+真实车辆Input整圈",
+          "difficulty_prior": "难",
+          "status": "reference_case_exists"
+        },
+        {
+          "name": "计时与检查点",
+          "example_requirement": "按顺序过点后结算，逆向无效",
+          "verification_plan": "实际Area穿越、顺序及方向负例、重开",
+          "difficulty_prior": "中",
+          "status": "reference_case_exists"
+        },
+        {
+          "name": "驾驶与镜头",
+          "example_requirement": "高速转向和沿速度方向前瞻",
+          "verification_plan": "真实输入，方向、速度和转向连续性实测",
+          "difficulty_prior": "难",
+          "status": "reference_case_exists"
+        },
+        {
+          "name": "车型切换",
+          "example_requirement": "只在停车时换车，旧车释放",
+          "verification_plan": "实际Tab、单活动车、位置朝向与相机绑定",
+          "difficulty_prior": "中",
+          "status": "reference_case_exists"
+        }
+      ],
+      "next_gate": "新增任务仍需正解、负例与检查器校准；已有12case不等于自动生成器。"
+    },
+    {
+      "id": "match3",
+      "name": "三消",
+      "repository": "https://github.com/KenneyNL/Starter-Kit-Match-3",
+      "commit": "4ddb3d2a50cbf247c79cafe9e7884d7d8f99c012",
+      "source_url": "https://github.com/KenneyNL/Starter-Kit-Match-3/tree/4ddb3d2a50cbf247c79cafe9e7884d7d8f99c012",
+      "project_path": "project.godot",
+      "main_scene": "res://scenes/main.tscn",
+      "status": "source_inspected_not_run",
+      "maturity": "官方游戏模板；已有基础玩法，新增任务需实现",
+      "engine": "声明Godot4.6 / Forward Plus；本轮尚未验证Compatibility",
+      "assets": [
+        "icon.png",
+        "screenshots/screenshot.png",
+        "sounds/tile-land.ogg",
+        "sounds/tile-match.ogg",
+        "sounds/tile-swap.ogg",
+        "splash-screen.png",
+        "sprites/backgrounds/background.png",
+        "sprites/cursors/cursor-hand-closed.png",
+        "sprites/cursors/cursor-hand-open.png",
+        "sprites/particles/sparkle.png",
+        "sprites/tiles/tile-gem.png",
+        "sprites/tiles/tile-godot.png",
+        "sprites/tiles/tile-grass.png",
+        "sprites/tiles/tile-kenney.png",
+        "sprites/tiles/tile-spikes.png"
+      ],
+      "asset_count": 15,
+      "license": "代码MIT；README声明2D/3D/音效CC0",
+      "priority": "首批扩展",
+      "task_families": [
+        {
+          "name": "步数与目标",
+          "example_requirement": "有限步数内达成目标；无效交换不扣步",
+          "verification_plan": "固定棋盘，合法/无效交换两侧、连锁结束及终局锁定",
+          "difficulty_prior": "中",
+          "status": "proposed_not_implemented"
+        },
+        {
+          "name": "交互并发修复",
+          "example_requirement": "消除动画期间不允许第二次交换破坏棋盘",
+          "verification_plan": "快速输入压力序列；格子唯一性、数组与节点位置一致",
+          "difficulty_prior": "中",
+          "status": "proposed_not_implemented"
+        },
+        {
+          "name": "特殊棋子",
+          "example_requirement": "四连生成特殊棋子，再次匹配触发清除",
+          "verification_plan": "构造横竖交叉棋盘，独立匹配oracle检查生成/清除集合",
+          "difficulty_prior": "难",
+          "status": "proposed_not_implemented"
+        },
+        {
+          "name": "棋盘恢复",
+          "example_requirement": "保存稳定棋盘后恢复步数和棋子布局",
+          "verification_plan": "真实I/O、恢复后可继续交换，损坏档不覆盖当前局面",
+          "difficulty_prior": "难",
+          "status": "proposed_not_implemented"
+        }
+      ],
+      "next_gate": "拉取固定版本完整工程，导入/运行冒烟；每个任务族先做一个正解和多个错误候选校准；FPS归零缺陷目前为源码发现，尚未运行复现。"
+    },
+    {
+      "id": "fps",
+      "name": "第一人称射击",
+      "repository": "https://github.com/KenneyNL/Starter-Kit-FPS",
+      "commit": "185fd2326d74a5cf858cffc616f87cf9696f9cc0",
+      "source_url": "https://github.com/KenneyNL/Starter-Kit-FPS/tree/185fd2326d74a5cf858cffc616f87cf9696f9cc0",
+      "project_path": "project.godot",
+      "main_scene": "res://scenes/main.tscn",
+      "status": "source_inspected_not_run",
+      "maturity": "官方游戏模板；已有基础玩法，新增任务需实现",
+      "engine": "声明Godot4.6 / Forward Plus；本轮尚未验证Compatibility",
+      "assets": [
+        "icon.png",
+        "models/Textures/colormap.png",
+        "models/blaster-repeater.glb",
+        "models/blaster.glb",
+        "models/cloud.glb",
+        "models/enemy-flying.glb",
+        "models/grass-small.glb",
+        "models/grass.glb",
+        "models/platform-large-grass.glb",
+        "models/platform.glb",
+        "models/wall-high.glb",
+        "models/wall-low.glb",
+        "screenshots/screenshot.png",
+        "sounds/blaster.ogg",
+        "sounds/blaster_repeater.ogg",
+        "sounds/enemy_attack.ogg",
+        "sounds/enemy_destroy.ogg",
+        "sounds/enemy_hurt.ogg",
+        "sounds/jump_a.ogg",
+        "sounds/jump_b.ogg",
+        "sounds/jump_c.ogg",
+        "sounds/land.ogg",
+        "sounds/walking.ogg",
+        "sounds/weapon_change.ogg",
+        "splash-screen.png",
+        "sprites/blob_shadow.png",
+        "sprites/burst.png",
+        "sprites/crosshair-repeater.png",
+        "sprites/crosshair.png",
+        "sprites/hit.png",
+        "sprites/skybox.png"
+      ],
+      "asset_count": 31,
+      "license": "代码MIT；README声明2D/3D/音效CC0；随附字体OFL1.1",
+      "priority": "第二批/整工程留出候选",
+      "task_families": [
+        {
+          "name": "生命边界修复",
+          "example_requirement": "生命恰好归零时也应死亡，且只结算一次",
+          "verification_plan": "源码player.damage为health<0；用实际伤害路径检查0及负数边界",
+          "difficulty_prior": "易",
+          "status": "proposed_not_implemented"
+        },
+        {
+          "name": "弹药与装填",
+          "example_requirement": "有限弹药、装填期间禁射，切枪保持各枪弹量",
+          "verification_plan": "真实射击/装填/切枪序列；发射与命中、弹量、冷却检查",
+          "difficulty_prior": "中",
+          "status": "proposed_not_implemented"
+        },
+        {
+          "name": "敌人波次",
+          "example_requirement": "上一波清空后只生成一次下一波",
+          "verification_plan": "生成数与击败事件、延时、重开时旧敌人清理",
+          "difficulty_prior": "中",
+          "status": "proposed_not_implemented"
+        },
+        {
+          "name": "遮挡与命中",
+          "example_requirement": "墙后目标不受伤，射击命中可见目标",
+          "verification_plan": "射线及实际输入，对照遮挡/无遮挡位置，检查生命和命中特效",
+          "difficulty_prior": "难",
+          "status": "proposed_not_implemented"
+        }
+      ],
+      "next_gate": "拉取固定版本完整工程，导入/运行冒烟；每个任务族先做一个正解和多个错误候选校准；FPS归零缺陷目前为源码发现，尚未运行复现。"
+    },
+    {
+      "id": "godot-dodge-the-creeps",
+      "name": "生存躲避",
+      "repository": "https://github.com/godotengine/godot-demo-projects",
+      "commit": "a3b5c113112f77291d5f3d1360f33a882fdc52f7",
+      "source_url": "https://github.com/godotengine/godot-demo-projects/tree/a3b5c113112f77291d5f3d1360f33a882fdc52f7/2d/dodge_the_creeps",
+      "project_path": "2d/dodge_the_creeps/project.godot",
+      "main_scene": "res://main.tscn",
+      "status": "source_inspected_not_run",
+      "maturity": "可玩的教学小游戏，有开始、计分、死亡与重开",
+      "engine": "Godot4.7 / gl_compatibility",
+      "assets": [
+        "玩家动画、三类敌人图片、死亡音效、背景音乐、HUD字体"
+      ],
+      "asset_count": 13,
+      "license": "代码MIT；README明确图片CC0，背景音乐House In a Forest Loop为CC-BY3.0须保留署名，Xolonium字体OFL1.1须附许可证/保留字体名称要求。",
+      "priority": "第二批扩展",
+      "task_families": [
+        {
+          "name": "生命与受击保护",
+          "example_requirement": "新增有限生命和短暂无敌期，死亡只结算一次",
+          "verification_plan": "确定种子，真实碰撞接触；断言生命变化、保护窗口内不重复扣血、死亡后计时停止",
+          "difficulty_prior": "中",
+          "status": "proposed_not_implemented"
+        },
+        {
+          "name": "波次和暂停",
+          "example_requirement": "分阶段调整敌人生成，暂停时冻结生成与分数",
+          "verification_plan": "引擎时间推进，观察生成计数和分数；输入暂停后检查所有相关计时器，再恢复",
+          "difficulty_prior": "中",
+          "status": "proposed_not_implemented"
+        },
+        {
+          "name": "安全重开",
+          "example_requirement": "多次重开清空旧敌人和分数",
+          "verification_plan": "真实Start按钮输入和碰撞死亡循环；检查mobs数量、位置和HUD状态",
+          "difficulty_prior": "中",
+          "status": "proposed_not_implemented"
+        }
+      ],
+      "next_gate": "下载完整候选子目录；处理素材许可；固定引擎导入/运行冒烟；冻结基线；一条任务正反样本校准检查器后才可量产。",
+      "lineage": {
+        "repository_group": "godotengine/godot-demo-projects",
+        "base_group": "2d/dodge_the_creeps",
+        "shared_engine_api": "Godot4.x/GDScript",
+        "assets_and_code_exact_blob_matches": [
+          {
+            "file": "2d/dodge_the_creeps/art/House In a Forest Loop.ogg",
+            "git_blob_sha": "ece36402739a3cb884647df78e6ea95315cbf223",
+            "identical_blob_elsewhere": [
+              "3d/squash_the_creeps/art/House In a Forest Loop.ogg",
+              "mono/dodge_the_creeps/art/House In a Forest Loop.ogg",
+              "mono/squash_the_creeps/art/House In a Forest Loop.ogg"
+            ]
+          },
+          {
+            "file": "2d/dodge_the_creeps/art/enemyFlyingAlt_1.png",
+            "git_blob_sha": "61c94cd75b84aaca7c55df1cda01214e44bd5129",
+            "identical_blob_elsewhere": [
+              "mono/dodge_the_creeps/art/enemyFlyingAlt_1.png"
+            ]
+          },
+          {
+            "file": "2d/dodge_the_creeps/art/enemyFlyingAlt_2.png",
+            "git_blob_sha": "ea966a9676e4fc2a37435eca4631eb0a93654624",
+            "identical_blob_elsewhere": [
+              "mono/dodge_the_creeps/art/enemyFlyingAlt_2.png"
+            ]
+          },
+          {
+            "file": "2d/dodge_the_creeps/art/enemySwimming_1.png",
+            "git_blob_sha": "6e4243a0ed7eda5a49b3b08da31222b98444f1e0",
+            "identical_blob_elsewhere": [
+              "mono/dodge_the_creeps/art/enemySwimming_1.png"
+            ]
+          },
+          {
+            "file": "2d/dodge_the_creeps/art/enemySwimming_2.png",
+            "git_blob_sha": "35e7fee3f187322998baa0a9af5525cec6c6146e",
+            "identical_blob_elsewhere": [
+              "mono/dodge_the_creeps/art/enemySwimming_2.png"
+            ]
+          },
+          {
+            "file": "2d/dodge_the_creeps/art/enemyWalking_1.png",
+            "git_blob_sha": "f30770b27a84d0d5add07e2ff94f43096ab1c66c",
+            "identical_blob_elsewhere": [
+              "mono/dodge_the_creeps/art/enemyWalking_1.png"
+            ]
+          },
+          {
+            "file": "2d/dodge_the_creeps/art/enemyWalking_2.png",
+            "git_blob_sha": "a9cdcaa399ce5facd2dd8563be35ff3d5e707140",
+            "identical_blob_elsewhere": [
+              "mono/dodge_the_creeps/art/enemyWalking_2.png"
+            ]
+          },
+          {
+            "file": "2d/dodge_the_creeps/art/gameover.wav",
+            "git_blob_sha": "77f865a1e1629c98dd56811bbe7acdf564d52176",
+            "identical_blob_elsewhere": [
+              "mono/dodge_the_creeps/art/gameover.wav"
+            ]
+          },
+          {
+            "file": "2d/dodge_the_creeps/art/playerGrey_up1.png",
+            "git_blob_sha": "98431f823a88f1c4220308978d2a904a39a874a5",
+            "identical_blob_elsewhere": [
+              "mono/dodge_the_creeps/art/playerGrey_up1.png"
+            ]
+          },
+          {
+            "file": "2d/dodge_the_creeps/art/playerGrey_up2.png",
+            "git_blob_sha": "4f6c54f0129dad309ea6f2c5a962d472b016e726",
+            "identical_blob_elsewhere": [
+              "mono/dodge_the_creeps/art/playerGrey_up2.png"
+            ]
+          },
+          {
+            "file": "2d/dodge_the_creeps/art/playerGrey_walk1.png",
+            "git_blob_sha": "0426b5edfb25515c52eda899bd5ee6dbbaadbe56",
+            "identical_blob_elsewhere": [
+              "mono/dodge_the_creeps/art/playerGrey_walk1.png"
+            ]
+          },
+          {
+            "file": "2d/dodge_the_creeps/art/playerGrey_walk2.png",
+            "git_blob_sha": "975c47e610ce9c75bcf90e6771a5a0e45f9ce3f4",
+            "identical_blob_elsewhere": [
+              "mono/dodge_the_creeps/art/playerGrey_walk2.png"
+            ]
+          },
+          {
+            "file": "2d/dodge_the_creeps/fonts/Xolonium-Regular.ttf",
+            "git_blob_sha": "031d62779e094430749240424d466dff731495e3",
+            "identical_blob_elsewhere": [
+              "3d/labels_and_texts/fonts/Xolonium-Regular-MSDF-Mipmaps.ttf",
+              "3d/labels_and_texts/fonts/Xolonium-Regular-MSDF.ttf",
+              "3d/labels_and_texts/fonts/Xolonium-Regular-Mipmaps.ttf",
+              "3d/labels_and_texts/fonts/Xolonium-Regular.ttf",
+              "mono/dodge_the_creeps/fonts/Xolonium-Regular.ttf"
+            ]
+          }
+        ],
+        "split_rule_zh": "同一基线及其改名/改数值/地图变体按组隔离；存在相同blob仅代表文件复用，需结合任务语义再判断泄漏。共同官方仓库本身不证明任务等价。"
+      }
+    },
+    {
+      "id": "godot-pong",
+      "name": "双人球拍对战",
+      "repository": "https://github.com/godotengine/godot-demo-projects",
+      "commit": "a3b5c113112f77291d5f3d1360f33a882fdc52f7",
+      "source_url": "https://github.com/godotengine/godot-demo-projects/tree/a3b5c113112f77291d5f3d1360f33a882fdc52f7/2d/pong",
+      "project_path": "2d/pong/project.godot",
+      "main_scene": "res://pong.tscn",
+      "status": "source_inspected_not_run",
+      "maturity": "可玩的极简Pong，越界会重置球；当前未实现完整计分赛制",
+      "engine": "Godot4.7 / gl_compatibility",
+      "assets": [
+        "球、球拍、分隔线图片；无需额外角色包"
+      ],
+      "asset_count": 3,
+      "license": "仓库MIT，候选目录未发现独立素材许可证；保留仓库版权声明。",
+      "priority": "首批扩展",
+      "task_families": [
+        {
+          "name": "计分与比赛结束",
+          "example_requirement": "按出界侧计分，达到目标分数结束比赛",
+          "verification_plan": "使球实际穿越左右Area2D边界，断言得分方向、每次仅计一次、终局冻结",
+          "difficulty_prior": "中",
+          "status": "proposed_not_implemented"
+        },
+        {
+          "name": "发球与重开",
+          "example_requirement": "轮换发球，重开完整重置",
+          "verification_plan": "记录出界后方向/速度/位置；按重开检查比分、发球方和速度",
+          "difficulty_prior": "中",
+          "status": "proposed_not_implemented"
+        },
+        {
+          "name": "碰撞与控制",
+          "example_requirement": "球拍击球角度与屏幕边界约束",
+          "verification_plan": "真实输入移动球拍，球从不同相对位置接触；检查反射方向、速度上限和球拍不越界",
+          "difficulty_prior": "中",
+          "status": "proposed_not_implemented"
+        }
+      ],
+      "next_gate": "下载完整候选子目录；处理素材许可；固定引擎导入/运行冒烟；冻结基线；一条任务正反样本校准检查器后才可量产。",
+      "lineage": {
+        "repository_group": "godotengine/godot-demo-projects",
+        "base_group": "2d/pong",
+        "shared_engine_api": "Godot4.x/GDScript",
+        "assets_and_code_exact_blob_matches": [
+          {
+            "file": "2d/pong/ball.png",
+            "git_blob_sha": "465d3521aa8d143ea46b540f2902a13a507b5b00",
+            "identical_blob_elsewhere": [
+              "mono/multiplayer_pong/ball.png",
+              "mono/pong/ball.png",
+              "networking/multiplayer_pong/ball.png",
+              "viewport/2d_in_3d/ball.png"
+            ]
+          },
+          {
+            "file": "2d/pong/paddle.png",
+            "git_blob_sha": "1860b0741531064d3bbc97137f9ad78e39c22cf0",
+            "identical_blob_elsewhere": [
+              "mono/multiplayer_pong/paddle.png",
+              "mono/pong/paddle.png",
+              "networking/multiplayer_pong/paddle.png"
+            ]
+          },
+          {
+            "file": "2d/pong/separator.png",
+            "git_blob_sha": "30c44fcdfa2e78afc2fffbe490ad83b2f2595362",
+            "identical_blob_elsewhere": [
+              "mono/multiplayer_pong/separator.png",
+              "networking/multiplayer_pong/separator.png",
+              "viewport/2d_in_3d/separator.png"
+            ]
+          }
+        ],
+        "split_rule_zh": "同一基线及其改名/改数值/地图变体按组隔离；存在相同blob仅代表文件复用，需结合任务语义再判断泄漏。共同官方仓库本身不证明任务等价。"
+      }
+    },
+    {
+      "id": "godot-navigation-astar",
+      "name": "网格寻路与迷宫",
+      "repository": "https://github.com/godotengine/godot-demo-projects",
+      "commit": "a3b5c113112f77291d5f3d1360f33a882fdc52f7",
+      "source_url": "https://github.com/godotengine/godot-demo-projects/tree/a3b5c113112f77291d5f3d1360f33a882fdc52f7/2d/navigation_astar",
+      "project_path": "2d/navigation_astar/project.godot",
+      "main_scene": "res://game.tscn",
+      "status": "source_inspected_not_run",
+      "maturity": "AStarGrid2D移动演示，当前没有迷宫通关或箱子玩法；需任务化补目标",
+      "engine": "Godot4.7 / gl_compatibility",
+      "assets": [
+        "角色、路径标记与地块图集"
+      ],
+      "asset_count": 4,
+      "license": "仓库MIT，候选目录未发现独立素材许可证。",
+      "priority": "先补任务环境，后置",
+      "task_families": [
+        {
+          "name": "障碍编辑与重规划",
+          "example_requirement": "移动途中新增/移除障碍后重规划",
+          "verification_plan": "独立BFS作为oracle；检查路径每格可走、相邻、最终到达，堵死时明确失败且不穿越障碍",
+          "difficulty_prior": "中",
+          "status": "proposed_not_implemented"
+        },
+        {
+          "name": "多目标路线",
+          "example_requirement": "按顺序到访几个指定目标",
+          "verification_plan": "真实鼠标或键盘输入目标；记录访问序列，检查每个目标恰好到访及取消行为",
+          "difficulty_prior": "中",
+          "status": "proposed_not_implemented"
+        },
+        {
+          "name": "地图边界与不可达",
+          "example_requirement": "正确处理越界、障碍目标和无路情况",
+          "verification_plan": "枚举边界与隔断图；检查不崩溃、不瞬移、路径为空时状态恢复IDLE",
+          "difficulty_prior": "中",
+          "status": "proposed_not_implemented"
+        }
+      ],
+      "next_gate": "下载完整候选子目录；处理素材许可；固定引擎导入/运行冒烟；冻结基线；一条任务正反样本校准检查器后才可量产。",
+      "lineage": {
+        "repository_group": "godotengine/godot-demo-projects",
+        "base_group": "2d/navigation_astar",
+        "shared_engine_api": "Godot4.x/GDScript",
+        "assets_and_code_exact_blob_matches": [],
+        "split_rule_zh": "同一基线及其改名/改数值/地图变体按组隔离；存在相同blob仅代表文件复用，需结合任务语义再判断泄漏。共同官方仓库本身不证明任务等价。"
+      }
+    },
+    {
+      "id": "godot-isometric",
+      "name": "等距地牢探索",
+      "repository": "https://github.com/godotengine/godot-demo-projects",
+      "commit": "a3b5c113112f77291d5f3d1360f33a882fdc52f7",
+      "source_url": "https://github.com/godotengine/godot-demo-projects/tree/a3b5c113112f77291d5f3d1360f33a882fdc52f7/2d/isometric",
+      "project_path": "2d/isometric/project.godot",
+      "main_scene": "res://dungeon.tscn",
+      "status": "source_inspected_not_run",
+      "maturity": "等距移动/遮挡演示，有墙门柱碰撞和灯光；没有已实现钥匙、战斗或胜利循环",
+      "engine": "Godot4.7 / gl_compatibility",
+      "assets": [
+        "八方向哥布林动画、地牢地块、柱门墙、蜡烛及装饰"
+      ],
+      "asset_count": 19,
+      "license": "仓库MIT，候选目录未发现独立素材许可证。",
+      "priority": "先补任务环境，后置",
+      "task_families": [
+        {
+          "name": "钥匙与门",
+          "example_requirement": "新增拾钥匙后开门的路径任务",
+          "verification_plan": "实际输入行走触发钥匙/门；门关闭阻挡、取钥匙后可通行、只消耗一次；BFS验证布局连通",
+          "difficulty_prior": "中",
+          "status": "proposed_not_implemented"
+        },
+        {
+          "name": "交互范围与目标",
+          "example_requirement": "近距离操作物体，远处不能交互",
+          "verification_plan": "真实输入和距离边界fixture；检查目标唯一性、超距离不执行、目标移除后引用有效",
+          "difficulty_prior": "中",
+          "status": "proposed_not_implemented"
+        },
+        {
+          "name": "方向动画与遮挡",
+          "example_requirement": "修复八方向动画或遮挡顺序",
+          "verification_plan": "八方向Input检查animation名/速度；遮挡需渲染像素或人工抽样，不能仅由y_sort_enabled断言画面正确",
+          "difficulty_prior": "中",
+          "status": "proposed_not_implemented"
+        }
+      ],
+      "next_gate": "下载完整候选子目录；处理素材许可；固定引擎导入/运行冒烟；冻结基线；一条任务正反样本校准检查器后才可量产。",
+      "lineage": {
+        "repository_group": "godotengine/godot-demo-projects",
+        "base_group": "2d/isometric",
+        "shared_engine_api": "Godot4.x/GDScript",
+        "assets_and_code_exact_blob_matches": [],
+        "split_rule_zh": "同一基线及其改名/改数值/地图变体按组隔离；存在相同blob仅代表文件复用，需结合任务语义再判断泄漏。共同官方仓库本身不证明任务等价。"
+      }
+    },
+    {
+      "id": "godot-bullet-shower",
+      "name": "弹幕躲避与资源管理",
+      "repository": "https://github.com/godotengine/godot-demo-projects",
+      "commit": "a3b5c113112f77291d5f3d1360f33a882fdc52f7",
+      "source_url": "https://github.com/godotengine/godot-demo-projects/tree/a3b5c113112f77291d5f3d1360f33a882fdc52f7/2d/bullet_shower",
+      "project_path": "2d/bullet_shower/project.godot",
+      "main_scene": "res://shower.tscn",
+      "status": "source_inspected_not_run",
+      "maturity": "PhysicsServer2D低级RID弹幕/碰撞技术演示；非完整射击游戏，无胜败循环",
+      "engine": "Godot4.7 / gl_compatibility",
+      "assets": [
+        "子弹图片、开心/受伤表情"
+      ],
+      "asset_count": 3,
+      "license": "仓库MIT，候选目录未发现独立素材许可证。",
+      "priority": "先补任务环境，后置",
+      "task_families": [
+        {
+          "name": "弹幕波形与确定性",
+          "example_requirement": "按种子产生不同波形并保持边界回收",
+          "verification_plan": "比较相同种子轨迹、速度/方向范围、离屏回收次数；oracle不依赖候选自己的统计输出",
+          "difficulty_prior": "难",
+          "status": "proposed_not_implemented"
+        },
+        {
+          "name": "生命与恢复",
+          "example_requirement": "增加受击冷却和重开状态",
+          "verification_plan": "真实物理碰撞检测后观察生命和保护窗口；重开清空历史状态",
+          "difficulty_prior": "难",
+          "status": "proposed_not_implemented"
+        },
+        {
+          "name": "资源清理与暂停",
+          "example_requirement": "多次重开/退出释放RID，暂停恢复一致",
+          "verification_plan": "观察PhysicsServer对象/泄漏日志、退出码；短小固定负载测试，不以不同机器绝对FPS当通用reward",
+          "difficulty_prior": "难",
+          "status": "proposed_not_implemented"
+        }
+      ],
+      "next_gate": "下载完整候选子目录；处理素材许可；固定引擎导入/运行冒烟；冻结基线；一条任务正反样本校准检查器后才可量产。",
+      "lineage": {
+        "repository_group": "godotengine/godot-demo-projects",
+        "base_group": "2d/bullet_shower",
+        "shared_engine_api": "Godot4.x/GDScript",
+        "assets_and_code_exact_blob_matches": [],
+        "split_rule_zh": "同一基线及其改名/改数值/地图变体按组隔离；存在相同blob仅代表文件复用，需结合任务语义再判断泄漏。共同官方仓库本身不证明任务等价。"
+      }
+    }
+  ],
+  "reserve": [
+    {
+      "id": "godot-role-playing-game",
+      "genre_zh": "网格探索与回合战斗",
+      "repository": "https://github.com/godotengine/godot-demo-projects",
+      "commit": "a3b5c113112f77291d5f3d1360f33a882fdc52f7",
+      "project_path": "2d/role_playing_game/project.godot",
+      "source_url": "https://github.com/godotengine/godot-demo-projects/tree/a3b5c113112f77291d5f3d1360f33a882fdc52f7/2d/role_playing_game",
+      "main_scene": "res://game.tscn",
+      "main_scene_exists_in_tree": true,
+      "engine_declared": "Godot4.7",
+      "renderer": "gl_compatibility",
+      "language": "GDScript",
+      "source_inspection_status": "source_inspected_not_run",
+      "priority": "条件纳入",
+      "maturity_zh": "教学型JRPG，包含网格移动、对话、战斗和探索切换；非完整长篇RPG",
+      "bundled_assets_zh": [
+        "角色和敌人动画、地形/装饰、战斗背景、对话UI、Montserrat字体"
+      ],
+      "asset_count": 50,
+      "asset_examples": [
+        "2d/role_playing_game/combat/background/arena.png",
+        "2d/role_playing_game/combat/background/combat_background.png",
+        "2d/role_playing_game/combat/background/combat_shadow.png",
+        "2d/role_playing_game/combat/combatants/sprites/blue.png",
+        "2d/role_playing_game/combat/combatants/sprites/green.png",
+        "2d/role_playing_game/combat/combatants/sprites/opponent_battle.png",
+        "2d/role_playing_game/combat/combatants/sprites/opponent_surprised.png",
+        "2d/role_playing_game/combat/combatants/sprites/player_battle.png"
+      ],
+      "subtree_blob_bytes": 700679,
+      "license_zh": "仓库MIT；theme/fonts/montserrat_extra_bold.otf存在，但候选目录未找到独立字体许可证。纳入分发前补来源/OFL文本或换已核清字体。",
+      "license_evidence": [
+        "2d/role_playing_game/README.md",
+        "LICENSE.md"
+      ],
+      "task_families": [
+        {
+          "name_zh": "生命伤害边界",
+          "example_requirement_zh": "修复护甲大于伤害导致回血等生命规则",
+          "verifier_plan_zh": "健康组件有take_damage/health_changed/dead；用伤害-护甲矩阵检查不负伤害、最大生命、死亡事件；再做实际战斗输入",
+          "status": "proposed_not_implemented"
+        },
+        {
+          "name_zh": "回合状态与技能",
+          "example_requirement_zh": "新增冷却或治疗技能，严格轮流执行",
+          "verifier_plan_zh": "UI按钮输入；跟踪turn_queue.active_combatant、生命、技能次数，检查非当前回合不能行动",
+          "status": "proposed_not_implemented"
+        },
+        {
+          "name_zh": "探索战斗恢复",
+          "example_requirement_zh": "胜败后返回探索并保存结果",
+          "verifier_plan_zh": "从对话触发战斗，完成确定性战斗再回探索；检查一次结算、敌人状态、角色位置和对话不会重复触发",
+          "status": "proposed_not_implemented"
+        }
+      ],
+      "unresolved_literal_res_references": [],
+      "next_gate_zh": "下载完整候选子目录；处理素材许可；固定引擎导入/运行冒烟；冻结基线；一条任务正反样本校准检查器后才可量产。",
+      "shortlist_role": "reserve",
+      "lineage": {
+        "repository_group": "godotengine/godot-demo-projects",
+        "base_group": "2d/role_playing_game",
+        "shared_engine_api": "Godot4.x/GDScript",
+        "assets_and_code_exact_blob_matches": [
+          {
+            "file": "2d/role_playing_game/theme/fonts/montserrat_extra_bold.otf",
+            "git_blob_sha": "d5727507ccc561595737bb0f0ada12c52eb1bae8",
+            "identical_blob_elsewhere": [
+              "networking/multiplayer_bomber/montserrat.otf"
+            ]
+          }
+        ],
+        "split_rule_zh": "同一基线及其改名/改数值/地图变体按组隔离；存在相同blob仅代表文件复用，需结合任务语义再判断泄漏。共同官方仓库本身不证明任务等价。"
+      }
+    },
+    {
+      "id": "godot-physics-platformer",
+      "genre_zh": "刚体平台与射击",
+      "repository": "https://github.com/godotengine/godot-demo-projects",
+      "commit": "a3b5c113112f77291d5f3d1360f33a882fdc52f7",
+      "project_path": "2d/physics_platformer/project.godot",
+      "source_url": "https://github.com/godotengine/godot-demo-projects/tree/a3b5c113112f77291d5f3d1360f33a882fdc52f7/2d/physics_platformer",
+      "main_scene": "res://stage.tscn",
+      "main_scene_exists_in_tree": true,
+      "engine_declared": "Godot4.7",
+      "renderer": "gl_compatibility",
+      "language": "GDScript",
+      "source_inspection_status": "source_inspected_not_run",
+      "priority": "条件纳入",
+      "maturity_zh": "包含刚体角色、敌人、射击、金币、移动台、跷跷板的演示关卡；完整通关循环需补",
+      "bundled_assets_zh": [
+        "角色/敌人/子弹、金币、平台、背景、音效、音乐"
+      ],
+      "asset_count": 24,
+      "asset_examples": [
+        "2d/physics_platformer/audio/music.ogg",
+        "2d/physics_platformer/audio/sound_coin.wav",
+        "2d/physics_platformer/audio/sound_explode.wav",
+        "2d/physics_platformer/audio/sound_hit.wav",
+        "2d/physics_platformer/audio/sound_jump.wav",
+        "2d/physics_platformer/audio/sound_shoot.wav",
+        "2d/physics_platformer/background/plank.png",
+        "2d/physics_platformer/background/plankpin.png"
+      ],
+      "subtree_blob_bytes": 2233075,
+      "license_zh": "仓库MIT；README单独署名Pompy/Hubert Lamontagne并链接SoundCloud，但没明确单列音乐许可证。核清授权或替换/移除音乐后纳入。",
+      "license_evidence": [
+        "2d/physics_platformer/README.md",
+        "LICENSE.md"
+      ],
+      "task_families": [
+        {
+          "name_zh": "射击机制",
+          "example_requirement_zh": "增加弹药、冷却和补给",
+          "verifier_plan_zh": "通过Input开火；检查生成子弹、速度方向、弹药扣除、冷却期和重开恢复",
+          "status": "proposed_not_implemented"
+        },
+        {
+          "name_zh": "移动平台承载",
+          "example_requirement_zh": "调整移动台或跷跷板但保持可乘坐",
+          "verifier_plan_zh": "物理接触测试和确定输入序列；检查角色随平台移动、接触稳定、不卡入碰撞体",
+          "status": "proposed_not_implemented"
+        },
+        {
+          "name_zh": "关卡目标与复活",
+          "example_requirement_zh": "金币门槛、目标触发、掉落复活",
+          "verifier_plan_zh": "实际Area接触/物理掉落；验证金币只计一次、目标门槛、复活状态完整",
+          "status": "proposed_not_implemented"
+        }
+      ],
+      "unresolved_literal_res_references": [],
+      "next_gate_zh": "下载完整候选子目录；处理素材许可；固定引擎导入/运行冒烟；冻结基线；一条任务正反样本校准检查器后才可量产。",
+      "shortlist_role": "reserve",
+      "lineage": {
+        "repository_group": "godotengine/godot-demo-projects",
+        "base_group": "2d/physics_platformer",
+        "shared_engine_api": "Godot4.x/GDScript",
+        "assets_and_code_exact_blob_matches": [
+          {
+            "file": "2d/physics_platformer/audio/music.ogg",
+            "git_blob_sha": "ed3e9f0a018ab8b0bce5bd39462be6b492d87d90",
+            "identical_blob_elsewhere": [
+              "2d/platformer/music.ogg"
+            ]
+          },
+          {
+            "file": "2d/physics_platformer/audio/sound_coin.wav",
+            "git_blob_sha": "e78579f461fe5dbe43ac3e6cfb58d889ca0a66c9",
+            "identical_blob_elsewhere": [
+              "2d/platformer/player/coin_pickup.wav",
+              "3d/platformer/coin/sound_coin.wav"
+            ]
+          },
+          {
+            "file": "2d/physics_platformer/audio/sound_explode.wav",
+            "git_blob_sha": "229c85399c6d936b0fa24803053ec0674c721b3e",
+            "identical_blob_elsewhere": [
+              "2d/platformer/enemy/explode.wav",
+              "3d/platformer/enemy/sound_explode.wav"
+            ]
+          },
+          {
+            "file": "2d/physics_platformer/audio/sound_hit.wav",
+            "git_blob_sha": "4fb3b1381294981b06c76f8bd248ceb9d4610b79",
+            "identical_blob_elsewhere": [
+              "2d/platformer/enemy/hit.wav",
+              "3d/platformer/enemy/sound_hit.wav"
+            ]
+          },
+          {
+            "file": "2d/physics_platformer/audio/sound_jump.wav",
+            "git_blob_sha": "e9942e65e63b1b41c610210e0011bfae3c3288ea",
+            "identical_blob_elsewhere": [
+              "2d/platformer/player/jump.wav",
+              "3d/platformer/player/sound_jump.wav"
+            ]
+          },
+          {
+            "file": "2d/physics_platformer/audio/sound_shoot.wav",
+            "git_blob_sha": "ad74f328cb4cd0d0fe3e3170744b33dfe1a74dfa",
+            "identical_blob_elsewhere": [
+              "2d/platformer/player/shoot.wav",
+              "3d/platformer/player/sound_shoot.wav"
+            ]
+          },
+          {
+            "file": "2d/physics_platformer/background/scroll_bg_cloud_1.png",
+            "git_blob_sha": "5f01d1b8d5489451d99e56362f4d70586ce45503",
+            "identical_blob_elsewhere": [
+              "2d/skeleton/level/background/cloud_1.png"
+            ]
+          },
+          {
+            "file": "2d/physics_platformer/background/scroll_bg_cloud_2.png",
+            "git_blob_sha": "68c985f276c9c47307eed4b8668b81c961dd8fc5",
+            "identical_blob_elsewhere": [
+              "2d/skeleton/level/background/cloud_2.png"
+            ]
+          },
+          {
+            "file": "2d/physics_platformer/background/scroll_bg_cloud_3.png",
+            "git_blob_sha": "998d6ff0646ba8777dd31685e136bed696660025",
+            "identical_blob_elsewhere": [
+              "2d/skeleton/level/background/cloud_3.png"
+            ]
+          },
+          {
+            "file": "2d/physics_platformer/background/scroll_bg_sky.png",
+            "git_blob_sha": "13ba7b6c2886a7e9ffa47d3f8e4daff67dbadb7d",
+            "identical_blob_elsewhere": [
+              "2d/skeleton/level/background/sky.png"
+            ]
+          }
+        ],
+        "split_rule_zh": "同一基线及其改名/改数值/地图变体按组隔离；存在相同blob仅代表文件复用，需结合任务语义再判断泄漏。共同官方仓库本身不证明任务等价。"
+      }
+    }
+  ],
+  "task_types": [
+    "场景布局与可达性",
+    "输入交互与状态机",
+    "计分目标与游戏规则",
+    "存档恢复与资源生命周期",
+    "实际缺陷修复",
+    "素材接入与可验证UI行为"
+  ],
+  "difficulty_policy": {
+    "levels": [
+      "易：局部逻辑及少量状态",
+      "中：多状态、多条件或少量模块联动",
+      "难：跨模块和较长操作链或复杂物理行为"
+    ],
+    "labels": "结构性先验；尚未以目标2.5–7B模型成功率校准",
+    "calibration": "用训练/开发任务在固定模型、工具、上下文与token预算下测成功率/修复轮数，不靠修改文件数划档"
+  },
+  "split_proposal": {
+    "train": 900,
+    "dev": 100,
+    "test": 200,
+    "test_slices": {
+      "seen_base_unseen_task_families": 100,
+      "unseen_scene_layouts": 60,
+      "held_out_base_projects": 40
+    },
+    "status": "proposed_not_instantiated",
+    "rules": [
+      "先按源码/任务机制/改错模板/地图家族分组，再划分任务；不随机按JSON行拆",
+      "同机制的小参数改动或改写query是同一家族，不计作独立能力",
+      "完全留出工程中的全部任务不得进入训练或开发；建议先预留2个工程，准入后冻结ID",
+      "60个未见场景测试按地图家族隔离；与未见任务族/整工程子集去重",
+      "测试只用于冻结后评估，开发反馈和难度校准使用dev",
+      "公开工程可能在预训练出现，未见仅指本项目训练/开发未纳入",
+      "共享音效本身不等于语义泄漏；相同控制器、任务修复代码与近似地图需额外审查"
+    ]
+  },
+  "release_gates": [
+    "固定上游commit并核对完整资源/许可",
+    "工程导入和最小运行成功",
+    "任务基线确有未满足要求，避免空任务",
+    "有一个独立校准的通过候选及针对每条标准的失败负例",
+    "外部检查器固定，运行错误与候选失败区分，验收任意阈值不得隐藏强加",
+    "记录验证时延/稳定性；视觉偏好任务不作为程序reward主干",
+    "在小样本试跑后才扩量，1200是目标数量而非当前已证明容量"
+  ]
+}

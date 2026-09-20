@@ -1,0 +1,10 @@
+{
+  "fixture_only": true,
+  "reject_accept_when_hard_checks_fail": true,
+  "store_decision_when_eligible": true,
+  "reject_duplicate_decision": true,
+  "real_run_human_review_unchanged": true,
+  "browser_page_observed": "6 passed checks and 705 sampled trajectory points",
+  "play_launch": "Godot Starter Kit Racing (DEBUG) native window observed; screenshot attempt ended after app exit",
+  "human_acceptance": null
+}

@@ -1,0 +1,45 @@
+{
+  "run_id": "warehouse-generate-01",
+  "brief": "布置一个可穿行的仓库房间，保留六个箱子，玩家从西侧绿色出生点走到东侧金色出口。箱子不得越墙、相互穿透或堵住唯一通路。",
+  "created_at": "2026-09-19T09:10:44.077235+00:00",
+  "mode": "generate",
+  "model": {
+    "name": "Qwen/Qwen2.5-Coder-7B-Instruct",
+    "deployment": "DSW A800 GPU5, Transformers via SSH",
+    "source": "https://huggingface.co/Qwen/Qwen2.5-Coder-7B-Instruct",
+    "license": "Apache-2.0",
+    "health": {
+      "status": "ready",
+      "model": {
+        "name": "Qwen/Qwen2.5-Coder-7B-Instruct",
+        "revision": "c03e6d358207e414f1eca0bb1891e29f1db0e242",
+        "source": "https://huggingface.co/Qwen/Qwen2.5-Coder-7B-Instruct",
+        "license": "Apache-2.0",
+        "backend": "transformers",
+        "device": "DSW hjw-rsi GPU5",
+        "role": "public alternative, not paper AWoMo/Cosmos",
+        "weight_bytes": 15231271864,
+        "torch_version": "2.10.0+cu128",
+        "transformers_version": "4.57.6"
+      },
+      "calls_used": 0,
+      "calls_limit": 5
+    }
+  },
+  "model_call_count": 1,
+  "status": "awaiting_human",
+  "candidates": [
+    {
+      "id": "001-model",
+      "origin": "model",
+      "spec": "candidates/001-model/scene.json",
+      "checks": "candidates/001-model/checks.json",
+      "screenshot": "candidates/001-model/scene.png",
+      "model_response": "responses/001-model.json"
+    }
+  ],
+  "final_candidate_id": "001-model",
+  "human_review": null,
+  "implementation": "Independent public-component implementation; not original paper reproduction",
+  "completed_at": "2026-09-19T09:10:54.409629+00:00"
+}

@@ -1,0 +1,12 @@
+[
+  {
+    "path": "scripts/view.gd",
+    "baseline_sha256": "bd01a3fed163547b71e2a0820eed9729b04a5aeeef780696b7f050eb3c92483c",
+    "sha256": "d4c1b744fd0f3c871f1ecf5e3f62168df26e416a991fa33bb2f0a72388ed854e"
+  },
+  {
+    "path": "scripts/vehicle.gd",
+    "baseline_sha256": "fd33d1bb4ed3e473cab4110d64cee0ec1112ba4cf505b0d29577a1b1719e02bb",
+    "sha256": "ad9c91eae22653f438cae25f2ae2544b01ba82015d7816916d063a03f89ea2ef"
+  }
+]

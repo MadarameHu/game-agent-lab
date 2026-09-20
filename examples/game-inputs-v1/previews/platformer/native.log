@@ -1,0 +1,14 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+OpenGL API 4.1 Metal - 90.5 - Compatibility - Using Device: Apple - Apple M5
+
+PREVIEW_COMPLETE {"collision_shapes":39,"engine_version":"4.7.2-stable (official)","initial_setup":"default","main_scene":"res://scenes/main.tscn","mesh_instances":52,"node_count":209,"observation":"120 process frames; no requested task changes executed","rendering_method":"gl_compatibility","screenshot_error":0}
+ERROR: 1 RID allocations of type 'N5GLES36ShaderE' were leaked at exit.
+
+WARNING: Screen-space AA is only available when using the Forward+ or Mobile renderer.
+     at: viewport_set_screen_space_aa (servers/rendering/renderer_viewport.cpp:1435)
+WARNING: Image format BPTC_RGBA not supported by hardware, converting to RGBA8.
+     at: _get_gl_image_and_format (drivers/gles3/storage/texture_storage.cpp:987)
+     GDScript backtrace (most recent call first):
+         [0] capture (/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/outputs/game-inputs-v1/tools/capture_preview.gd:14)
+ERROR: 1 shaders of type ParticlesShaderGLES3 were never freed
+   at: ~ShaderGLES3 (drivers/gles3/shader_gles3.cpp:838)

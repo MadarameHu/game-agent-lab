@@ -1,0 +1,69 @@
+{
+  "repository": "https://github.com/KenneyNL/Starter-Kit-3D-Platformer",
+  "commit": "3fa8a04b1c01ab23db43123d4ce814a34c3fc7f0",
+  "commit_date": "2026-03-12T08:52:37Z",
+  "download_url": "https://codeload.github.com/KenneyNL/Starter-Kit-3D-Platformer/zip/3fa8a04b1c01ab23db43123d4ce814a34c3fc7f0",
+  "archive_sha256": "aae74237d4fe047aa6074e209c7bb7eec2ddfbfc110547818230a2da4cb924b9",
+  "archive_bytes": 4565232,
+  "downloaded_at": "2026-09-19",
+  "project_directory": "project",
+  "local_modifications": [],
+  "source_type": "official upstream fixed-commit snapshot",
+  "source_file_manifest": "upstream-files.sha256",
+  "licenses": [
+    {
+      "scope": "scripts and project",
+      "license": "MIT",
+      "files": [
+        "project/LICENSE.md",
+        "project/README.md"
+      ],
+      "note": "Original license notices retained; LICENSE.md says 2023, README says 2026."
+    },
+    {
+      "scope": "sprites, 3D models, sound effects",
+      "license": "CC0-1.0",
+      "files": [
+        "project/README.md"
+      ],
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+    },
+    {
+      "scope": "Lilita One font",
+      "license": "OFL-1.1",
+      "files": [
+        "project/fonts/license.txt"
+      ]
+    }
+  ],
+  "upstream_engine_version": "Godot 4.6 (project.godot and README)",
+  "validated_engine_version": "Godot 4.7.2.stable.official.ed1daf0bf",
+  "main_scene": "res://scenes/main.tscn",
+  "renderer": "Forward Plus by default; existing upstream Compatibility brightness adjustment supported",
+  "physics": "Jolt Physics (upstream default)",
+  "menu": false,
+  "validation": "validation/results.json",
+  "validation_limitations": [
+    "Headless import and 180 process-frame startup only; no native screenshot or interactive traversal performed by this agent.",
+    "Headless dummy renderer and ObjectDB/resource cleanup warnings at process exit; no script parse/runtime errors observed."
+  ],
+  "generated_files": "Godot .godot cache and import-generated metadata may be present; all upstream source file bytes restored after import.",
+  "import_rewritten_files_restored": [
+    "meshes/brick.res",
+    "models/block-coin.glb.import",
+    "models/brick-particle.glb.import",
+    "models/brick.glb.import",
+    "models/character.glb.import",
+    "models/cloud.glb.import",
+    "models/coin.glb.import",
+    "models/dust.glb.import",
+    "models/flag.glb.import",
+    "models/grass-small.glb.import",
+    "models/grass.glb.import",
+    "models/platform-falling.glb.import",
+    "models/platform-grass-large-round.glb.import",
+    "models/platform-large.glb.import",
+    "models/platform-medium.glb.import",
+    "models/platform.glb.import"
+  ]
+}

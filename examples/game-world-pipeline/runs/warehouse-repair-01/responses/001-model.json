@@ -1,0 +1,24 @@
+{
+  "request_id": "warehouse-repair-01-001-model",
+  "raw_text": "```json\n{\n  \"moves\": [\n    {\n      \"id\": \"crate_03\",\n      \"position\": [2, 0, 0]\n    }\n  ],\n  \"reason\": \"Moved crate_03 to create a continuous path from player start to goal.\"\n}\n```",
+  "model": {
+    "name": "Qwen/Qwen2.5-Coder-7B-Instruct",
+    "revision": "c03e6d358207e414f1eca0bb1891e29f1db0e242",
+    "source": "https://huggingface.co/Qwen/Qwen2.5-Coder-7B-Instruct",
+    "license": "Apache-2.0",
+    "backend": "transformers",
+    "device": "DSW hjw-rsi GPU5",
+    "role": "public alternative, not paper AWoMo/Cosmos",
+    "weight_bytes": 15231271864,
+    "torch_version": "2.10.0+cu128",
+    "transformers_version": "4.57.6"
+  },
+  "usage": {
+    "input_tokens": 1699,
+    "output_tokens": 62
+  },
+  "elapsed_seconds": 1.2989106178283691,
+  "finish_reason": "stop",
+  "calls_used": 2,
+  "calls_limit": 5
+}

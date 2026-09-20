@@ -1,0 +1,38 @@
+{
+  "id": "platformer-03",
+  "title": "改善平台边缘起跳与落地连跳手感",
+  "status": "awaiting_human",
+  "human_review": null,
+  "engine_reward": 1,
+  "agent_system": "Current Codex agents; no separate reward model",
+  "attempts": [
+    {
+      "evidence": "evidence/behavior-attempt1",
+      "exit_code": 0
+    },
+    {
+      "evidence": "evidence/behavior-final",
+      "exit_code": 1
+    },
+    {
+      "evidence": "evidence/native-final",
+      "exit_code": 0
+    },
+    {
+      "evidence": "evidence/import",
+      "exit_code": 0
+    },
+    {
+      "evidence": "evidence/behavior-final2",
+      "exit_code": 0
+    }
+  ],
+  "contract_sha256": "8009338c2c404046b4e3a662b31ad7f69c33f5d9d818a6a496fe057e6e24b601",
+  "combined_reward": null,
+  "final_evidence": "evidence/final",
+  "checks": "evidence/final/result.json",
+  "play": {
+    "mode": "project"
+  },
+  "summary": "增加0.12秒离地宽容和0.15秒落地预输入，保持二段跳与原关卡，并加入边角操作提示。"
+}

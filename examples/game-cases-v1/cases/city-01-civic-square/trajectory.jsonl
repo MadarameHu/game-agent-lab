@@ -1,0 +1,4 @@
+{"event": "input_prepared", "task": "city-01-civic-square", "input_source": "outputs/game-inputs-v1/tasks/city-01-civic-square/task.json"}
+{"timestamp": "2026-09-19T10:54:00.691059+00:00", "event": "contract_frozen", "contract_sha256": "b690203db193c091df9b92fad2d1b0b7b67587dbcc4061f1f73e5c6ce56bc1d7"}
+{"timestamp": "2026-09-19T10:54:07.684347+00:00", "event": "verification_attempt", "attempt": "attempt01", "passed": true, "evidence": "evidence/attempt01"}
+{"timestamp": "2026-09-19T10:54:37.512714+00:00", "event": "finalized", "hard_pass": true, "engine_reward": 1, "human_review": null}

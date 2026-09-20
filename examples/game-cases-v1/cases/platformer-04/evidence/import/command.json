@@ -1,0 +1,15 @@
+{
+  "command": [
+    "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/work/pipeline-build/runtime/Godot.app/Contents/MacOS/Godot",
+    "--headless",
+    "--editor",
+    "--import",
+    "--path",
+    "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/outputs/game-cases-v1/cases/platformer-04/project",
+    "--quit"
+  ],
+  "exit_code": 0,
+  "elapsed_seconds": 11.717,
+  "script_error_free": true,
+  "timeout_seconds": 60
+}

@@ -1,0 +1,77 @@
+{
+  "hard_pass": true,
+  "engine_reward": 1,
+  "human_review": null,
+  "combined_reward": null,
+  "source_report": "evidence/final-verification-v2/result.json",
+  "lap": {
+    "criteria": {
+      "max_centerline_distance_m": 2.5,
+      "max_steps": 18000,
+      "return_radius_m": 2.0
+    },
+    "distance_traveled_m": 134.727179108944,
+    "driver": "input-pure-pursuit-v3",
+    "max_local_centerline_distance_m": 1.99315917491913,
+    "max_sphere_y": 0.499999970197678,
+    "note": "Only Input.action_press/release used. Stock controller and rigid body remain unmodified. A driver failure alone does not prove human undrivability.",
+    "parameters": {
+      "forward_strength": 0.24,
+      "lookahead_m": 1.8,
+      "settle_steps_included": 60,
+      "waypoint_progress": "sequential perpendicular gates within current local segment error bound"
+    },
+    "passed": true,
+    "physical_end": [
+      3.83600449562073,
+      0.499989628791809,
+      5.11539220809937
+    ],
+    "physical_start": [
+      3.5,
+      0.5,
+      5.0
+    ],
+    "physics_hz": 60,
+    "physics_steps": 3519,
+    "return_distance_xz": 0.355266630649567,
+    "reverse_action_used": false,
+    "simulation_seconds": 58.65,
+    "status": "stock_physics_lap_pass",
+    "wall_seconds": 0.658696,
+    "waypoints_completed": 421,
+    "waypoints_total": 421
+  },
+  "checks": [
+    {
+      "id": "project_loads",
+      "pass": true,
+      "summary": "Godot 导入与场景加载成功；无脚本错误。"
+    },
+    {
+      "id": "protected_gameplay",
+      "pass": true,
+      "summary": "48 个受保护文件保持一致；主场景仅 GridMap 布局改变。"
+    },
+    {
+      "id": "closed_track",
+      "pass": true,
+      "summary": "18 块道路构成单一闭合环线，接口匹配。"
+    },
+    {
+      "id": "required_geometry",
+      "pass": true,
+      "summary": "连续直道 ≥3 块；存在先左后右相邻弯道；包含 1 块终点外观。"
+    },
+    {
+      "id": "spawn_and_decor",
+      "pass": true,
+      "summary": "出生点在路上；8 组森林、1 组外侧帐篷通过几何检查；视角体验待人工。"
+    },
+    {
+      "id": "physical_lap",
+      "pass": true,
+      "summary": "3519 个物理步 / 58.65 秒仿真，行驶 134.73m；返回距离 0.355m。"
+    }
+  ]
+}

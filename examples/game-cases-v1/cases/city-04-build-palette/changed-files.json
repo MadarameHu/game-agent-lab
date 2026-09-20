@@ -1,0 +1,15 @@
+{
+  "changed": [
+    {
+      "path": "scripts/builder.gd",
+      "before": "a43cb68b0a07b1d9524c99d6a1bd3029aa8f12dcc5f739ea7da27785502b3aa9",
+      "after": "28cb957cf7f23914a363a0d143197c0c36d68b372b7f4a807a4405d456506a27"
+    },
+    {
+      "path": "scripts/view.gd",
+      "before": "c92f26e648947fefa0aa3fb7b8433b14997c63667c27566e7b744566c0f9937f",
+      "after": "17ddd5ccf9e7e1a89acde643a3223ca3ebaf4220705629a6023160e959480d7f"
+    }
+  ],
+  "removed": []
+}

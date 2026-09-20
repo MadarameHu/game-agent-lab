@@ -1,0 +1,38 @@
+{
+  "criteria": {
+    "max_centerline_distance_m": 2.5,
+    "max_steps": 18000,
+    "return_radius_m": 2.0
+  },
+  "distance_traveled_m": 16.9248345576343,
+  "driver": "input-pure-pursuit-v1",
+  "max_local_centerline_distance_m": 2.50491261482239,
+  "max_sphere_y": 0.499999970197678,
+  "note": "Only Input.action_press/release used. Stock controller and rigid body remain unmodified. A driver failure alone does not prove human undrivability.",
+  "parameters": {
+    "forward_strength": 0.24,
+    "lookahead_m": 1.8,
+    "settle_steps_included": 60,
+    "waypoint_radius_m": 0.85
+  },
+  "passed": false,
+  "physical_end": [
+    7.39697980880737,
+    0.499998331069946,
+    19.3729572296143
+  ],
+  "physical_start": [
+    3.5,
+    0.5,
+    5.0
+  ],
+  "physics_hz": 60,
+  "physics_steps": 540,
+  "return_distance_xz": 14.8918886184692,
+  "reverse_action_used": false,
+  "simulation_seconds": 9.0,
+  "status": "local_centerline_limit_exceeded",
+  "wall_seconds": 0.096355,
+  "waypoints_completed": 45,
+  "waypoints_total": 421
+}

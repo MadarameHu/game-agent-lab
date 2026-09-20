@@ -1,0 +1,164 @@
+[
+  {
+    "command": [
+      "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/work/pipeline-build/runtime/Godot.app/Contents/MacOS/Godot",
+      "--headless",
+      "--editor",
+      "--import",
+      "--quit",
+      "--path",
+      "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/outputs/game-cases-v1/cases/racing-03/project"
+    ],
+    "exit_code": 0,
+    "timed_out": false,
+    "wall_seconds": 2.756,
+    "log": "import-v2.log",
+    "script_error": false
+  },
+  {
+    "command": [
+      "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/work/pipeline-build/runtime/Godot.app/Contents/MacOS/Godot",
+      "--headless",
+      "--path",
+      "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/outputs/game-cases-v1/cases/racing-03/project",
+      "--fixed-fps",
+      "60",
+      "--script",
+      "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/outputs/game-cases-v1/cases/racing-03/verification/behavior.gd",
+      "--",
+      "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/outputs/game-cases-v1/cases/racing-03/evidence/final/behavior.json"
+    ],
+    "exit_code": 0,
+    "timed_out": false,
+    "wall_seconds": 0.425,
+    "log": "behavior-v2.log",
+    "script_error": false
+  },
+  {
+    "command": [
+      "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/work/pipeline-build/runtime/Godot.app/Contents/MacOS/Godot",
+      "--headless",
+      "--editor",
+      "--import",
+      "--quit",
+      "--path",
+      "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/outputs/game-cases-v1/cases/racing-03/project"
+    ],
+    "exit_code": 0,
+    "timed_out": false,
+    "wall_seconds": 2.587,
+    "log": "import.log",
+    "script_error": true
+  },
+  {
+    "command": [
+      "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/work/pipeline-build/runtime/Godot.app/Contents/MacOS/Godot",
+      "--headless",
+      "--path",
+      "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/outputs/game-cases-v1/cases/racing-03/project",
+      "--fixed-fps",
+      "60",
+      "--script",
+      "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/outputs/game-cases-v1/cases/racing-03/verification/behavior.gd",
+      "--",
+      "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/outputs/game-cases-v1/cases/racing-03/evidence/final/behavior.json"
+    ],
+    "exit_code": null,
+    "timed_out": true,
+    "wall_seconds": 60.009,
+    "log": "behavior-v1.log",
+    "script_error": true
+  },
+  {
+    "command": [
+      "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/work/pipeline-build/runtime/Godot.app/Contents/MacOS/Godot",
+      "--path",
+      "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/outputs/game-cases-v1/cases/racing-03/project",
+      "--rendering-method",
+      "gl_compatibility",
+      "--script",
+      "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/outputs/game-cases-v1/cases/racing-03/verification/render.gd",
+      "--",
+      "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/outputs/game-cases-v1/cases/racing-03/evidence/final"
+    ],
+    "exit_code": 0,
+    "timed_out": false,
+    "wall_seconds": 3.674,
+    "log": "native-render.log",
+    "script_error": false
+  },
+  {
+    "command": [
+      "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/work/pipeline-build/runtime/Godot.app/Contents/MacOS/Godot",
+      "--headless",
+      "--path",
+      "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/outputs/game-cases-v1/cases/racing-03/project",
+      "--fixed-fps",
+      "60",
+      "--script",
+      "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/outputs/game-cases-v1/cases/racing-03/verification/behavior.gd",
+      "--",
+      "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/outputs/game-cases-v1/cases/racing-03/evidence/final/behavior-direction-before.json"
+    ],
+    "exit_code": 2,
+    "timed_out": false,
+    "wall_seconds": 0.369,
+    "log": "behavior-direction-before.log",
+    "script_error": false
+  },
+  {
+    "command": [
+      "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/work/pipeline-build/runtime/Godot.app/Contents/MacOS/Godot",
+      "--headless",
+      "--editor",
+      "--import",
+      "--quit",
+      "--path",
+      "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/outputs/game-cases-v1/cases/racing-03/project"
+    ],
+    "exit_code": 0,
+    "timed_out": false,
+    "wall_seconds": 2.348,
+    "log": "import-direction-fixed.log",
+    "script_error": false
+  },
+  {
+    "command": [
+      "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/work/pipeline-build/runtime/Godot.app/Contents/MacOS/Godot",
+      "--headless",
+      "--path",
+      "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/outputs/game-cases-v1/cases/racing-03/project",
+      "--fixed-fps",
+      "60",
+      "--script",
+      "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/outputs/game-cases-v1/cases/racing-03/verification/behavior.gd",
+      "--",
+      "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/outputs/game-cases-v1/cases/racing-03/evidence/final/behavior.json"
+    ],
+    "exit_code": 0,
+    "timed_out": false,
+    "wall_seconds": 0.343,
+    "log": "behavior-direction-fixed.log",
+    "script_error": false
+  },
+  {
+    "command": [
+      "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/work/pipeline-build/runtime/Godot.app/Contents/MacOS/Godot",
+      "--path",
+      "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/outputs/game-cases-v1/cases/racing-03/project",
+      "--fixed-fps",
+      "60",
+      "--rendering-method",
+      "gl_compatibility",
+      "--script",
+      "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/outputs/game-cases-v1/cases/racing-03/verification/render.gd",
+      "--",
+      "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/outputs/game-cases-v1/cases/racing-03/evidence/final"
+    ],
+    "exit_code": 0,
+    "timed_out": false,
+    "wall_seconds": 5.191,
+    "log": "native-render-direction-fixed.log",
+    "script_error": false
+  }
+]

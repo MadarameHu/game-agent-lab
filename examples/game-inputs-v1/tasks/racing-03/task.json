@@ -1,0 +1,51 @@
+{
+  "id": "racing-03",
+  "title": "让卡车的高速转向和镜头更易控制",
+  "category": "驾驶体验",
+  "query": "调校默认黄色卡车的驾驶手感：低速仍容易转向，高速连续转向时更平稳，不要突然甩头；保留S先制动再倒车的行为，让松开油门后的减速变化自然。把驱动力、低速/高速转向强度和转向响应速度作为清楚命名的Inspector可调参数，并给出适合当前赛道的默认值。调整跟随镜头，使高速时能提前看见前方道路，减速时平滑回到近景，不要出现镜头跳变。不要改赛道、换车或加入自动驾驶。",
+  "initial_state": "vehicle.gd通过RigidBody3D球体驱动车辆外观，转向使用固定系数4和lerp；倒车目标为负向输入的一半。主要驾驶参数没有导出到Inspector。view.gd按linear_speed把相机z从10插值到20，跟随速度也是脚本固定值。项目已经有前轮转向、车身侧倾、烟雾和随速度改变的引擎音效。",
+  "available_assets": [
+    "scripts/vehicle.gd",
+    "scripts/view.gd",
+    "scenes/vehicle.tscn",
+    "scenes/main.tscn",
+    "models/vehicle-truck-yellow.glb",
+    "audio/engine.ogg",
+    "audio/skid.ogg",
+    "sprites/smoke.png"
+  ],
+  "editable_paths": [
+    "scripts/vehicle.gd",
+    "scripts/view.gd",
+    "scenes/vehicle.tscn",
+    "scenes/main.tscn"
+  ],
+  "required_preservation": [
+    "保留现有W/S/A/D与手柄输入映射，不新增自动操控。",
+    "保留车身、车轮、音效、烟雾和地面对齐效果。",
+    "保留RigidBody3D球体驱动的整体结构与现有赛道。",
+    "不得靠降低到近乎不能移动的速度达成稳定效果。"
+  ],
+  "acceptance_notes": [
+    "人工比较静止起步、低速弯、高速连续左右转和S制动再倒车。",
+    "Inspector中可找到参数，改动参数确实影响驾驶而非仅改变显示。",
+    "加速减速时镜头平滑、有前方路况视野且仍跟随玩家。"
+  ],
+  "difficulty": "medium",
+  "schema_version": 1,
+  "base_id": "racing",
+  "base_name": "赛车",
+  "status": "input_ready_task_not_executed",
+  "query_origin": "Authored for this collection; not an upstream dataset annotation",
+  "initial_project": "bases/racing/project",
+  "scene_setup": "default",
+  "source_manifest": "bases/racing/source.json",
+  "source_manifest_sha256": "9965f7d08bf8df51ac6c27d86fb833070b9f994e948d84536447a0e17cf7def3",
+  "preview": "previews/racing/scene.png",
+  "path_conventions": {
+    "initial_project": "relative to collection root",
+    "available_assets": "relative to initial_project",
+    "editable_paths": "relative to initial_project; annotations specify new files or restrictions"
+  },
+  "evaluation_status": "Acceptance notes are human-authored task requirements, not implemented automatic checkers."
+}

@@ -1,0 +1,17 @@
+[
+  {
+    "path": "scenes/main.tscn",
+    "baseline_sha256": "5138d40275304a21644a6fb3500e03a2b734e6761f8dc4c677d08781902f1122",
+    "sha256": "d1dddebf020258d96b8fc595196a27142d374b0603b98d498b1edc34952c4a4f"
+  },
+  {
+    "path": "scripts/view.gd",
+    "baseline_sha256": "bd01a3fed163547b71e2a0820eed9729b04a5aeeef780696b7f050eb3c92483c",
+    "sha256": "8e162807bec3fb16a846b6a7c4b6f7530b3b82387a885b265df4386b108c8309"
+  },
+  {
+    "path": "scripts/vehicle_switcher.gd",
+    "baseline_sha256": null,
+    "sha256": "223f34aaf63e3732bc8d73b04b29fc9af44f784ad1db236e01deca377c933190"
+  }
+]

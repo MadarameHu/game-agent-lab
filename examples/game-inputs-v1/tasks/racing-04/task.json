@@ -1,0 +1,58 @@
+{
+  "id": "racing-04",
+  "title": "把摩托车接入主场景并支持停车换车",
+  "category": "车辆适配",
+  "query": "把随包提供的摩托车正式接入主场景，启动时默认驾驶摩托车；同时保留黄色卡车作为可选车辆。新增Tab停车换车功能：只有车辆接近静止时才允许切换；切换后新车出现在同一位置并保持朝向，旧车不再响应输入或继续作为活动物理车存在，镜头立即绑定新车并平滑跟随。屏幕角落显示当前是摩托车还是卡车；行驶中按Tab应提示先停车，不应直接换车。摩托车要保留专用侧倾、前叉/车轮动画和发动机声音。",
+  "initial_state": "scenes/vehicle-motorcycle.tscn和scripts/vehicle-motorcycle.gd已经存在，摩托车脚本继承Vehicle并覆盖车身和车轮效果。主场景实际只实例化可驾驶的黄色卡车Vehicle，View.target固定指向它；其他绿、紫、红色卡车是模型实例而非可驾驶控制器。没有车型选择HUD或Tab切换输入逻辑。",
+  "available_assets": [
+    "scenes/vehicle-motorcycle.tscn",
+    "scenes/vehicle.tscn",
+    "scripts/vehicle-motorcycle.gd",
+    "scripts/vehicle.gd",
+    "scripts/view.gd",
+    "models/vehicle-motorcycle.glb",
+    "models/vehicle-truck-yellow.glb",
+    "audio/engine-motorcycle.ogg",
+    "audio/engine.ogg"
+  ],
+  "editable_paths": [
+    "scenes/main.tscn",
+    "scenes/vehicle-motorcycle.tscn",
+    "scenes/vehicle.tscn",
+    "scripts/vehicle.gd",
+    "scripts/vehicle-motorcycle.gd",
+    "scripts/view.gd",
+    "project.godot",
+    "scripts/vehicle_switcher.gd",
+    "scenes/vehicle_hud.tscn",
+    "scripts/vehicle_hud.gd"
+  ],
+  "required_preservation": [
+    "保留原赛道GridMap和静态场景布景。",
+    "两种车辆都保留W/S/A/D和现有音效；摩托车不得只用卡车模型缩放冒充。",
+    "任何时刻只允许一辆车接受玩家输入，View.target始终有效。",
+    "保留原始资产及许可证。"
+  ],
+  "acceptance_notes": [
+    "初始进入场景驾驶的是摩托车，能看到专用倾斜和前叉/车轮表现。",
+    "停车时可来回切换，位置朝向保持且镜头和HUD跟随正确对象。",
+    "行驶中换车被拒绝并有提示；多次切换后没有幽灵车、双重输入或空相机目标。"
+  ],
+  "difficulty": "hard",
+  "schema_version": 1,
+  "base_id": "racing",
+  "base_name": "赛车",
+  "status": "input_ready_task_not_executed",
+  "query_origin": "Authored for this collection; not an upstream dataset annotation",
+  "initial_project": "bases/racing/project",
+  "scene_setup": "default",
+  "source_manifest": "bases/racing/source.json",
+  "source_manifest_sha256": "9965f7d08bf8df51ac6c27d86fb833070b9f994e948d84536447a0e17cf7def3",
+  "preview": "previews/racing/scene.png",
+  "path_conventions": {
+    "initial_project": "relative to collection root",
+    "available_assets": "relative to initial_project",
+    "editable_paths": "relative to initial_project; annotations specify new files or restrictions"
+  },
+  "evaluation_status": "Acceptance notes are human-authored task requirements, not implemented automatic checkers."
+}

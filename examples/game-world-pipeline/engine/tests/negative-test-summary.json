@@ -1,0 +1,38 @@
+{
+  "overlap": {
+    "exit": 0,
+    "hard_pass": false,
+    "checks": {
+      "scene_load": true,
+      "bounds": true,
+      "no_overlap": false,
+      "route_exists": true,
+      "rollout_reaches_goal": true
+    },
+    "stderr": ""
+  },
+  "bounds": {
+    "exit": 0,
+    "hard_pass": false,
+    "checks": {
+      "scene_load": true,
+      "bounds": false,
+      "no_overlap": true,
+      "route_exists": true,
+      "rollout_reaches_goal": true
+    },
+    "stderr": ""
+  },
+  "too-few": {
+    "exit": 0,
+    "hard_pass": false,
+    "checks": {
+      "scene_load": false,
+      "bounds": false,
+      "no_overlap": false,
+      "route_exists": false,
+      "rollout_reaches_goal": false
+    },
+    "stderr": ""
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "id": "city-01-civic-square",
+  "title": "把喷泉旁扩成可辨认的社区广场",
+  "status": "awaiting_human",
+  "human_review": null,
+  "engine_reward": 1,
+  "agent_system": "Current Codex agents; no separate reward model",
+  "attempts": [
+    {
+      "id": "attempt01",
+      "passed": true,
+      "evidence": "evidence/attempt01"
+    }
+  ],
+  "contract_sha256": "b690203db193c091df9b92fad2d1b0b7b67587dbcc4061f1f73e5c6ce56bc1d7",
+  "final_evidence": "evidence/final",
+  "checks": "evidence/final/result.json",
+  "play": {
+    "mode": "project"
+  },
+  "summary": "在原喷泉南侧新增27格社区庭院：连贯人行铺装、两种住宅、草地与高低树木；直接启动显示149格扩建城市，资金5860。"
+}

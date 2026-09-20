@@ -1,0 +1,8 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+LAP_RESULT {"criteria":{"max_centerline_distance_m":2.5,"max_steps":18000,"return_radius_m":2.0},"distance_traveled_m":134.727179108944,"driver":"input-pure-pursuit-v3","max_local_centerline_distance_m":1.99315917491913,"max_sphere_y":0.499999970197678,"note":"Only Input.action_press/release used. Stock controller and rigid body remain unmodified. A driver failure alone does not prove human undrivability.","parameters":{"forward_strength":0.24,"lookahead_m":1.8,"settle_steps_included":60,"waypoint_progress":"sequential perpendicular gates within current local segment error bound"},"passed":true,"physical_end":[3.83600449562073,0.499989628791809,5.11539220809937],"physical_start":[3.5,0.5,5.0],"physics_hz":60,"physics_steps":3519,"return_distance_xz":0.355266630649567,"reverse_action_used":false,"simulation_seconds":58.65,"status":"stock_physics_lap_pass","wall_seconds":0.658696,"waypoints_completed":421,"waypoints_total":421}
+WARNING: 12 ObjectDB instances were leaked at exit (run with `--verbose` for details).
+   at: cleanup (core/object/object.cpp:2536)
+ERROR: 6 resources still in use at exit (run with --verbose for details).
+   at: clear (core/io/resource.cpp:822)
+ERROR: 1 RID allocations of type 'N13RendererDummy15MaterialStorage11DummyShaderE' were leaked at exit.

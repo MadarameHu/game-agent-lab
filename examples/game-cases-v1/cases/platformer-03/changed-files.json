@@ -1,0 +1,13 @@
+{
+  "changed": {
+    "scripts/hud.gd": {
+      "before": "ed525fee70e6f6901062bf53d6ea8946af844f93ba4750a917d19c14fe09016e",
+      "after": "8aa1af1c5a53f854e030401e08fa1409a947f21da79b6fdc5d18df15ed274184"
+    },
+    "scripts/player.gd": {
+      "before": "bfb8edfce98b95e7f7116dbc3e884604db277904dd9c329d4493521fa363e269",
+      "after": "780536e7b30274565fcbcc3d6d5b45f4bf2bc114ea836c706e41c1a9a5dbc8e4"
+    }
+  },
+  "removed": []
+}

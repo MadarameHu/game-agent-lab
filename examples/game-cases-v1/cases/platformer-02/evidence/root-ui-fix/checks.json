@@ -1,0 +1,79 @@
+{
+  "checks": [
+    {
+      "details": {
+        "coins": 0,
+        "fixture": "Teleport onto real goal Area; real body-enter event",
+        "message": "NEED 8 MORE COINS\nKeep exploring, then return!"
+      },
+      "id": "zero_coin_goal_rejected",
+      "pass": true,
+      "summary": "zero_coin_goal_rejected"
+    },
+    {
+      "details": {},
+      "id": "can_leave_locked_goal",
+      "pass": true,
+      "summary": "can_leave_locked_goal"
+    },
+    {
+      "details": {
+        "after": 7,
+        "before": 7,
+        "fixture": "Repeated real body contact with already grabbed coin"
+      },
+      "id": "coin_counts_once",
+      "pass": true,
+      "summary": "coin_counts_once"
+    },
+    {
+      "details": {
+        "coins": 7,
+        "message": "NEED 1 MORE COINS\nKeep exploring, then return!"
+      },
+      "id": "seven_coin_goal_rejected",
+      "pass": true,
+      "summary": "seven_coin_goal_rejected"
+    },
+    {
+      "details": {
+        "coins": 8,
+        "completed": true,
+        "completion_count": 1,
+        "consumed_fixture_objects": true
+      },
+      "id": "eight_coin_goal_completes",
+      "pass": true,
+      "summary": "eight_coin_goal_completes"
+    },
+    {
+      "details": {
+        "count": 1
+      },
+      "id": "completion_is_idempotent",
+      "pass": true,
+      "summary": "completion_is_idempotent"
+    },
+    {
+      "details": {
+        "button": "[P: (405.0, 367.0), S: (470.0, 56.0)]",
+        "panel": "[P: (375.0, 220.0), S: (530.0, 280.0)]",
+        "viewport": "[P: (0.0, 0.0), S: (1280.0, 720.0)]"
+      },
+      "id": "success_panel_visible",
+      "pass": true,
+      "summary": "success_panel_visible"
+    },
+    {
+      "details": {
+        "coins": 14,
+        "fixture": "Real Viewport mouse click at visible product button center; no manual world reset",
+        "new_scene_id": 51069847241,
+        "old_scene_id": 38067504635
+      },
+      "id": "restart_restores_world",
+      "pass": true,
+      "summary": "restart_restores_world"
+    }
+  ]
+}

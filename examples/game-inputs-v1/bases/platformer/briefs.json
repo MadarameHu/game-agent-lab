@@ -1,0 +1,50 @@
+[
+  {
+    "id": "platformer-01",
+    "title": "把悬空群岛改造成主线与挑战支路",
+    "category": "布局与关卡设计",
+    "query": "请基于现有悬空平台关卡重新设计从出生点到旗帜的探索路线。主线依次呈现安全起步、台阶式上升、抵达高处旗帜三个清楚的空间段落；同时保留一条离开主线、经过下坠平台和顶碎砖块、再回到主线的可选挑战支路。用金币分布提示前进方向，保留总共14枚金币，主线与支路都要有奖励。沿用原角色、草地平台、下坠平台、砖块与旗帜素材，可以重排或复制平台，但不要只是把整关平移或简单延长一排跳台。",
+    "initial_state": ["原始单关卡直接进入scenes/main.tscn，无标题菜单。", "已有14枚金币、3个下坠平台、3个从下方顶碎的砖块。", "Player出生点约[0,0.493,0]，旗帜位于[0,3.481,-6]；旗帜只有模型，没有通关逻辑。", "平台从出生点延伸到x约-22处；下坠平台分别在[-9,0.419,4]、[-12,-0.315,4]、[-11.753,1.830,-2.306]。"],
+    "available_assets": ["objects/player.tscn", "objects/platform.tscn", "objects/platform_medium.tscn", "objects/platform_grass_large_round.tscn", "objects/platform_falling.tscn", "objects/coin.tscn", "objects/brick.tscn", "objects/cloud.tscn", "models/flag.glb"],
+    "editable_paths": ["scenes/main.tscn", "objects/platform.tscn", "objects/platform_medium.tscn", "objects/platform_grass_large_round.tscn", "objects/platform_falling.tscn", "objects/coin.tscn", "objects/brick.tscn"],
+    "required_preservation": ["保持原角色控制、相机控制、金币收集与二段跳，不提高跳跃高度来掩盖不可达布局。", "仍从原出生平台出发，保留旗帜作为空间终点，本任务不增加通关系统。", "保留14枚金币、至少3个下坠平台与3个可顶碎砖块，并保留现有许可证。"],
+    "acceptance_notes": ["人工试玩能从出生点辨认主线方向，用现有二段跳完成三段上升并到达旗帜。", "挑战支路具有不同风险节奏，绕行有金币奖励且能汇入主线，不是无回路死路。", "金币在可跳取位置，平台边缘与落点可辨认，主线不要求踩已坠毁平台回头。"],
+    "difficulty": "中等"
+  },
+  {
+    "id": "platformer-02",
+    "title": "给装饰旗帜加入金币门槛与通关流程",
+    "category": "玩法新增",
+    "query": "现在关卡旗帜只是装饰。请新增完整的小关卡目标：收集至少8枚金币后到旗帜处才能通关。金币不足时靠近旗帜应显示还缺几枚，玩家仍能离开继续探索；满足条件时明确提示成功，并显示本次收集数量，提供重新挑战按钮。HUD需要一直显示当前金币和目标数量，让玩家知道为什么在收集。尽量复用现有旗帜、金币UI与音效，不引入新美术包。",
+    "initial_state": ["原关卡有14枚金币，金币脚本避免重复收集，通过Player.coin_collected信号更新HUD。", "HUD只有金币图标、乘号和数量；scripts/hud.gd只把收到的数量显示出来。", "旗帜直接实例化models/flag.glb，没有Area3D触发器或胜利脚本。", "掉到y<-10会重新加载整个场景，同时重置金币、砖块与下坠平台。"],
+    "available_assets": ["models/flag.glb", "objects/coin.tscn", "objects/player.tscn", "sprites/coin.png", "sounds/coin.ogg", "fonts/lilita_one_regular.ttf"],
+    "editable_paths": ["scenes/main.tscn", "scripts/main.gd", "scripts/hud.gd", "scripts/player.gd", "objects/coin.gd", "scripts/gameplay/ (可新建)", "objects/goal/ (可新建)"],
+    "required_preservation": ["保持原平台与14枚金币位置、角色移动和相机手感。", "金币只能计数一次；保持现有掉落死亡重载行为。", "保留脚本MIT、素材CC0和字体OFL许可证。"],
+    "acceptance_notes": ["人工分别以少于8枚及至少8枚金币靠近旗帜，能看到缺额提示或通关结果。", "成功流程不会重复触发，重新挑战恢复金币、角色、砖块和下坠平台。", "目标进度在游玩时易读，成功后有清楚且可点击的重新挑战入口。"],
+    "difficulty": "中等偏高"
+  },
+  {
+    "id": "platformer-03",
+    "title": "改善平台边缘起跳与落地连跳手感",
+    "category": "操作体验与可用性",
+    "query": "请让这个二段跳平台游戏对短促输入更宽容：离开平台边缘后约0.12秒内仍允许一次地面起跳；落地前约0.15秒内按下跳跃，落地时应执行该次起跳。必须保留原有二段跳，但不能借两种缓冲获得第三段跳或无限空中跳跃。保持原移动速度和跳跃高度，在HUD边角增加简短操作提示，说明移动、跳跃及相机控制，避免挡住落点。不要改关卡布局，也不要添加自动跳跃。",
+    "initial_state": ["支持WASD相机相对移动、空格二段跳、方向键旋转相机及手柄输入。", "scripts/player.gd直接读取Input.is_action_just_pressed并用jump_single/jump_double布尔值控制跳跃，尚无显式离地计时器或落地输入缓冲。", "原控制器离地后仍可能保留jump_single；需要明确区分短暂离地宽容与真正空中跳跃，不能仅追加跳跃机会。", "原参数movement_speed=250、jump_strength=7，已有跳跃/落地音效和角色拉伸动画。"],
+    "available_assets": ["objects/player.tscn", "objects/character.tscn", "sounds/jump.ogg", "sounds/land.ogg", "sprites/coin.png", "fonts/lilita_one_regular.ttf"],
+    "editable_paths": ["scripts/player.gd", "scripts/hud.gd", "scenes/main.tscn"],
+    "required_preservation": ["不改变关卡物体transform、金币数、下坠平台和砖块机制。", "保持原movement_speed=250与jump_strength=7，保留跳跃和落地动画音效。", "相机旋转、缩放和手柄控制仍可用；提示文字与金币HUD不重叠。"],
+    "acceptance_notes": ["人工在平台边缘刚走空后短按空格仍能起跳；超过宽容窗口不会额外获得地面起跳次数。", "即将落地前按空格能够接上下一跳，单纯长按不会不停自动跳。", "连续空中输入不会出现第三次起跳；正常地面起跳加一次空中跳仍保持原手感。"],
+    "difficulty": "中等偏高"
+  },
+  {
+    "id": "platformer-04",
+    "title": "把明亮玩具群岛改为清晰可读的黄昏关卡",
+    "category": "视觉与信息设计",
+    "query": "请在不改变关卡玩法和布局的前提下，把明亮天空群岛调整为温暖黄昏风格：天空和远处云朵形成暖橙到淡紫的层次，角色、金币与平台边缘仍容易识别；下坠平台应通过与普通草地不同的颜色或细节传达危险，不能只靠HUD文字说明。同步整理金币HUD的配色、阴影和留白，使它和场景协调。复用已有模型、材质贴图、字体与粒子，避免给全屏套一层同色滤镜。",
+    "initial_state": ["场景使用scenes/main-environment.tres天空、Sun方向光、objects/cloud.tscn漂浮云和共享models/Textures/colormap.png贴图。", "主场景已有14枚金币和3个下坠平台，HUD使用Lilita字体。", "scripts/main.gd为Compatibility renderer专门降低太阳和背景能量，视觉修改需要考虑这个既有分支。"],
+    "available_assets": ["objects/cloud.tscn", "objects/platform.tscn", "objects/platform_falling.tscn", "models/colormap.tres", "models/Textures/colormap.png", "sprites/skybox.png", "sprites/particle.png", "sprites/coin.png", "fonts/lilita_one_regular.ttf"],
+    "editable_paths": ["scenes/main-environment.tres", "scenes/main.tscn", "scripts/main.gd", "objects/cloud.tscn", "objects/platform.tscn", "objects/platform_medium.tscn", "objects/platform_grass_large_round.tscn", "objects/platform_falling.tscn", "models/colormap.tres", "models/Textures/colormap.png", "sprites/skybox.png", "materials/ (可新建)"],
+    "required_preservation": ["不改玩法脚本、碰撞形状或世界中物体的位置尺寸；金币数和原始路线保持不变。", "角色、金币与旗帜的识别度不能因调暗而降低，下坠平台保持原机制。", "保留原模型、字体许可，新增材质只用项目已有资源。"],
+    "acceptance_notes": ["人工从出生点和远端平台观察，能看出黄昏氛围及前中后景层次，金币与下一落点仍清晰。", "普通平台和下坠平台有稳定可识别的视觉区分，阴影不遮住落点边界。", "1280×720窗口中金币HUD不贴边、不覆盖主要落点；兼容渲染模式无明显曝光异常。"],
+    "difficulty": "中等"
+  }
+]

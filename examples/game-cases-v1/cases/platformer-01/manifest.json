@@ -1,0 +1,42 @@
+{
+  "id": "platformer-01",
+  "title": "把悬空群岛改造成主线与挑战支路",
+  "status": "awaiting_human",
+  "human_review": null,
+  "engine_reward": 1,
+  "agent_system": "Current Codex agents; no separate reward model",
+  "attempts": [
+    {
+      "evidence": "evidence/behavior-03",
+      "exit_code": 0
+    },
+    {
+      "evidence": "evidence/behavior-02",
+      "exit_code": 2
+    },
+    {
+      "evidence": "evidence/native-final",
+      "exit_code": 0
+    },
+    {
+      "evidence": "evidence/import",
+      "exit_code": 0
+    },
+    {
+      "evidence": "evidence/bricks-extra",
+      "exit_code": 0
+    },
+    {
+      "evidence": "evidence/behavior-01",
+      "exit_code": null
+    }
+  ],
+  "contract_sha256": "91d88fdb3931c4e2a99136d04b39c3038b54ee9db014783a2b5ebedb42e71080",
+  "combined_reward": null,
+  "final_evidence": "evidence/final",
+  "checks": "evidence/final/result.json",
+  "play": {
+    "mode": "project"
+  },
+  "summary": "主线与挑战回路已完成；原控制器实走主线/支路并拾取全部14枚金币。"
+}

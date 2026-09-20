@@ -1,0 +1,72 @@
+{
+  "checks": [
+    {
+      "id": "real_input_lookahead_direction",
+      "pass": true,
+      "summary": "After actual forward Input, camera lookahead points ahead of real physical travel (velocity dot lookahead >1)"
+    },
+    {
+      "id": "actual_input_drive",
+      "pass": true,
+      "summary": "Actual forward Input and real rigidbody move more than 2m in two seconds"
+    },
+    {
+      "id": "brake_before_reverse",
+      "pass": true,
+      "summary": "S first brakes positive drive before settling into half-strength reverse"
+    },
+    {
+      "id": "coast",
+      "pass": true,
+      "summary": "Coast decays continuously and monotonically instead of abrupt loss"
+    },
+    {
+      "id": "speed_sensitive_steering",
+      "pass": true,
+      "summary": "Physical speed gives useful low-speed turning and lower high-speed yaw"
+    },
+    {
+      "id": "continuous_turns",
+      "pass": true,
+      "summary": "Alternating real input at injected high physical speed has bounded smooth yaw response (<0.2 rad/s each 60Hz tick)"
+    },
+    {
+      "id": "parameter_effect",
+      "pass": true,
+      "summary": "Changing Inspector drive force changes applied angular drive; steering parameter changes product gain"
+    },
+    {
+      "id": "camera",
+      "pass": true,
+      "summary": "Measured speed widens camera and advances focus; continuous easing returns to near view"
+    }
+  ],
+  "fixture": "Only first test is uninterrupted real driving; other tests inject physical state then exercise product functions and real Input.",
+  "metrics": {
+    "actual_drive_distance": 11.7886447906494,
+    "camera": {
+      "far": 18.9983158111572,
+      "first_step": 0.0000543594360351562,
+      "lookahead": 3.49997639656067,
+      "near": 10.0018444061279,
+      "returned": 10.0003824234009
+    },
+    "coast_after_1s": 0.135335283236613,
+    "high_yaw_rate": 0.949994162998264,
+    "low_yaw_rate": 3.399979109678,
+    "max_high_speed_yaw_step": 0.180808350267521,
+    "real_input_lookahead": {
+      "dot": 29.2162456512451,
+      "lookahead": [
+        -0.00000166899940268195,
+        0.0,
+        3.1161744594574
+      ],
+      "velocity": [
+        -0.00000409401718570734,
+        0.0,
+        9.37567710876465
+      ]
+    }
+  }
+}

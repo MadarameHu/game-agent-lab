@@ -1,0 +1,6 @@
+{
+  "construction": "Copy current protected files, restore preserved pre-edit main scene; no original input or product files modified",
+  "main_source": "evidence/baseline/main.tscn",
+  "main_sha256": "5138d40275304a21644a6fb3500e03a2b734e6761f8dc4c677d08781902f1122",
+  "protected_manifest": "contract/protected-files.json"
+}

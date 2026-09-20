@@ -1,0 +1,10 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+SCREEN (64, 64) POINT (55.17777, 42.63538) raycell (10, 0, 0)
+DOWN false []
+PATH []
+BEHAVIOR [{"details":{},"id":"startup","pass":true,"summary":"122 unchanged original cells,5860 cash,visible road mode"},{"details":{"built":false,"cash":5860,"corner_preview":false,"preview":false},"id":"stroke-preview-commit","pass":false,"summary":"Mouse drag turns and revisits:5 unique ghosts, no mutation before release,one125 charge,auto corner"},{"details":{"cancelled":true,"conflict_visible":false,"refused":true},"id":"stroke-cancel-conflict","pass":false,"summary":"Esc preserves complete grid/cash; house conflict visible and whole stroke refused"},{"details":{},"id":"single-build-controls","pass":true,"summary":"Q/E mode switch,right rotation,house and grass single-cell placement retained"}]
+WARNING: 12 ObjectDB instances were leaked at exit (run with `--verbose` for details).
+   at: cleanup (core/object/object.cpp:2536)
+ERROR: 6 resources still in use at exit (run with --verbose for details).
+   at: clear (core/io/resource.cpp:822)

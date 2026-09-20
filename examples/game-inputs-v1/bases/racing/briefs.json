@@ -1,0 +1,153 @@
+[
+  {
+    "id": "racing-01",
+    "title": "改成带连续左右弯的林间练习环线",
+    "category": "赛道布局",
+    "query": "把当前赛道改成一条能从黄色卡车出生点连续开完一圈的林间练习环线。保留GridMap拼装方式，使用现有直道、弯道和终点外观砖；在环线中安排一段至少连续三块直道，以及一组先左后右的连续弯道。把帐篷区安排在赛道外侧，森林不要盖住路面或完全遮挡驾驶视角。赛道不应有断口、重叠接缝或需要倒车才能通过的死路。此次只改路线和布景，不添加圈数、计时或检查点玩法。",
+    "initial_state": "scenes/main.tscn使用一个GridMap和已有MeshLibrary铺设场景，默认Vehicle是出生于(3.5,0,5)的黄色卡车，View跟随Vehicle。当前GridMap内有终点外观砖，但没有判圈或计时脚本。现有赛道碰撞保存在MeshLibrary中；装饰项本身没有碰撞形状。",
+    "available_assets": [
+      "models/Library/mesh-library.tres",
+      "models/Library/mesh-library.tscn",
+      "models/track-straight.glb",
+      "models/track-corner.glb",
+      "models/track-finish.glb",
+      "models/decoration-forest.glb",
+      "models/decoration-tents.glb",
+      "models/decoration-empty.glb",
+      "scenes/vehicle.tscn"
+    ],
+    "editable_paths": [
+      "scenes/main.tscn",
+      "models/Library/mesh-library.tscn",
+      "models/Library/mesh-library.tres"
+    ],
+    "required_preservation": [
+      "保留黄色卡车及现有W/S/A/D输入、音效和粒子效果。",
+      "保留View对Vehicle的有效目标引用；不要替换驾驶控制器。",
+      "保留所有上游模型、声音文件及许可证。",
+      "不得以自动驾驶或传送代替可实际驾驶的路线。"
+    ],
+    "acceptance_notes": [
+      "编辑器中检查路线确为闭合环线，并能辨认三块连续直道及左右连续弯。",
+      "人工驾驶一圈，留意接缝碰撞、窄弯卡车通行和树木遮挡。",
+      "确认帐篷在路线外侧且没有新增比赛计时机制。"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "racing-02",
+    "title": "新增按顺序过检查点的单圈计时挑战",
+    "category": "机制添加",
+    "query": "在现有赛道上新增一个单圈计时挑战。把现有终点外观所在路段设为起终点，在沿赛道不同位置新增三个有清楚编号的检查点。显示3、2、1、GO倒计时，倒计时结束才允许车辆接受驾驶输入并开始计时。玩家必须按1、2、3顺序穿过检查点，再沿正确方向穿过起终点才结束本圈；反向穿过、漏点或在起终点来回倒车不能完成。HUD显示当前用时和下一个检查点，完成后显示最终用时。新增R键重新开始本次挑战，并重置车辆、计时器和检查点状态。",
+    "initial_state": "项目只有vehicle.gd、vehicle-motorcycle.gd、view.gd三个运行脚本；主场景没有HUD、Area3D检查点、计时器或圈数控制器。track-finish.glb及GridMap中的对应砖仅提供终点视觉外观，不是现成比赛触发器。车辆移动的物理载体是Vehicle/Sphere这个RigidBody3D。",
+    "available_assets": [
+      "models/track-finish.glb",
+      "models/track-straight.glb",
+      "models/Library/mesh-library.tres",
+      "scenes/main.tscn",
+      "scenes/vehicle.tscn",
+      "scripts/vehicle.gd",
+      "scripts/view.gd"
+    ],
+    "editable_paths": [
+      "scenes/main.tscn",
+      "scenes/vehicle.tscn",
+      "scripts/vehicle.gd",
+      "project.godot",
+      "scripts/race_manager.gd",
+      "scenes/checkpoint.tscn",
+      "scripts/checkpoint.gd",
+      "scenes/race_hud.tscn",
+      "scripts/race_hud.gd"
+    ],
+    "required_preservation": [
+      "保留原赛道布局、已有模型素材和第三人称跟随相机。",
+      "保留W/S/A/D基本驾驶方式、车辆音效和烟雾。",
+      "检测真正穿越触发区和方向，不以按键或固定等待代替过点。",
+      "保留所有许可证；新增UI和触发器可用Godot内置节点制作。"
+    ],
+    "acceptance_notes": [
+      "启动查看倒计时、输入锁定、GO后计时和HUD。",
+      "按顺序正常驾驶能完成；漏过检查点、逆向过线和起终点反复进出不应完成。",
+      "R后位置、物理速度、计时和已通过检查点全部恢复新一局状态。"
+    ],
+    "difficulty": "hard"
+  },
+  {
+    "id": "racing-03",
+    "title": "让卡车的高速转向和镜头更易控制",
+    "category": "驾驶体验",
+    "query": "调校默认黄色卡车的驾驶手感：低速仍容易转向，高速连续转向时更平稳，不要突然甩头；保留S先制动再倒车的行为，让松开油门后的减速变化自然。把驱动力、低速/高速转向强度和转向响应速度作为清楚命名的Inspector可调参数，并给出适合当前赛道的默认值。调整跟随镜头，使高速时能提前看见前方道路，减速时平滑回到近景，不要出现镜头跳变。不要改赛道、换车或加入自动驾驶。",
+    "initial_state": "vehicle.gd通过RigidBody3D球体驱动车辆外观，转向使用固定系数4和lerp；倒车目标为负向输入的一半。主要驾驶参数没有导出到Inspector。view.gd按linear_speed把相机z从10插值到20，跟随速度也是脚本固定值。项目已经有前轮转向、车身侧倾、烟雾和随速度改变的引擎音效。",
+    "available_assets": [
+      "scripts/vehicle.gd",
+      "scripts/view.gd",
+      "scenes/vehicle.tscn",
+      "scenes/main.tscn",
+      "models/vehicle-truck-yellow.glb",
+      "audio/engine.ogg",
+      "audio/skid.ogg",
+      "sprites/smoke.png"
+    ],
+    "editable_paths": [
+      "scripts/vehicle.gd",
+      "scripts/view.gd",
+      "scenes/vehicle.tscn",
+      "scenes/main.tscn"
+    ],
+    "required_preservation": [
+      "保留现有W/S/A/D与手柄输入映射，不新增自动操控。",
+      "保留车身、车轮、音效、烟雾和地面对齐效果。",
+      "保留RigidBody3D球体驱动的整体结构与现有赛道。",
+      "不得靠降低到近乎不能移动的速度达成稳定效果。"
+    ],
+    "acceptance_notes": [
+      "人工比较静止起步、低速弯、高速连续左右转和S制动再倒车。",
+      "Inspector中可找到参数，改动参数确实影响驾驶而非仅改变显示。",
+      "加速减速时镜头平滑、有前方路况视野且仍跟随玩家。"
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "racing-04",
+    "title": "把摩托车接入主场景并支持停车换车",
+    "category": "车辆适配",
+    "query": "把随包提供的摩托车正式接入主场景，启动时默认驾驶摩托车；同时保留黄色卡车作为可选车辆。新增Tab停车换车功能：只有车辆接近静止时才允许切换；切换后新车出现在同一位置并保持朝向，旧车不再响应输入或继续作为活动物理车存在，镜头立即绑定新车并平滑跟随。屏幕角落显示当前是摩托车还是卡车；行驶中按Tab应提示先停车，不应直接换车。摩托车要保留专用侧倾、前叉/车轮动画和发动机声音。",
+    "initial_state": "scenes/vehicle-motorcycle.tscn和scripts/vehicle-motorcycle.gd已经存在，摩托车脚本继承Vehicle并覆盖车身和车轮效果。主场景实际只实例化可驾驶的黄色卡车Vehicle，View.target固定指向它；其他绿、紫、红色卡车是模型实例而非可驾驶控制器。没有车型选择HUD或Tab切换输入逻辑。",
+    "available_assets": [
+      "scenes/vehicle-motorcycle.tscn",
+      "scenes/vehicle.tscn",
+      "scripts/vehicle-motorcycle.gd",
+      "scripts/vehicle.gd",
+      "scripts/view.gd",
+      "models/vehicle-motorcycle.glb",
+      "models/vehicle-truck-yellow.glb",
+      "audio/engine-motorcycle.ogg",
+      "audio/engine.ogg"
+    ],
+    "editable_paths": [
+      "scenes/main.tscn",
+      "scenes/vehicle-motorcycle.tscn",
+      "scenes/vehicle.tscn",
+      "scripts/vehicle.gd",
+      "scripts/vehicle-motorcycle.gd",
+      "scripts/view.gd",
+      "project.godot",
+      "scripts/vehicle_switcher.gd",
+      "scenes/vehicle_hud.tscn",
+      "scripts/vehicle_hud.gd"
+    ],
+    "required_preservation": [
+      "保留原赛道GridMap和静态场景布景。",
+      "两种车辆都保留W/S/A/D和现有音效；摩托车不得只用卡车模型缩放冒充。",
+      "任何时刻只允许一辆车接受玩家输入，View.target始终有效。",
+      "保留原始资产及许可证。"
+    ],
+    "acceptance_notes": [
+      "初始进入场景驾驶的是摩托车，能看到专用倾斜和前叉/车轮表现。",
+      "停车时可来回切换，位置朝向保持且镜头和HUD跟随正确对象。",
+      "行驶中换车被拒绝并有提示；多次切换后没有幽灵车、双重输入或空相机目标。"
+    ],
+    "difficulty": "hard"
+  }
+]

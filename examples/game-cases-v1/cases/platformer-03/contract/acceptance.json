@@ -1,0 +1,36 @@
+{
+  "task_id": "platformer-03",
+  "frozen_before_edits": true,
+  "checks": [
+    {
+      "id": "preservation",
+      "criterion": "Only player/hud scripts modified; parameters250/7, scene transforms/assets/camera/gamepad inputs preserved."
+    },
+    {
+      "id": "coyote",
+      "criterion": "Real walk-off Input jump inside .12s retains ground+air jump; outside window consumes the sole remaining air jump."
+    },
+    {
+      "id": "jump_buffer",
+      "criterion": "After two actual Input jumps, pre-landing press inside .15s yields one landing jump, outside expires; actual timing recorded."
+    },
+    {
+      "id": "jump_limits",
+      "criterion": "Third midair input cannot reset upward velocity; holding jump does not auto-repeat after landing."
+    },
+    {
+      "id": "native_render",
+      "criterion": "Native screenshot includes legible controls HUD, without changing world layout."
+    }
+  ],
+  "human_checks": [
+    "Manual jump feel at platform edges and near landing.",
+    "HUD legibility and controller/gamepad experience."
+  ],
+  "allowed_product_paths": [
+    "scripts/player.gd",
+    "scripts/hud.gd"
+  ],
+  "reward": "All tested hard checks must pass; human_review/combined_reward remain null.",
+  "scope": "Current Codex implements and tests. Root audits separately; no independent reward model."
+}

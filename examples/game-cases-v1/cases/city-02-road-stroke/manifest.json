@@ -1,0 +1,37 @@
+{
+  "id": "city-02-road-stroke",
+  "title": "为道路增加可取消的拖拽连续铺设",
+  "status": "awaiting_human",
+  "human_review": null,
+  "engine_reward": 1,
+  "agent_system": "Current Codex agents; no separate reward model",
+  "attempts": [
+    {
+      "id": "attempt01",
+      "passed": false,
+      "evidence": "evidence/attempt01"
+    },
+    {
+      "id": "attempt02",
+      "passed": false,
+      "evidence": "evidence/attempt02"
+    },
+    {
+      "id": "attempt03",
+      "passed": false,
+      "evidence": "evidence/attempt03"
+    },
+    {
+      "id": "attempt04",
+      "passed": true,
+      "evidence": "evidence/attempt04"
+    }
+  ],
+  "contract_sha256": "419141f12d50f3a51dfa73b5c26c5c152f15b3da9e520c9ffcbc925d0f5e727b",
+  "final_evidence": "evidence/final",
+  "checks": "evidence/final/result.json",
+  "play": {
+    "mode": "project"
+  },
+  "summary": "道路支持整段拖拽预览、转角衔接、一次提交与Esc取消；重复格去重，遇非道路占用整段拒绝并提示，住宅与绿地保持单格建造。"
+}

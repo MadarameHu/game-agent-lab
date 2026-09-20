@@ -1,0 +1,51 @@
+{
+  "id": "racing-01",
+  "title": "改成带连续左右弯的林间练习环线",
+  "category": "赛道布局",
+  "query": "把当前赛道改成一条能从黄色卡车出生点连续开完一圈的林间练习环线。保留GridMap拼装方式，使用现有直道、弯道和终点外观砖；在环线中安排一段至少连续三块直道，以及一组先左后右的连续弯道。把帐篷区安排在赛道外侧，森林不要盖住路面或完全遮挡驾驶视角。赛道不应有断口、重叠接缝或需要倒车才能通过的死路。此次只改路线和布景，不添加圈数、计时或检查点玩法。",
+  "initial_state": "scenes/main.tscn使用一个GridMap和已有MeshLibrary铺设场景，默认Vehicle是出生于(3.5,0,5)的黄色卡车，View跟随Vehicle。当前GridMap内有终点外观砖，但没有判圈或计时脚本。现有赛道碰撞保存在MeshLibrary中；装饰项本身没有碰撞形状。",
+  "available_assets": [
+    "models/Library/mesh-library.tres",
+    "models/Library/mesh-library.tscn",
+    "models/track-straight.glb",
+    "models/track-corner.glb",
+    "models/track-finish.glb",
+    "models/decoration-forest.glb",
+    "models/decoration-tents.glb",
+    "models/decoration-empty.glb",
+    "scenes/vehicle.tscn"
+  ],
+  "editable_paths": [
+    "scenes/main.tscn",
+    "models/Library/mesh-library.tscn",
+    "models/Library/mesh-library.tres"
+  ],
+  "required_preservation": [
+    "保留黄色卡车及现有W/S/A/D输入、音效和粒子效果。",
+    "保留View对Vehicle的有效目标引用；不要替换驾驶控制器。",
+    "保留所有上游模型、声音文件及许可证。",
+    "不得以自动驾驶或传送代替可实际驾驶的路线。"
+  ],
+  "acceptance_notes": [
+    "编辑器中检查路线确为闭合环线，并能辨认三块连续直道及左右连续弯。",
+    "人工驾驶一圈，留意接缝碰撞、窄弯卡车通行和树木遮挡。",
+    "确认帐篷在路线外侧且没有新增比赛计时机制。"
+  ],
+  "difficulty": "medium",
+  "schema_version": 1,
+  "base_id": "racing",
+  "base_name": "赛车",
+  "status": "input_ready_task_not_executed",
+  "query_origin": "Authored for this collection; not an upstream dataset annotation",
+  "initial_project": "bases/racing/project",
+  "scene_setup": "default",
+  "source_manifest": "bases/racing/source.json",
+  "source_manifest_sha256": "9965f7d08bf8df51ac6c27d86fb833070b9f994e948d84536447a0e17cf7def3",
+  "preview": "previews/racing/scene.png",
+  "path_conventions": {
+    "initial_project": "relative to collection root",
+    "available_assets": "relative to initial_project",
+    "editable_paths": "relative to initial_project; annotations specify new files or restrictions"
+  },
+  "evaluation_status": "Acceptance notes are human-authored task requirements, not implemented automatic checkers."
+}

@@ -1,0 +1,91 @@
+{
+  "checks": [
+    {
+      "details": {
+        "height": 720,
+        "save_error": 0,
+        "width": 1280
+      },
+      "id": "image_scene.png",
+      "pass": true
+    },
+    {
+      "details": {
+        "height": 720,
+        "save_error": 0,
+        "width": 1280
+      },
+      "id": "image_overview.png",
+      "pass": true
+    },
+    {
+      "details": {
+        "height": 720,
+        "save_error": 0,
+        "width": 1280
+      },
+      "id": "image_remote.png",
+      "pass": true
+    },
+    {
+      "details": {
+        "coins": 14,
+        "falling_platforms": 3
+      },
+      "id": "original_counts",
+      "pass": true
+    },
+    {
+      "details": {
+        "hazard_meshes": 3,
+        "platform_count": 3
+      },
+      "id": "hazard_material",
+      "pass": true
+    },
+    {
+      "details": {
+        "icon": "[P: (44.0, 43.0), S: (51.2, 51.2)]",
+        "panel": "[P: (28.0, 28.0), S: (178.0, 80.0)]"
+      },
+      "id": "hud_padding",
+      "pass": true
+    },
+    {
+      "details": {
+        "background_energy": 0.800000011920929,
+        "horizon": "(1.0, 0.59, 0.38, 1.0)",
+        "postprocess_tint": false,
+        "sun_energy": 0.379999995231628,
+        "zenith": "(0.25, 0.18, 0.43, 1.0)"
+      },
+      "id": "dusk_lighting",
+      "pass": true
+    },
+    {
+      "details": {
+        "coins": 1,
+        "fixture": "one original coin moved to player after all screenshots",
+        "hud": "1"
+      },
+      "id": "coin_overlap",
+      "pass": true
+    },
+    {
+      "details": {
+        "current_y": -5.3223729133606,
+        "fixture": "player placed above original falling platform; actual collision/physics",
+        "initial_y": 0.419293999671936
+      },
+      "id": "falling_mechanism",
+      "pass": true
+    }
+  ],
+  "height": 720,
+  "human_review": null,
+  "native": true,
+  "pass": true,
+  "renderer": "gl_compatibility",
+  "view": "scene.png original spawn camera; overview/remote explicitly injected review cameras, layout untouched",
+  "width": 1280
+}

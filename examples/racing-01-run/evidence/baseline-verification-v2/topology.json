@@ -1,0 +1,2029 @@
+{
+  "closed_track": true,
+  "errors": [],
+  "road_count": 16,
+  "ordered_cells": [
+    [
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      0,
+      2
+    ],
+    [
+      -1,
+      0,
+      2
+    ],
+    [
+      -2,
+      0,
+      2
+    ],
+    [
+      -2,
+      0,
+      1
+    ],
+    [
+      -2,
+      0,
+      0
+    ],
+    [
+      -2,
+      0,
+      -1
+    ],
+    [
+      -3,
+      0,
+      -1
+    ],
+    [
+      -3,
+      0,
+      -2
+    ],
+    [
+      -3,
+      0,
+      -3
+    ],
+    [
+      -2,
+      0,
+      -3
+    ],
+    [
+      -1,
+      0,
+      -3
+    ],
+    [
+      0,
+      0,
+      -3
+    ],
+    [
+      0,
+      0,
+      -2
+    ],
+    [
+      0,
+      0,
+      -1
+    ]
+  ],
+  "turn_signs_left_positive": [
+    0,
+    0,
+    -1,
+    0,
+    -1,
+    0,
+    0,
+    1,
+    -1,
+    0,
+    -1,
+    0,
+    0,
+    -1,
+    0,
+    0
+  ],
+  "plain_three_straights": false,
+  "adjacent_left_right_indices": [
+    7
+  ],
+  "required_geometry": false,
+  "finish_tiles": 1,
+  "spawn_centerline_distance_m": 0.2462499141693102,
+  "spawn_on_road": true,
+  "roads_inside_original_floor": true,
+  "forest_count": 109,
+  "tents_count": 3,
+  "decor_clear_of_road_band": true,
+  "tents_aabbs_outside": false,
+  "decoration_geometry": [
+    {
+      "cell": [
+        -3,
+        0,
+        1
+      ],
+      "name": "decoration-forest",
+      "world_aabb_xz": [
+        -22.4812488555908,
+        7.48874950408936,
+        -14.9812488555908,
+        14.9887504577637
+      ],
+      "distance_to_centerline": 3.742499351501401,
+      "overlaps_road_band": false,
+      "all_aabb_corners_outside_route": true
+    },
+    {
+      "cell": [
+        -3,
+        0,
+        2
+      ],
+      "name": "decoration-forest",
+      "world_aabb_xz": [
+        -22.4812488555908,
+        14.9812488555908,
+        -14.9812488555908,
+        22.4812488555908
+      ],
+      "distance_to_centerline": 3.742499351501401,
+      "overlaps_road_band": false,
+      "all_aabb_corners_outside_route": true
+    },
+    {
+      "cell": [
+        1,
+        0,
+        -1
+      ],
+      "name": "decoration-forest",
+      "world_aabb_xz": [
+        7.48874950408936,
+        -7.49625015258789,
+        14.9887504577637,
+        0.00375008583068848
+      ],
+      "distance_to_centerline": 3.7424995899200497,
+      "overlaps_road_band": false,
+      "all_aabb_corners_outside_route": true
+    },
+    {
+      "cell": [
+        1,
+        0,
+        0
+      ],
+      "name": "decoration-forest",
+      "world_aabb_xz": [
+        7.48874950408936,
+        -0.00375008583068848,
+        14.9887504577637,
+        7.49625015258789
+      ],
+      "distance_to_centerline": 3.7424995899200497,
+      "overlaps_road_band": false,
+      "all_aabb_corners_outside_route": true
+    },
+    {
+      "cell": [
+        1,
+        0,
+        1
+      ],
+      "name": "decoration-forest",
+      "world_aabb_xz": [
+        7.48874950408936,
+        7.48874950408936,
+        14.9887504577637,
+        14.9887504577637
+      ],
+      "distance_to_centerline": 3.7424995899200497,
+      "overlaps_road_band": false,
+      "all_aabb_corners_outside_route": true
+    },
+    {
+      "cell": [
+        1,
+        0,
+        3
+      ],
+      "name": "decoration-forest",
+      "world_aabb_xz": [
+        7.48874950408936,
+        22.4737510681152,
+        14.9887504577637,
+        29.9737510681152
+      ],
+      "distance_to_centerline": 6.845996390601359,
+      "overlaps_road_band": false,
+      "all_aabb_corners_outside_route": true
+    },
+    {
+      "cell": [
+        -1,
+        0,
+        3
+      ],
+      "name": "decoration-forest",
+      "world_aabb_xz": [
+        -7.49625015258789,
+        22.4737510681152,
+        0.00375008583068848,
+        29.9737510681152
+      ],
+      "distance_to_centerline": 3.7425022125244,
+      "overlaps_road_band": false,
+      "all_aabb_corners_outside_route": true
+    },
+    {
+      "cell": [
+        -2,
+        0,
+        3
+      ],
+      "name": "decoration-forest",
+      "world_aabb_xz": [
+        -14.9887504577637,
+        22.4737510681152,
+        -7.48874950408936,
+        29.9737510681152
+      ],
+      "distance_to_centerline": 3.7425022125244,
+      "overlaps_road_band": false,
+      "all_aabb_corners_outside_route": true
+    },
+    {
+      "cell": [
+        -3,
+        0,
+        3
+      ],
+      "name": "decoration-forest",
+      "world_aabb_xz": [
+        -22.4812488555908,
+        22.4737510681152,
+        -14.9812488555908,
+        29.9737510681152
+      ],
+      "distance_to_centerline": 6.845996222013963,
+      "overlaps_road_band": false,
+      "all_aabb_corners_outside_route": true
+    },
+    {
+      "cell": [
+        -4,
+        0,
+        -4
+      ],
+      "name": "decoration-forest",
+      "world_aabb_xz": [
+        -29.9737510681152,
+        -29.9737510681152,
+        -22.4737510681152,
+        -22.4737510681152
+      ],
+      "distance_to_centerline": 6.845998245062428,
+      "overlaps_road_band": false,
+      "all_aabb_corners_outside_route": true
+    },
+    {
+      "cell": [
+        -4,
+        0,
+        -3
+      ],
+      "name": "decoration-forest",
+      "world_aabb_xz": [
+        -29.9737510681152,
+        -22.4812488555908,
+        -22.4737510681152,
+        -14.9812488555908
+      ],
+      "distance_to_centerline": 3.7425022125244,
+      "overlaps_road_band": false,
+      "all_aabb_corners_outside_route": true
+    },
+    {
+      "cell": [
+        -3,
+        0,
+        -4
+      ],
+      "name": "decoration-forest",
+      "world_aabb_xz": [
+        -22.4812488555908,
+        -29.9737510681152,
+        -14.9812488555908,
+        -22.4737510681152
+      ],
+      "distance_to_centerline": 3.7425022125244,
+      "overlaps_road_band": false,
+      "all_aabb_corners_outside_route": true
+    },
+    {
+      "cell": [
+        -2,
+        0,
+        -4
+      ],
+      "name": "decoration-forest",
+      "world_aabb_xz": [
+        -14.9887504577637,
+        -29.9737510681152,
+        -7.48874950408936,
+        -22.4737510681152
+      ],
+      "distance_to_centerline": 3.7425022125244,
+      "overlaps_road_band": false,
+      "all_aabb_corners_outside_route": true
+    },
+    {
+      "cell": [
+        0,
+        0,
+        -4
+      ],
+      "name": "decoration-forest",
+      "world_aabb_xz": [
+        -0.00375008583068848,
+        -29.9737510681152,
+        7.49625015258789,
+        -22.4737510681152
+      ],
+      "distance_to_centerline": 3.7425022125244,
+      "overlaps_road_band": false,
+      "all_aabb_corners_outside_route": true
+    },
+    {
+      "cell": [
+        1,
+        0,
+        -4
+      ],
+      "name": "decoration-forest",
+      "world_aabb_xz": [
+        7.48874950408936,
+        -29.9737510681152,
+        14.9887504577637,
+        -22.4737510681152
+      ],
+      "distance_to_centerline": 6.845996390601359,
+      "overlaps_road_band": false,
+      "all_aabb_corners_outside_route": true
+    },
+    {
+      "cell": [
+        1,
+        0,
+        -3
+      ],
+      "name": "decoration-forest",
+      "world_aabb_xz": [
+        7.48874950408936,
+        -22.4812488555908,
+        14.9887504577637,
+        -14.9812488555908
+      ],
+      "distance_to_centerline": 3.7424995899200497,
+      "overlaps_road_band": false,
+      "all_aabb_corners_outside_route": true
+    },
+    {
+      "cell": [
+        1,
+        0,
+        -2
+      ],
+      "name": "decoration-forest",
+      "world_aabb_xz": [
+        7.48874950408936,
+        -14.9887504577637,
+        14.9887504577637,
+        -7.48874950408936
+      ],
+      "distance_to_centerline": 3.7424995899200497,
+      "overlaps_road_band": false,
+      "all_aabb_corners_outside_route": true
+    },
+    {
+      "cell": [
+        -4,
+        0,
+        0
+      ],
+      "name": "decoration-forest",
+      "world_aabb_xz": [
+        -29.9737510681152,
+        -0.00375008583068848,
+        -22.4737510681152,
+        7.49625015258789
+      ],
+      "distance_to_centerline": 6.845996559188705,
+      "overlaps_road_band": false,
+      "all_aabb_corners_outside_route": true
+    },
+    {
+      "cell": [
+        -4,
+        0,
+        1
+      ],
+      "name": "decoration-forest",
+      "world_aabb_xz": [
+        -29.9737510681152,
+        7.48874950408936,
+        -22.4737510681152,
+        14.9887504577637
+      ],
+      "distance_to_centerline": 11.235001564025799,
+      "overlaps_road_band": false,
+      "all_aabb_corners_outside_route": true
+    },
+    {
+      "cell": [
+        -4,
+        0,
+        4
+      ],
+      "name": "decoration-forest",
+      "world_aabb_xz": [
+        -29.9737510681152,
+        29.9662475585938,
+        -22.4737510681152,
+        37.4662475585938
+      ],
+      "distance_to_centerline": 17.441990420978822,
+      "overlaps_road_band": false,
+      "all_aabb_corners_outside_route": true
+    },
+    {
+      "cell": [
+        -2,
+        0,
+        4
+      ],
+      "name": "decoration-forest",
+      "world_aabb_xz": [
+        -14.9887504577637,
+        29.9662475585938,
+        -7.48874950408936,
+        37.4662475585938
+      ],
+      "distance_to_centerline": 11.234998703003,
+      "overlaps_road_band": false,
+      "all_aabb_corners_outside_route": true
+    },
+    {
+      "cell": [
+        -1,
+        0,
+        4
+      ],
+      "name": "decoration-forest",
+      "world_aabb_xz": [
+        -7.49625015258789,
+        29.9662475585938,
+        0.00375008583068848,
+        37.4662475585938
+      ],
+      "distance_to_centerline": 11.234998703003,
+      "overlaps_road_band": false,
+      "all_aabb_corners_outside_route": true
+    },
+    {
+      "cell": [
+        0,
+        0,
+        4
+      ],
+      "name": "decoration-forest",
+      "world_aabb_xz": [
+        -0.00375008583068848,
+        29.9662475585938,
+        7.49625015258789,
+        37.4662475585938
+      ],
+      "distance_to_centerline": 11.234998703003,
+      "overlaps_road_band": false,
+      "all_aabb_corners_outside_route": true
+    },
+    {
+      "cell": [
+        1,
+        0,
+        4
+      ],
+      "name": "decoration-forest",
+      "world_aabb_xz": [
+        7.48874950408936,
+        29.9662475585938,
+        14.9887504577637,
+        37.4662475585938
+      ],
+      "distance_to_centerline": 13.003877187805694,
+      "overlaps_road_band": false,
+      "all_aabb_corners_outside_route": true
+    },
+    {
+      "cell": [
+        2,
+        0,
+        4
+      ],
+      "name": "decoration-forest",
+      "world_aabb_xz": [
+        14.9812488555908,
+        29.9662475585938,
+        22.4812488555908,
+        37.4662475585938
+      ],
+      "distance_to_centerline": 17.441988566517413,
+      "overlaps_road_band": false,
+      "all_aabb_corners_outside_route": true
+    },
+    {
+      "cell": [
+        2,
+        0,
+        3
+      ],
+      "name": "decoration-forest",
+      "world_aabb_xz": [
+        14.9812488555908,
+        22.4737510681152,
+        22.4812488555908,
+        29.9737510681152
+      ],
+      "distance_to_centerline": 13.003878569013231,
+      "overlaps_road_band": false,
+      "all_aabb_corners_outside_route": true
+    },
+    {
+      "cell": [
+        2,
+        0,
+        2
+      ],
+      "name": "decoration-forest",
+      "world_aabb_xz": [
+        14.9812488555908,
+        14.9812488555908,
+        22.4812488555908,
+        22.4812488555908
+      ],
+      "distance_to_centerline": 11.234998941421491,
+      "overlaps_road_band": false,
+      "all_aabb_corners_outside_route": true
+    },
+    {
+      "cell": [
+        2,
+        0,
+        1
+      ],
+      "name": "decoration-forest",
+      "world_aabb_xz": [
+        14.9812488555908,
+        7.48874950408936,
+        22.4812488555908,
+        14.9887504577637
+      ],
+      "distance_to_centerline": 11.234998941421491,
+      "overlaps_road_band": false,
+      "all_aabb_corners_outside_route": true
+    },
+    {
+      "cell": [
+        2,
+        0,
+        0
+      ],
+      "name": "decoration-forest",
+      "world_aabb_xz": [
+        14.9812488555908,
+        -0.00375008583068848,
+        22.4812488555908,
+        7.49625015258789
+      ],
+      "distance_to_centerline": 11.234998941421491,
+      "overlaps_road_band": false,
+      "all_aabb_corners_outside_route": true
+    },
+    {
+      "cell": [
+        2,
+        0,
+        -1
+      ],
+      "name": "decoration-forest",
+      "world_aabb_xz": [
+        14.9812488555908,
+        -7.49625015258789,
+        22.4812488555908,
+        0.00375008583068848
+      ],
+      "distance_to_centerline": 11.234998941421491,
+      "overlaps_road_band": false,
+      "all_aabb_corners_outside_route": true
+    },
+    {
+      "cell": [
+        2,
+        0,
+        -3
+      ],
+      "name": "decoration-forest",
+      "world_aabb_xz": [
+        14.9812488555908,
+        -22.4812488555908,
+        22.4812488555908,
+        -14.9812488555908
+      ],
+      "distance_to_centerline": 11.234998941421491,
+      "overlaps_road_band": false,
+      "all_aabb_corners_outside_route": true
+    },
+    {
+      "cell": [
+        2,
+        0,
+        -4
+      ],
+      "name": "decoration-forest",
+      "world_aabb_xz": [
+        14.9812488555908,
+        -29.9737510681152,
+        22.4812488555908,
+        -22.4737510681152
+      ],
+      "distance_to_centerline": 13.003878569013231,
+      "overlaps_road_band": false,
+      "all_aabb_corners_outside_route": true
+    },
+    {
+      "cell": [
+        2,
+        0,
+        -5
+      ],
+      "name": "decoration-forest",
+      "world_aabb_xz": [
+        14.9812488555908,
+        -37.4662475585938,
+        22.4812488555908,
+        -29.9662475585938
+      ],
+      "distance_to_centerline": 17.441988566517413,
+      "overlaps_road_band": false,
+      "all_aabb_corners_outside_route": true
+    },
+    {
+      "cell": [
+        1,
+        0,
+        -5
+      ],
+      "name": "decoration-forest",
+      "world_aabb_xz": [
+        7.48874950408936,
+        -37.4662475585938,
+        14.9887504577637,
+        -29.9662475585938
+      ],
+      "distance_to_centerline": 13.003877187805694,
+      "overlaps_road_band": false,
+      "all_aabb_corners_outside_route": true
+    },
+    {
+      "cell": [
+        0,
+        0,
+        -5
+      ],
+      "name": "decoration-forest",
+      "world_aabb_xz": [
+        -0.00375008583068848,
+        -37.4662475585938,
+        7.49625015258789,
+        -29.9662475585938
+      ],
+      "distance_to_centerline": 11.234998703003,
+      "overlaps_road_band": false,
+      "all_aabb_corners_outside_route": true
+    },
+    {
+      "cell": [
+        -1,
+        0,
+        -6
+      ],
+      "name": "decoration-forest",
+      "world_aabb_xz": [
+        -7.49625015258789,
+        -44.9587478637695,
+        0.00375008583068848,
+        -37.4587478637695
+      ],
+      "distance_to_centerline": 18.727499008178704,
+      "overlaps_road_band": false,
+      "all_aabb_corners_outside_route": true
+    },
+    {
+      "cell": [
+        -1,
+        0,
+        -5
+      ],
+      "name": "decoration-forest",
+      "world_aabb_xz": [
+        -7.49625015258789,
+        -37.4662475585938,
+        0.00375008583068848,
+        -29.9662475585938
+      ],
+      "distance_to_centerline": 11.234998703003,
+      "overlaps_road_band": false,
+      "all_aabb_corners_outside_route": true
+    },
+    {
+      "cell": [
+        -2,
+        0,
+        -5
+      ],
+      "name": "decoration-forest",
+      "world_aabb_xz": [
+        -14.9887504577637,
+        -37.4662475585938,
+        -7.48874950408936,
+        -29.9662475585938
+      ],
+      "distance_to_centerline": 11.234998703003,
+      "overlaps_road_band": false,
+      "all_aabb_corners_outside_route": true
+    },
+    {
+      "cell": [
+        -4,
+        0,
+        -5
+      ],
+      "name": "decoration-forest",
+      "world_aabb_xz": [
+        -29.9737510681152,
+        -37.4662475585938,
+        -22.4737510681152,
+        -29.9662475585938
+      ],
+      "distance_to_centerline": 13.00387835553237,
+      "overlaps_road_band": false,
+      "all_aabb_corners_outside_route": true
+    },
+    {
+      "cell": [
+        1,
+        0,
+        -6
+      ],
+      "name": "decoration-forest",
+      "world_aabb_xz": [
+        7.48874950408936,
+        -44.9587478637695,
+        14.9887504577637,
+        -37.4587478637695
+      ],
+      "distance_to_centerline": 19.943492666212844,
+      "overlaps_road_band": false,
+      "all_aabb_corners_outside_route": true
+    },
+    {
+      "cell": [
+        2,
+        0,
+        -6
+      ],
+      "name": "decoration-forest",
+      "world_aabb_xz": [
+        14.9812488555908,
+        -44.9587478637695,
+        22.4812488555908,
+        -37.4587478637695
+      ],
+      "distance_to_centerline": 23.267467853642508,
+      "overlaps_road_band": false,
+      "all_aabb_corners_outside_route": true
+    },
+    {
+      "cell": [
+        -5,
+        0,
+        4
+      ],
+      "name": "decoration-forest",
+      "world_aabb_xz": [
+        -37.4662475585938,
+        29.9662475585938,
+        -29.9662475585938,
+        37.4662475585938
+      ],
+      "distance_to_centerline": 23.26746692823309,
+      "overlaps_road_band": false,
+      "all_aabb_corners_outside_route": true
+    },
+    {
+      "cell": [
+        -5,
+        0,
+        0
+      ],
+      "name": "decoration-forest",
+      "world_aabb_xz": [
+        -37.4662475585938,
+        -0.00375008583068848,
+        -29.9662475585938,
+        7.49625015258789
+      ],
+      "distance_to_centerline": 13.003877293962644,
+      "overlaps_road_band": false,
+      "all_aabb_corners_outside_route": true
+    },
+    {
+      "cell": [
+        -5,
+        0,
+        -2
+      ],
+      "name": "decoration-forest",
+      "world_aabb_xz": [
+        -37.4662475585938,
+        -14.9887504577637,
+        -29.9662475585938,
+        -7.48874950408936
+      ],
+      "distance_to_centerline": 11.234998703003,
+      "overlaps_road_band": false,
+      "all_aabb_corners_outside_route": true
+    },
+    {
+      "cell": [
+        -5,
+        0,
+        -5
+      ],
+      "name": "decoration-forest",
+      "world_aabb_xz": [
+        -37.4662475585938,
+        -37.4662475585938,
+        -29.9662475585938,
+        -29.9662475585938
+      ],
+      "distance_to_centerline": 17.441988397930082,
+      "overlaps_road_band": false,
+      "all_aabb_corners_outside_route": true
+    },
+    {
+      "cell": [
+        -5,
+        0,
+        -6
+      ],
+      "name": "decoration-forest",
+      "world_aabb_xz": [
+        -37.4662475585938,
+        -44.9587478637695,
+        -29.9662475585938,
+        -37.4587478637695
+      ],
+      "distance_to_centerline": 23.267467721184293,
+      "overlaps_road_band": false,
+      "all_aabb_corners_outside_route": true
+    },
+    {
+      "cell": [
+        -6,
+        0,
+        -5
+      ],
+      "name": "decoration-forest",
+      "world_aabb_xz": [
+        -44.9587478637695,
+        -37.4662475585938,
+        -37.4587478637695,
+        -29.9662475585938
+      ],
+      "distance_to_centerline": 23.267467721184293,
+      "overlaps_road_band": false,
+      "all_aabb_corners_outside_route": true
+    },
+    {
+      "cell": [
+        -6,
+        0,
+        0
+      ],
+      "name": "decoration-forest",
+      "world_aabb_xz": [
+        -44.9587478637695,
+        -0.00375008583068848,
+        -37.4587478637695,
+        7.49625015258789
+      ],
+      "distance_to_centerline": 19.943492741930193,
+      "overlaps_road_band": false,
+      "all_aabb_corners_outside_route": true
+    },
+    {
+      "cell": [
+        -6,
+        0,
+        1
+      ],
+      "name": "decoration-forest",
+      "world_aabb_xz": [
+        -44.9587478637695,
+        7.48874950408936,
+        -37.4587478637695,
+        14.9887504577637
+      ],
+      "distance_to_centerline": 23.26746811855905,
+      "overlaps_road_band": false,
+      "all_aabb_corners_outside_route": true
+    },
+    {
+      "cell": [
+        -6,
+        0,
+        2
+      ],
+      "name": "decoration-forest",
+      "world_aabb_xz": [
+        -44.9587478637695,
+        14.9812488555908,
+        -37.4587478637695,
+        22.4812488555908
+      ],
+      "distance_to_centerline": 26.219998359680105,
+      "overlaps_road_band": false,
+      "all_aabb_corners_outside_route": true
+    },
+    {
+      "cell": [
+        -6,
+        0,
+        3
+      ],
+      "name": "decoration-forest",
+      "world_aabb_xz": [
+        -44.9587478637695,
+        22.4737510681152,
+        -37.4587478637695,
+        29.9737510681152
+      ],
+      "distance_to_centerline": 27.14255477842961,
+      "overlaps_road_band": false,
+      "all_aabb_corners_outside_route": true
+    },
+    {
+      "cell": [
+        -6,
+        0,
+        4
+      ],
+      "name": "decoration-forest",
+      "world_aabb_xz": [
+        -44.9587478637695,
+        29.9662475585938,
+        -37.4587478637695,
+        37.4662475585938
+      ],
+      "distance_to_centerline": 29.757598263670598,
+      "overlaps_road_band": false,
+      "all_aabb_corners_outside_route": true
+    },
+    {
+      "cell": [
+        -6,
+        0,
+        -7
+      ],
+      "name": "decoration-forest",
+      "world_aabb_xz": [
+        -44.9587478637695,
+        -52.4512481689453,
+        -37.4587478637695,
+        -44.9512481689453
+      ],
+      "distance_to_centerline": 33.712979126296865,
+      "overlaps_road_band": false,
+      "all_aabb_corners_outside_route": true
+    },
+    {
+      "cell": [
+        -5,
+        0,
+        -7
+      ],
+      "name": "decoration-forest",
+      "world_aabb_xz": [
+        -37.4662475585938,
+        -52.4512481689453,
+        -29.9662475585938,
+        -44.9512481689453
+      ],
+      "distance_to_centerline": 29.757599117070523,
+      "overlaps_road_band": false,
+      "all_aabb_corners_outside_route": true
+    },
+    {
+      "cell": [
+        -2,
+        0,
+        -7
+      ],
+      "name": "decoration-forest",
+      "world_aabb_xz": [
+        -14.9887504577637,
+        -52.4512481689453,
+        -7.48874950408936,
+        -44.9512481689453
+      ],
+      "distance_to_centerline": 26.2199993133545,
+      "overlaps_road_band": false,
+      "all_aabb_corners_outside_route": true
+    },
+    {
+      "cell": [
+        -1,
+        0,
+        -7
+      ],
+      "name": "decoration-forest",
+      "world_aabb_xz": [
+        -7.49625015258789,
+        -52.4512481689453,
+        0.00375008583068848,
+        -44.9512481689453
+      ],
+      "distance_to_centerline": 26.2199993133545,
+      "overlaps_road_band": false,
+      "all_aabb_corners_outside_route": true
+    },
+    {
+      "cell": [
+        0,
+        0,
+        -7
+      ],
+      "name": "decoration-forest",
+      "world_aabb_xz": [
+        -0.00375008583068848,
+        -52.4512481689453,
+        7.49625015258789,
+        -44.9512481689453
+      ],
+      "distance_to_centerline": 26.2199993133545,
+      "overlaps_road_band": false,
+      "all_aabb_corners_outside_route": true
+    },
+    {
+      "cell": [
+        1,
+        0,
+        -7
+      ],
+      "name": "decoration-forest",
+      "world_aabb_xz": [
+        7.48874950408936,
+        -52.4512481689453,
+        14.9887504577637,
+        -44.9512481689453
+      ],
+      "distance_to_centerline": 27.142555063965347,
+      "overlaps_road_band": false,
+      "all_aabb_corners_outside_route": true
+    },
+    {
+      "cell": [
+        2,
+        0,
+        -7
+      ],
+      "name": "decoration-forest",
+      "world_aabb_xz": [
+        14.9812488555908,
+        -52.4512481689453,
+        22.4812488555908,
+        -44.9512481689453
+      ],
+      "distance_to_centerline": 29.75759922349046,
+      "overlaps_road_band": false,
+      "all_aabb_corners_outside_route": true
+    },
+    {
+      "cell": [
+        2,
+        0,
+        -8
+      ],
+      "name": "decoration-forest",
+      "world_aabb_xz": [
+        14.9812488555908,
+        -59.9437484741211,
+        22.4812488555908,
+        -52.4437484741211
+      ],
+      "distance_to_centerline": 36.59865386826498,
+      "overlaps_road_band": false,
+      "all_aabb_corners_outside_route": true
+    },
+    {
+      "cell": [
+        1,
+        0,
+        -8
+      ],
+      "name": "decoration-forest",
+      "world_aabb_xz": [
+        7.48874950408936,
+        -59.9437484741211,
+        14.9887504577637,
+        -52.4437484741211
+      ],
+      "distance_to_centerline": 34.45727346476666,
+      "overlaps_road_band": false,
+      "all_aabb_corners_outside_route": true
+    },
+    {
+      "cell": [
+        0,
+        0,
+        -8
+      ],
+      "name": "decoration-forest",
+      "world_aabb_xz": [
+        -0.00375008583068848,
+        -59.9437484741211,
+        7.49625015258789,
+        -52.4437484741211
+      ],
+      "distance_to_centerline": 33.7124996185303,
+      "overlaps_road_band": false,
+      "all_aabb_corners_outside_route": true
+    },
+    {
+      "cell": [
+        -1,
+        0,
+        -8
+      ],
+      "name": "decoration-forest",
+      "world_aabb_xz": [
+        -7.49625015258789,
+        -59.9437484741211,
+        0.00375008583068848,
+        -52.4437484741211
+      ],
+      "distance_to_centerline": 33.7124996185303,
+      "overlaps_road_band": false,
+      "all_aabb_corners_outside_route": true
+    },
+    {
+      "cell": [
+        -2,
+        0,
+        -8
+      ],
+      "name": "decoration-forest",
+      "world_aabb_xz": [
+        -14.9887504577637,
+        -59.9437484741211,
+        -7.48874950408936,
+        -52.4437484741211
+      ],
+      "distance_to_centerline": 33.7124996185303,
+      "overlaps_road_band": false,
+      "all_aabb_corners_outside_route": true
+    },
+    {
+      "cell": [
+        -3,
+        0,
+        -8
+      ],
+      "name": "decoration-forest",
+      "world_aabb_xz": [
+        -22.4812488555908,
+        -59.9437484741211,
+        -14.9812488555908,
+        -52.4437484741211
+      ],
+      "distance_to_centerline": 33.7124996185303,
+      "overlaps_road_band": false,
+      "all_aabb_corners_outside_route": true
+    },
+    {
+      "cell": [
+        -4,
+        0,
+        -8
+      ],
+      "name": "decoration-forest",
+      "world_aabb_xz": [
+        -29.9737510681152,
+        -59.9437484741211,
+        -22.4737510681152,
+        -52.4437484741211
+      ],
+      "distance_to_centerline": 34.457273976411386,
+      "overlaps_road_band": false,
+      "all_aabb_corners_outside_route": true
+    },
+    {
+      "cell": [
+        -5,
+        0,
+        -8
+      ],
+      "name": "decoration-forest",
+      "world_aabb_xz": [
+        -37.4662475585938,
+        -59.9437484741211,
+        -29.9662475585938,
+        -52.4437484741211
+      ],
+      "distance_to_centerline": 36.5986537799952,
+      "overlaps_road_band": false,
+      "all_aabb_corners_outside_route": true
+    },
+    {
+      "cell": [
+        -6,
+        0,
+        -8
+      ],
+      "name": "decoration-forest",
+      "world_aabb_xz": [
+        -44.9587478637695,
+        -59.9437484741211,
+        -37.4587478637695,
+        -52.4437484741211
+      ],
+      "distance_to_centerline": 39.938585895294096,
+      "overlaps_road_band": false,
+      "all_aabb_corners_outside_route": true
+    },
+    {
+      "cell": [
+        -7,
+        0,
+        -8
+      ],
+      "name": "decoration-forest",
+      "world_aabb_xz": [
+        -52.4512481689453,
+        -59.9437484741211,
+        -44.9512481689453,
+        -52.4437484741211
+      ],
+      "distance_to_centerline": 44.22750550641924,
+      "overlaps_road_band": false,
+      "all_aabb_corners_outside_route": true
+    },
+    {
+      "cell": [
+        -7,
+        0,
+        -7
+      ],
+      "name": "decoration-forest",
+      "world_aabb_xz": [
+        -52.4512481689453,
+        -52.4512481689453,
+        -44.9512481689453,
+        -44.9512481689453
+      ],
+      "distance_to_centerline": 38.63397949325828,
+      "overlaps_road_band": false,
+      "all_aabb_corners_outside_route": true
+    },
+    {
+      "cell": [
+        -7,
+        0,
+        -6
+      ],
+      "name": "decoration-forest",
+      "world_aabb_xz": [
+        -52.4512481689453,
+        -44.9587478637695,
+        -44.9512481689453,
+        -37.4587478637695
+      ],
+      "distance_to_centerline": 33.712979126296865,
+      "overlaps_road_band": false,
+      "all_aabb_corners_outside_route": true
+    },
+    {
+      "cell": [
+        -7,
+        0,
+        -5
+      ],
+      "name": "decoration-forest",
+      "world_aabb_xz": [
+        -52.4512481689453,
+        -37.4662475585938,
+        -44.9512481689453,
+        -29.9662475585938
+      ],
+      "distance_to_centerline": 29.757599117070523,
+      "overlaps_road_band": false,
+      "all_aabb_corners_outside_route": true
+    },
+    {
+      "cell": [
+        -7,
+        0,
+        -4
+      ],
+      "name": "decoration-forest",
+      "world_aabb_xz": [
+        -52.4512481689453,
+        -29.9737510681152,
+        -44.9512481689453,
+        -22.4737510681152
+      ],
+      "distance_to_centerline": 27.142555703329794,
+      "overlaps_road_band": false,
+      "all_aabb_corners_outside_route": true
+    },
+    {
+      "cell": [
+        -7,
+        0,
+        -3
+      ],
+      "name": "decoration-forest",
+      "world_aabb_xz": [
+        -52.4512481689453,
+        -22.4812488555908,
+        -44.9512481689453,
+        -14.9812488555908
+      ],
+      "distance_to_centerline": 26.2199993133545,
+      "overlaps_road_band": false,
+      "all_aabb_corners_outside_route": true
+    },
+    {
+      "cell": [
+        -7,
+        0,
+        -2
+      ],
+      "name": "decoration-forest",
+      "world_aabb_xz": [
+        -52.4512481689453,
+        -14.9887504577637,
+        -44.9512481689453,
+        -7.48874950408936
+      ],
+      "distance_to_centerline": 26.2199993133545,
+      "overlaps_road_band": false,
+      "all_aabb_corners_outside_route": true
+    },
+    {
+      "cell": [
+        -7,
+        0,
+        -1
+      ],
+      "name": "decoration-forest",
+      "world_aabb_xz": [
+        -52.4512481689453,
+        -7.49625015258789,
+        -44.9512481689453,
+        0.00375008583068848
+      ],
+      "distance_to_centerline": 26.2199993133545,
+      "overlaps_road_band": false,
+      "all_aabb_corners_outside_route": true
+    },
+    {
+      "cell": [
+        -7,
+        0,
+        0
+      ],
+      "name": "decoration-forest",
+      "world_aabb_xz": [
+        -52.4512481689453,
+        -0.00375008583068848,
+        -44.9512481689453,
+        7.49625015258789
+      ],
+      "distance_to_centerline": 27.14255512208938,
+      "overlaps_road_band": false,
+      "all_aabb_corners_outside_route": true
+    },
+    {
+      "cell": [
+        -7,
+        0,
+        1
+      ],
+      "name": "decoration-forest",
+      "world_aabb_xz": [
+        -52.4512481689453,
+        7.48874950408936,
+        -44.9512481689453,
+        14.9887504577637
+      ],
+      "distance_to_centerline": 29.75759943633043,
+      "overlaps_road_band": false,
+      "all_aabb_corners_outside_route": true
+    },
+    {
+      "cell": [
+        -7,
+        0,
+        2
+      ],
+      "name": "decoration-forest",
+      "world_aabb_xz": [
+        -52.4512481689453,
+        14.9812488555908,
+        -44.9512481689453,
+        22.4812488555908
+      ],
+      "distance_to_centerline": 33.7124986648559,
+      "overlaps_road_band": false,
+      "all_aabb_corners_outside_route": true
+    },
+    {
+      "cell": [
+        -7,
+        0,
+        3
+      ],
+      "name": "decoration-forest",
+      "world_aabb_xz": [
+        -52.4512481689453,
+        22.4737510681152,
+        -44.9512481689453,
+        29.9737510681152
+      ],
+      "distance_to_centerline": 34.45727304106157,
+      "overlaps_road_band": false,
+      "all_aabb_corners_outside_route": true
+    },
+    {
+      "cell": [
+        -7,
+        0,
+        4
+      ],
+      "name": "decoration-forest",
+      "world_aabb_xz": [
+        -52.4512481689453,
+        29.9662475585938,
+        -44.9512481689453,
+        37.4662475585938
+      ],
+      "distance_to_centerline": 36.59865289408896,
+      "overlaps_road_band": false,
+      "all_aabb_corners_outside_route": true
+    },
+    {
+      "cell": [
+        -8,
+        0,
+        4
+      ],
+      "name": "decoration-forest",
+      "world_aabb_xz": [
+        -59.9437484741211,
+        29.9662475585938,
+        -52.4437484741211,
+        37.4662475585938
+      ],
+      "distance_to_centerline": 43.636846686561974,
+      "overlaps_road_band": false,
+      "all_aabb_corners_outside_route": true
+    },
+    {
+      "cell": [
+        -8,
+        0,
+        3
+      ],
+      "name": "decoration-forest",
+      "world_aabb_xz": [
+        -59.9437484741211,
+        22.4737510681152,
+        -52.4437484741211,
+        29.9737510681152
+      ],
+      "distance_to_centerline": 41.82523063269665,
+      "overlaps_road_band": false,
+      "all_aabb_corners_outside_route": true
+    },
+    {
+      "cell": [
+        -8,
+        0,
+        2
+      ],
+      "name": "decoration-forest",
+      "world_aabb_xz": [
+        -59.9437484741211,
+        14.9812488555908,
+        -52.4437484741211,
+        22.4812488555908
+      ],
+      "distance_to_centerline": 39.93858577280846,
+      "overlaps_road_band": false,
+      "all_aabb_corners_outside_route": true
+    },
+    {
+      "cell": [
+        -8,
+        0,
+        1
+      ],
+      "name": "decoration-forest",
+      "world_aabb_xz": [
+        -59.9437484741211,
+        7.48874950408936,
+        -52.4437484741211,
+        14.9887504577637
+      ],
+      "distance_to_centerline": 36.59865404480464,
+      "overlaps_road_band": false,
+      "all_aabb_corners_outside_route": true
+    },
+    {
+      "cell": [
+        -8,
+        0,
+        0
+      ],
+      "name": "decoration-forest",
+      "world_aabb_xz": [
+        -59.9437484741211,
+        -0.00375008583068848,
+        -52.4437484741211,
+        7.49625015258789
+      ],
+      "distance_to_centerline": 34.45727351127981,
+      "overlaps_road_band": false,
+      "all_aabb_corners_outside_route": true
+    },
+    {
+      "cell": [
+        -8,
+        0,
+        -1
+      ],
+      "name": "decoration-forest",
+      "world_aabb_xz": [
+        -59.9437484741211,
+        -7.49625015258789,
+        -52.4437484741211,
+        0.00375008583068848
+      ],
+      "distance_to_centerline": 33.7124996185303,
+      "overlaps_road_band": false,
+      "all_aabb_corners_outside_route": true
+    },
+    {
+      "cell": [
+        -8,
+        0,
+        -2
+      ],
+      "name": "decoration-forest",
+      "world_aabb_xz": [
+        -59.9437484741211,
+        -14.9887504577637,
+        -52.4437484741211,
+        -7.48874950408936
+      ],
+      "distance_to_centerline": 33.7124996185303,
+      "overlaps_road_band": false,
+      "all_aabb_corners_outside_route": true
+    },
+    {
+      "cell": [
+        -8,
+        0,
+        -3
+      ],
+      "name": "decoration-forest",
+      "world_aabb_xz": [
+        -59.9437484741211,
+        -22.4812488555908,
+        -52.4437484741211,
+        -14.9812488555908
+      ],
+      "distance_to_centerline": 33.7124996185303,
+      "overlaps_road_band": false,
+      "all_aabb_corners_outside_route": true
+    },
+    {
+      "cell": [
+        -8,
+        0,
+        -4
+      ],
+      "name": "decoration-forest",
+      "world_aabb_xz": [
+        -59.9437484741211,
+        -29.9737510681152,
+        -52.4437484741211,
+        -22.4737510681152
+      ],
+      "distance_to_centerline": 34.457273976411386,
+      "overlaps_road_band": false,
+      "all_aabb_corners_outside_route": true
+    },
+    {
+      "cell": [
+        -8,
+        0,
+        -5
+      ],
+      "name": "decoration-forest",
+      "world_aabb_xz": [
+        -59.9437484741211,
+        -37.4662475585938,
+        -52.4437484741211,
+        -29.9662475585938
+      ],
+      "distance_to_centerline": 36.5986537799952,
+      "overlaps_road_band": false,
+      "all_aabb_corners_outside_route": true
+    },
+    {
+      "cell": [
+        -8,
+        0,
+        -6
+      ],
+      "name": "decoration-forest",
+      "world_aabb_xz": [
+        -59.9437484741211,
+        -44.9587478637695,
+        -52.4437484741211,
+        -37.4587478637695
+      ],
+      "distance_to_centerline": 39.938585895294096,
+      "overlaps_road_band": false,
+      "all_aabb_corners_outside_route": true
+    },
+    {
+      "cell": [
+        -8,
+        0,
+        -7
+      ],
+      "name": "decoration-forest",
+      "world_aabb_xz": [
+        -59.9437484741211,
+        -52.4512481689453,
+        -52.4437484741211,
+        -44.9512481689453
+      ],
+      "distance_to_centerline": 44.22750550641924,
+      "overlaps_road_band": false,
+      "all_aabb_corners_outside_route": true
+    },
+    {
+      "cell": [
+        -8,
+        0,
+        -8
+      ],
+      "name": "decoration-forest",
+      "world_aabb_xz": [
+        -59.9437484741211,
+        -59.9437484741211,
+        -52.4437484741211,
+        -52.4437484741211
+      ],
+      "distance_to_centerline": 49.229975040922454,
+      "overlaps_road_band": false,
+      "all_aabb_corners_outside_route": true
+    },
+    {
+      "cell": [
+        -8,
+        0,
+        -9
+      ],
+      "name": "decoration-forest",
+      "world_aabb_xz": [
+        -59.9437484741211,
+        -67.4362487792969,
+        -52.4437484741211,
+        -59.9362449645996
+      ],
+      "distance_to_centerline": 54.76858674616381,
+      "overlaps_road_band": false,
+      "all_aabb_corners_outside_route": true
+    },
+    {
+      "cell": [
+        -7,
+        0,
+        -9
+      ],
+      "name": "decoration-forest",
+      "world_aabb_xz": [
+        -52.4512481689453,
+        -67.4362487792969,
+        -44.9512481689453,
+        -59.9362449645996
+      ],
+      "distance_to_centerline": 50.28204380203495,
+      "overlaps_road_band": false,
+      "all_aabb_corners_outside_route": true
+    },
+    {
+      "cell": [
+        -6,
+        0,
+        -9
+      ],
+      "name": "decoration-forest",
+      "world_aabb_xz": [
+        -44.9587478637695,
+        -67.4362487792969,
+        -37.4587478637695,
+        -59.9362449645996
+      ],
+      "distance_to_centerline": 46.51133080289806,
+      "overlaps_road_band": false,
+      "all_aabb_corners_outside_route": true
+    },
+    {
+      "cell": [
+        -5,
+        0,
+        -9
+      ],
+      "name": "decoration-forest",
+      "world_aabb_xz": [
+        -37.4662475585938,
+        -67.4362487792969,
+        -29.9662475585938,
+        -59.9362449645996
+      ],
+      "distance_to_centerline": 43.63684397294812,
+      "overlaps_road_band": false,
+      "all_aabb_corners_outside_route": true
+    },
+    {
+      "cell": [
+        -4,
+        0,
+        -9
+      ],
+      "name": "decoration-forest",
+      "world_aabb_xz": [
+        -29.9737510681152,
+        -67.4362487792969,
+        -22.4737510681152,
+        -59.9362449645996
+      ],
+      "distance_to_centerline": 41.825227810942096,
+      "overlaps_road_band": false,
+      "all_aabb_corners_outside_route": true
+    },
+    {
+      "cell": [
+        -3,
+        0,
+        -9
+      ],
+      "name": "decoration-forest",
+      "world_aabb_xz": [
+        -22.4812488555908,
+        -67.4362487792969,
+        -14.9812488555908,
+        -59.9362449645996
+      ],
+      "distance_to_centerline": 41.2049961090088,
+      "overlaps_road_band": false,
+      "all_aabb_corners_outside_route": true
+    },
+    {
+      "cell": [
+        -2,
+        0,
+        -9
+      ],
+      "name": "decoration-forest",
+      "world_aabb_xz": [
+        -14.9887504577637,
+        -67.4362487792969,
+        -7.48874950408936,
+        -59.9362449645996
+      ],
+      "distance_to_centerline": 41.2049961090088,
+      "overlaps_road_band": false,
+      "all_aabb_corners_outside_route": true
+    },
+    {
+      "cell": [
+        -1,
+        0,
+        -9
+      ],
+      "name": "decoration-forest",
+      "world_aabb_xz": [
+        -7.49625015258789,
+        -67.4362487792969,
+        0.00375008583068848,
+        -59.9362449645996
+      ],
+      "distance_to_centerline": 41.2049961090088,
+      "overlaps_road_band": false,
+      "all_aabb_corners_outside_route": true
+    },
+    {
+      "cell": [
+        0,
+        0,
+        -9
+      ],
+      "name": "decoration-forest",
+      "world_aabb_xz": [
+        -0.00375008583068848,
+        -67.4362487792969,
+        7.49625015258789,
+        -59.9362449645996
+      ],
+      "distance_to_centerline": 41.2049961090088,
+      "overlaps_road_band": false,
+      "all_aabb_corners_outside_route": true
+    },
+    {
+      "cell": [
+        1,
+        0,
+        -9
+      ],
+      "name": "decoration-forest",
+      "world_aabb_xz": [
+        7.48874950408936,
+        -67.4362487792969,
+        14.9887504577637,
+        -59.9362449645996
+      ],
+      "distance_to_centerline": 41.82522737791709,
+      "overlaps_road_band": false,
+      "all_aabb_corners_outside_route": true
+    },
+    {
+      "cell": [
+        2,
+        0,
+        -9
+      ],
+      "name": "decoration-forest",
+      "world_aabb_xz": [
+        14.9812488555908,
+        -67.4362487792969,
+        22.4812488555908,
+        -59.9362449645996
+      ],
+      "distance_to_centerline": 43.636844048490204,
+      "overlaps_road_band": false,
+      "all_aabb_corners_outside_route": true
+    },
+    {
+      "cell": [
+        -1,
+        0,
+        -1
+      ],
+      "name": "decoration-forest",
+      "world_aabb_xz": [
+        -7.49625015258789,
+        -7.49625015258789,
+        0.00375008583068848,
+        0.00375008583068848
+      ],
+      "distance_to_centerline": 3.74249935150151,
+      "overlaps_road_band": false,
+      "all_aabb_corners_outside_route": false
+    },
+    {
+      "cell": [
+        -1,
+        0,
+        -2
+      ],
+      "name": "decoration-forest",
+      "world_aabb_xz": [
+        -7.49625015258789,
+        -14.9887504577637,
+        0.00375008583068848,
+        -7.48874950408936
+      ],
+      "distance_to_centerline": 3.73650916845495,
+      "overlaps_road_band": false,
+      "all_aabb_corners_outside_route": false
+    },
+    {
+      "cell": [
+        -2,
+        0,
+        -2
+      ],
+      "name": "decoration-forest",
+      "world_aabb_xz": [
+        -14.9887504577637,
+        -14.9887504577637,
+        -7.48874950408936,
+        -7.48874950408936
+      ],
+      "distance_to_centerline": 3.73650819742266,
+      "overlaps_road_band": false,
+      "all_aabb_corners_outside_route": false
+    },
+    {
+      "cell": [
+        -1,
+        0,
+        0
+      ],
+      "name": "decoration-forest",
+      "world_aabb_xz": [
+        -7.49625015258789,
+        -0.00375008583068848,
+        0.00375008583068848,
+        7.49625015258789
+      ],
+      "distance_to_centerline": 3.74249935150151,
+      "overlaps_road_band": false,
+      "all_aabb_corners_outside_route": false
+    },
+    {
+      "cell": [
+        -4,
+        0,
+        -2
+      ],
+      "name": "decoration-tents",
+      "world_aabb_xz": [
+        -29.9737510681152,
+        -14.988748550415,
+        -22.4737510681152,
+        -7.4887490272522
+      ],
+      "distance_to_centerline": 3.7425022125244,
+      "overlaps_road_band": false,
+      "all_aabb_corners_outside_route": true
+    },
+    {
+      "cell": [
+        -1,
+        0,
+        -4
+      ],
+      "name": "decoration-tents",
+      "world_aabb_xz": [
+        -7.49624919891357,
+        -29.9737510681152,
+        0.00375044345855713,
+        -22.4737510681152
+      ],
+      "distance_to_centerline": 3.7425022125244,
+      "overlaps_road_band": false,
+      "all_aabb_corners_outside_route": true
+    },
+    {
+      "cell": [
+        -1,
+        0,
+        1
+      ],
+      "name": "decoration-tents",
+      "world_aabb_xz": [
+        -7.49624919891357,
+        7.48874950408936,
+        0.00375044345855713,
+        14.9887504577637
+      ],
+      "distance_to_centerline": 3.7365089256968864,
+      "overlaps_road_band": false,
+      "all_aabb_corners_outside_route": false
+    }
+  ],
+  "spawn_and_decor": false,
+  "road_band_half_width_m": 3.375,
+  "decor_note": "Conservative transformed mesh AABB versus sampled true centerline band; includes empty mesh corners. Camera visibility remains human pending.",
+  "route_length_m": 110.21386274702031,
+  "self_intersections": []
+}

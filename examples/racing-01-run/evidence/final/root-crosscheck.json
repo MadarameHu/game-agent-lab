@@ -1,0 +1,10 @@
+{
+  "snapshot_protected_files_matched": 48,
+  "candidate_and_snapshot_hash_match": true,
+  "checker_driver_contract_hashes_match": true,
+  "telemetry_rows": 3519,
+  "steps_contiguous": true,
+  "waypoint_progress_monotonic": true,
+  "reverse_input_absent": true,
+  "human_review": null
+}

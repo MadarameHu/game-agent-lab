@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "task_id": "city-01-civic-square",
+  "task_sha256": "0aac5aebf042ae5e3b0d7f3b7b0278a63d65b86ee1415ad150db5ed8ddd955d6",
+  "frozen_before_product_edits": true,
+  "hard_checks": [
+    {
+      "id": "startup",
+      "expect": "Direct main scene loads additive civic-square.tres, cash5860, >122 cells"
+    },
+    {
+      "id": "original-cells",
+      "expect": "All122 official cells retain exact position, item and orientation; original resource hash unchanged"
+    },
+    {
+      "id": "layout",
+      "expect": "New compact connected region within x3..8,z6..10, >=2 housing types, pavement and grass plus both tree types; pavement at6,6 adjoining existing road6,5"
+    },
+    {
+      "id": "build-controls",
+      "expect": "Real input action toggles, rotates, places selected model on empty cell, charges price; demolition works; F3 restores122 official cells"
+    },
+    {
+      "id": "preservation-files",
+      "expect": "Only task editable paths differ; all15 models/prices and licenses retained"
+    },
+    {
+      "id": "native-render",
+      "expect": "Normal startup rendered with gl_compatibility, expansion visible"
+    }
+  ],
+  "human_checks": [
+    "Space coheres with existing fountain; building facades and entrance understandable; human review pending"
+  ],
+  "preservation": [
+    "保留官方素材许可证与字体许可证。",
+    "保留原有15种结构资源及其索引语义，已有地图仍可加载。",
+    "除本任务明确要求外，保留建造、拆除、90度旋转、相机移动/旋转/缩放、F1/F2/F3基本能力。",
+    "任务从加载官方sample map后的城市状态开始，不把空场景或宣传截图当作实际初始地图。",
+    "保留初始122个格子的类型、位置与朝向；新增内容放在未占用格子，不能修改官方sample map原件，扩建版另存新资源。"
+  ],
+  "reward": "1 iff all hard checks pass, human review remains null",
+  "scope": "Implementer behavioral verification; independent root audit pending"
+}

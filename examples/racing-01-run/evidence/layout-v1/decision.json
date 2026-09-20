@@ -1,0 +1,451 @@
+{
+  "task_id": "racing-01",
+  "candidate": "layout-v1",
+  "author_role": "coding agent",
+  "acceptance_claim": "Pending independent validation and human visual review",
+  "contract_sha256": "9f0850a8a52cf13bbdf765103f4b26c42e00cc569be15091faaad3e335d4fc92",
+  "tile_metadata_sha256": "338365ab791bd89e63d906edcc41442ae111fec9c3e247fa27fd14862830f8bd",
+  "main_scene_before_sha256": "5138d40275304a21644a6fb3500e03a2b734e6761f8dc4c677d08781902f1122",
+  "main_scene_after_sha256": "c1b7d4c3964d10a88d41536fc1df590be4be6d8173455d06734f58fab69f3ed1",
+  "outside_grid_data_unchanged": true,
+  "modified_project_paths": [
+    "scenes/main.tscn"
+  ],
+  "mesh_library_modified": false,
+  "road_cells": [
+    {
+      "cell": [
+        0,
+        0,
+        0
+      ],
+      "item": 4,
+      "orientation": 0,
+      "ports": [
+        [
+          0,
+          -1
+        ],
+        [
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "cell": [
+        0,
+        0,
+        1
+      ],
+      "item": 6,
+      "orientation": 0,
+      "ports": [
+        [
+          0,
+          -1
+        ],
+        [
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "cell": [
+        0,
+        0,
+        2
+      ],
+      "item": 3,
+      "orientation": 10,
+      "ports": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "cell": [
+        1,
+        0,
+        2
+      ],
+      "item": 3,
+      "orientation": 0,
+      "ports": [
+        [
+          -1,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "cell": [
+        1,
+        0,
+        3
+      ],
+      "item": 3,
+      "orientation": 22,
+      "ports": [
+        [
+          -1,
+          0
+        ],
+        [
+          0,
+          -1
+        ]
+      ]
+    },
+    {
+      "cell": [
+        0,
+        0,
+        3
+      ],
+      "item": 6,
+      "orientation": 16,
+      "ports": [
+        [
+          -1,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "cell": [
+        -1,
+        0,
+        3
+      ],
+      "item": 6,
+      "orientation": 16,
+      "ports": [
+        [
+          -1,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "cell": [
+        -2,
+        0,
+        3
+      ],
+      "item": 6,
+      "orientation": 16,
+      "ports": [
+        [
+          -1,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "cell": [
+        -3,
+        0,
+        3
+      ],
+      "item": 3,
+      "orientation": 10,
+      "ports": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "cell": [
+        -3,
+        0,
+        2
+      ],
+      "item": 6,
+      "orientation": 0,
+      "ports": [
+        [
+          0,
+          -1
+        ],
+        [
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "cell": [
+        -3,
+        0,
+        1
+      ],
+      "item": 6,
+      "orientation": 0,
+      "ports": [
+        [
+          0,
+          -1
+        ],
+        [
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "cell": [
+        -3,
+        0,
+        0
+      ],
+      "item": 6,
+      "orientation": 0,
+      "ports": [
+        [
+          0,
+          -1
+        ],
+        [
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "cell": [
+        -3,
+        0,
+        -1
+      ],
+      "item": 6,
+      "orientation": 0,
+      "ports": [
+        [
+          0,
+          -1
+        ],
+        [
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "cell": [
+        -3,
+        0,
+        -2
+      ],
+      "item": 3,
+      "orientation": 16,
+      "ports": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "cell": [
+        -2,
+        0,
+        -2
+      ],
+      "item": 6,
+      "orientation": 16,
+      "ports": [
+        [
+          -1,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "cell": [
+        -1,
+        0,
+        -2
+      ],
+      "item": 6,
+      "orientation": 16,
+      "ports": [
+        [
+          -1,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "cell": [
+        0,
+        0,
+        -2
+      ],
+      "item": 3,
+      "orientation": 0,
+      "ports": [
+        [
+          -1,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "cell": [
+        0,
+        0,
+        -1
+      ],
+      "item": 6,
+      "orientation": 0,
+      "ports": [
+        [
+          0,
+          -1
+        ],
+        [
+          0,
+          1
+        ]
+      ]
+    }
+  ],
+  "road_count": 18,
+  "total_cells": 64,
+  "forest_cells": [
+    [
+      -4,
+      0,
+      -4
+    ],
+    [
+      -3,
+      0,
+      -4
+    ],
+    [
+      -2,
+      0,
+      -4
+    ],
+    [
+      0,
+      0,
+      -4
+    ],
+    [
+      1,
+      0,
+      -4
+    ],
+    [
+      -4,
+      0,
+      -3
+    ],
+    [
+      -4,
+      0,
+      0
+    ],
+    [
+      -4,
+      0,
+      2
+    ]
+  ],
+  "tent_cells": [
+    [
+      2,
+      0,
+      0
+    ]
+  ],
+  "design": {
+    "spawn": "Preserved (3.5,0,5), +Z; finish tile remains at cell(0,0)",
+    "continuous_straight": [
+      [
+        -3,
+        0,
+        2
+      ],
+      [
+        -3,
+        0,
+        1
+      ],
+      [
+        -3,
+        0,
+        0
+      ],
+      [
+        -3,
+        0,
+        -1
+      ]
+    ],
+    "left_then_right": [
+      [
+        0,
+        0,
+        2
+      ],
+      [
+        1,
+        0,
+        2
+      ]
+    ],
+    "physical_ground": "Original 60m x 60m collider and GridMap transform unchanged",
+    "tile_world_pitch_m": 7.4925,
+    "decoration": "Tents east/outside; forest concentrated west/north; original parked-truck nodes unchanged",
+    "visual_bounds": "Inspector mesh AABBs: forest/tents XZ approximately [-5,5], scale .75; no decoration occupies a road cell; next native review must assess foliage/camera occlusion"
+  }
+}

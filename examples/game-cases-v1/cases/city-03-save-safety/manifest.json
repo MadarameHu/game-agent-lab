@@ -1,0 +1,27 @@
+{
+  "id": "city-03-save-safety",
+  "title": "让存读档能可靠反馈并保护当前城市",
+  "status": "awaiting_human",
+  "human_review": null,
+  "engine_reward": 1,
+  "agent_system": "Current Codex agents; no separate reward model",
+  "attempts": [
+    {
+      "id": "attempt01",
+      "passed": false,
+      "evidence": "evidence/attempt01"
+    },
+    {
+      "id": "attempt02",
+      "passed": true,
+      "evidence": "evidence/attempt02"
+    }
+  ],
+  "contract_sha256": "592b0b0d0b8368e87063674034e2818e4bfe3d5b72d973af14a51160f6182ed2",
+  "final_evidence": "evidence/final",
+  "checks": "evidence/final/result.json",
+  "play": {
+    "mode": "project"
+  },
+  "summary": "F1写完临时档再替换正式档；F2绕过资源缓存并在完整校验后加载，失败保留当前城市与余额；F3对未保存修改提供确认/取消。状态提示不阻挡建造。"
+}

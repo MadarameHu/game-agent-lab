@@ -1,0 +1,9 @@
+{
+  "id": "preservation",
+  "pass": true,
+  "summary": "All baseline files outside allowed paths identical; original GridMap block identical.",
+  "details": {
+    "errors": [],
+    "baseline_files": 72
+  }
+}

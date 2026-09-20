@@ -1,0 +1,24 @@
+{
+  "checks": [
+    {
+      "after_zoom": 8.83333333333334,
+      "before_zoom": 10.0,
+      "id": "camera_controls",
+      "pass": true
+    },
+    {
+      "coins": "[P: (144.0, 64.0), S: (224.0, 59.0)]",
+      "hint": "[P: (28.0, 640.0), S: (468.0, 59.0)]",
+      "id": "hint_placement",
+      "pass": true
+    }
+  ],
+  "height": 720,
+  "human_review": null,
+  "native": true,
+  "pass": true,
+  "renderer": "gl_compatibility",
+  "save_error": 0,
+  "view": "Original gameplay camera and original layout",
+  "width": 1280
+}

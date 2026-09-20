@@ -1,0 +1,954 @@
+{
+  "default_cash": 10000,
+  "default_used_cells": 0,
+  "sample_cash": 5860,
+  "sample_cells": [
+    {
+      "index": 0,
+      "orientation": 0,
+      "x": -2,
+      "y": 0,
+      "z": 5
+    },
+    {
+      "index": 0,
+      "orientation": 0,
+      "x": -2,
+      "y": 0,
+      "z": 4
+    },
+    {
+      "index": 3,
+      "orientation": 22,
+      "x": -2,
+      "y": 0,
+      "z": 3
+    },
+    {
+      "index": 1,
+      "orientation": 10,
+      "x": -2,
+      "y": 0,
+      "z": 2
+    },
+    {
+      "index": 0,
+      "orientation": 0,
+      "x": -2,
+      "y": 0,
+      "z": 1
+    },
+    {
+      "index": 0,
+      "orientation": 16,
+      "x": -1,
+      "y": 0,
+      "z": 0
+    },
+    {
+      "index": 3,
+      "orientation": 16,
+      "x": -2,
+      "y": 0,
+      "z": 0
+    },
+    {
+      "index": 0,
+      "orientation": 16,
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    {
+      "index": 3,
+      "orientation": 0,
+      "x": 1,
+      "y": 0,
+      "z": 0
+    },
+    {
+      "index": 0,
+      "orientation": 16,
+      "x": 2,
+      "y": 0,
+      "z": 0
+    },
+    {
+      "index": 3,
+      "orientation": 10,
+      "x": 3,
+      "y": 0,
+      "z": 0
+    },
+    {
+      "index": 0,
+      "orientation": 16,
+      "x": 4,
+      "y": 0,
+      "z": 0
+    },
+    {
+      "index": 1,
+      "orientation": 16,
+      "x": 5,
+      "y": 0,
+      "z": 0
+    },
+    {
+      "index": 0,
+      "orientation": 16,
+      "x": -3,
+      "y": 0,
+      "z": 3
+    },
+    {
+      "index": 0,
+      "orientation": 16,
+      "x": -4,
+      "y": 0,
+      "z": 3
+    },
+    {
+      "index": 0,
+      "orientation": 16,
+      "x": -5,
+      "y": 0,
+      "z": 3
+    },
+    {
+      "index": 0,
+      "orientation": 16,
+      "x": -6,
+      "y": 0,
+      "z": 3
+    },
+    {
+      "index": 0,
+      "orientation": 16,
+      "x": -7,
+      "y": 0,
+      "z": 3
+    },
+    {
+      "index": 0,
+      "orientation": 10,
+      "x": -2,
+      "y": 0,
+      "z": -1
+    },
+    {
+      "index": 0,
+      "orientation": 10,
+      "x": -2,
+      "y": 0,
+      "z": -2
+    },
+    {
+      "index": 0,
+      "orientation": 10,
+      "x": -2,
+      "y": 0,
+      "z": -3
+    },
+    {
+      "index": 0,
+      "orientation": 10,
+      "x": -2,
+      "y": 0,
+      "z": -4
+    },
+    {
+      "index": 0,
+      "orientation": 10,
+      "x": -2,
+      "y": 0,
+      "z": -5
+    },
+    {
+      "index": 0,
+      "orientation": 22,
+      "x": -1,
+      "y": 0,
+      "z": -3
+    },
+    {
+      "index": 0,
+      "orientation": 22,
+      "x": 0,
+      "y": 0,
+      "z": -3
+    },
+    {
+      "index": 0,
+      "orientation": 22,
+      "x": 1,
+      "y": 0,
+      "z": -3
+    },
+    {
+      "index": 0,
+      "orientation": 22,
+      "x": 2,
+      "y": 0,
+      "z": -3
+    },
+    {
+      "index": 2,
+      "orientation": 0,
+      "x": 3,
+      "y": 0,
+      "z": -3
+    },
+    {
+      "index": 0,
+      "orientation": 0,
+      "x": 3,
+      "y": 0,
+      "z": -2
+    },
+    {
+      "index": 0,
+      "orientation": 0,
+      "x": 3,
+      "y": 0,
+      "z": -1
+    },
+    {
+      "index": 0,
+      "orientation": 0,
+      "x": 1,
+      "y": 0,
+      "z": 2
+    },
+    {
+      "index": 0,
+      "orientation": 0,
+      "x": 1,
+      "y": 0,
+      "z": 1
+    },
+    {
+      "index": 0,
+      "orientation": 0,
+      "x": 1,
+      "y": 0,
+      "z": 3
+    },
+    {
+      "index": 3,
+      "orientation": 16,
+      "x": 1,
+      "y": 0,
+      "z": 5
+    },
+    {
+      "index": 0,
+      "orientation": 0,
+      "x": 1,
+      "y": 0,
+      "z": 6
+    },
+    {
+      "index": 2,
+      "orientation": 22,
+      "x": 1,
+      "y": 0,
+      "z": 7
+    },
+    {
+      "index": 0,
+      "orientation": 0,
+      "x": 1,
+      "y": 0,
+      "z": 4
+    },
+    {
+      "index": 0,
+      "orientation": 16,
+      "x": 0,
+      "y": 0,
+      "z": 7
+    },
+    {
+      "index": 0,
+      "orientation": 16,
+      "x": -1,
+      "y": 0,
+      "z": 7
+    },
+    {
+      "index": 2,
+      "orientation": 10,
+      "x": -2,
+      "y": 0,
+      "z": 7
+    },
+    {
+      "index": 0,
+      "orientation": 10,
+      "x": -2,
+      "y": 0,
+      "z": 6
+    },
+    {
+      "index": 0,
+      "orientation": 22,
+      "x": 2,
+      "y": 0,
+      "z": 5
+    },
+    {
+      "index": 0,
+      "orientation": 22,
+      "x": 3,
+      "y": 0,
+      "z": 5
+    },
+    {
+      "index": 3,
+      "orientation": 10,
+      "x": 4,
+      "y": 0,
+      "z": 5
+    },
+    {
+      "index": 0,
+      "orientation": 22,
+      "x": 5,
+      "y": 0,
+      "z": 5
+    },
+    {
+      "index": 0,
+      "orientation": 0,
+      "x": 6,
+      "y": 0,
+      "z": 4
+    },
+    {
+      "index": 4,
+      "orientation": 16,
+      "x": 6,
+      "y": 0,
+      "z": 3
+    },
+    {
+      "index": 0,
+      "orientation": 0,
+      "x": 6,
+      "y": 0,
+      "z": 2
+    },
+    {
+      "index": 0,
+      "orientation": 0,
+      "x": 6,
+      "y": 0,
+      "z": 1
+    },
+    {
+      "index": 2,
+      "orientation": 0,
+      "x": 6,
+      "y": 0,
+      "z": 0
+    },
+    {
+      "index": 2,
+      "orientation": 22,
+      "x": 6,
+      "y": 0,
+      "z": 5
+    },
+    {
+      "index": 2,
+      "orientation": 16,
+      "x": 4,
+      "y": 0,
+      "z": 3
+    },
+    {
+      "index": 1,
+      "orientation": 10,
+      "x": 4,
+      "y": 0,
+      "z": 4
+    },
+    {
+      "index": 0,
+      "orientation": 22,
+      "x": 5,
+      "y": 0,
+      "z": 3
+    },
+    {
+      "index": 0,
+      "orientation": 22,
+      "x": 7,
+      "y": 0,
+      "z": 3
+    },
+    {
+      "index": 3,
+      "orientation": 0,
+      "x": 8,
+      "y": 0,
+      "z": 3
+    },
+    {
+      "index": 0,
+      "orientation": 22,
+      "x": 9,
+      "y": 0,
+      "z": 3
+    },
+    {
+      "index": 8,
+      "orientation": 16,
+      "x": 0,
+      "y": 0,
+      "z": 6
+    },
+    {
+      "index": 5,
+      "orientation": 10,
+      "x": -1,
+      "y": 0,
+      "z": 6
+    },
+    {
+      "index": 5,
+      "orientation": 10,
+      "x": -1,
+      "y": 0,
+      "z": 5
+    },
+    {
+      "index": 9,
+      "orientation": 16,
+      "x": 0,
+      "y": 0,
+      "z": 5
+    },
+    {
+      "index": 10,
+      "orientation": 16,
+      "x": 0,
+      "y": 0,
+      "z": 4
+    },
+    {
+      "index": 5,
+      "orientation": 0,
+      "x": 0,
+      "y": 0,
+      "z": 3
+    },
+    {
+      "index": 5,
+      "orientation": 22,
+      "x": 0,
+      "y": 0,
+      "z": 2
+    },
+    {
+      "index": 10,
+      "orientation": 10,
+      "x": 0,
+      "y": 0,
+      "z": 1
+    },
+    {
+      "index": 7,
+      "orientation": 10,
+      "x": -1,
+      "y": 0,
+      "z": 1
+    },
+    {
+      "index": 5,
+      "orientation": 22,
+      "x": -1,
+      "y": 0,
+      "z": 2
+    },
+    {
+      "index": 5,
+      "orientation": 22,
+      "x": -1,
+      "y": 0,
+      "z": 3
+    },
+    {
+      "index": 5,
+      "orientation": 22,
+      "x": -1,
+      "y": 0,
+      "z": 4
+    },
+    {
+      "index": 8,
+      "orientation": 22,
+      "x": 2,
+      "y": 0,
+      "z": 3
+    },
+    {
+      "index": 7,
+      "orientation": 22,
+      "x": 2,
+      "y": 0,
+      "z": 4
+    },
+    {
+      "index": 5,
+      "orientation": 0,
+      "x": 3,
+      "y": 0,
+      "z": 4
+    },
+    {
+      "index": 5,
+      "orientation": 0,
+      "x": 3,
+      "y": 0,
+      "z": 3
+    },
+    {
+      "index": 7,
+      "orientation": 16,
+      "x": 2,
+      "y": 0,
+      "z": 2
+    },
+    {
+      "index": 3,
+      "orientation": 22,
+      "x": 3,
+      "y": 0,
+      "z": 1
+    },
+    {
+      "index": 5,
+      "orientation": 0,
+      "x": 4,
+      "y": 0,
+      "z": 2
+    },
+    {
+      "index": 5,
+      "orientation": 0,
+      "x": 5,
+      "y": 0,
+      "z": 1
+    },
+    {
+      "index": 5,
+      "orientation": 0,
+      "x": 4,
+      "y": 0,
+      "z": 1
+    },
+    {
+      "index": 8,
+      "orientation": 16,
+      "x": 2,
+      "y": 0,
+      "z": 1
+    },
+    {
+      "index": 0,
+      "orientation": 0,
+      "x": 3,
+      "y": 0,
+      "z": 2
+    },
+    {
+      "index": 9,
+      "orientation": 0,
+      "x": 5,
+      "y": 0,
+      "z": 2
+    },
+    {
+      "index": 6,
+      "orientation": 16,
+      "x": 5,
+      "y": 0,
+      "z": 4
+    },
+    {
+      "index": 10,
+      "orientation": 0,
+      "x": 2,
+      "y": 0,
+      "z": -1
+    },
+    {
+      "index": 11,
+      "orientation": 0,
+      "x": -1,
+      "y": 0,
+      "z": -4
+    },
+    {
+      "index": 11,
+      "orientation": 0,
+      "x": 0,
+      "y": 0,
+      "z": -4
+    },
+    {
+      "index": 11,
+      "orientation": 0,
+      "x": 1,
+      "y": 0,
+      "z": -4
+    },
+    {
+      "index": 11,
+      "orientation": 16,
+      "x": -3,
+      "y": 0,
+      "z": 1
+    },
+    {
+      "index": 10,
+      "orientation": 0,
+      "x": -3,
+      "y": 0,
+      "z": 2
+    },
+    {
+      "index": 8,
+      "orientation": 0,
+      "x": 4,
+      "y": 0,
+      "z": -1
+    },
+    {
+      "index": 7,
+      "orientation": 0,
+      "x": 5,
+      "y": 0,
+      "z": -1
+    },
+    {
+      "index": 9,
+      "orientation": 0,
+      "x": 6,
+      "y": 0,
+      "z": -1
+    },
+    {
+      "index": 7,
+      "orientation": 0,
+      "x": 7,
+      "y": 0,
+      "z": 2
+    },
+    {
+      "index": 8,
+      "orientation": 0,
+      "x": 8,
+      "y": 0,
+      "z": 2
+    },
+    {
+      "index": 11,
+      "orientation": 16,
+      "x": 7,
+      "y": 0,
+      "z": 4
+    },
+    {
+      "index": 2,
+      "orientation": 22,
+      "x": 8,
+      "y": 0,
+      "z": 4
+    },
+    {
+      "index": 12,
+      "orientation": 22,
+      "x": -1,
+      "y": 0,
+      "z": -2
+    },
+    {
+      "index": 12,
+      "orientation": 22,
+      "x": -1,
+      "y": 0,
+      "z": -1
+    },
+    {
+      "index": 12,
+      "orientation": 22,
+      "x": 0,
+      "y": 0,
+      "z": -1
+    },
+    {
+      "index": 13,
+      "orientation": 0,
+      "x": 0,
+      "y": 0,
+      "z": -2
+    },
+    {
+      "index": 13,
+      "orientation": 16,
+      "x": 1,
+      "y": 0,
+      "z": -2
+    },
+    {
+      "index": 12,
+      "orientation": 22,
+      "x": 1,
+      "y": 0,
+      "z": -1
+    },
+    {
+      "index": 13,
+      "orientation": 16,
+      "x": 2,
+      "y": 0,
+      "z": -2
+    },
+    {
+      "index": 12,
+      "orientation": 22,
+      "x": 7,
+      "y": 0,
+      "z": -1
+    },
+    {
+      "index": 14,
+      "orientation": 16,
+      "x": 7,
+      "y": 0,
+      "z": 0
+    },
+    {
+      "index": 12,
+      "orientation": 22,
+      "x": 7,
+      "y": 0,
+      "z": 1
+    },
+    {
+      "index": 13,
+      "orientation": 22,
+      "x": 3,
+      "y": 0,
+      "z": 6
+    },
+    {
+      "index": 13,
+      "orientation": 0,
+      "x": 2,
+      "y": 0,
+      "z": 6
+    },
+    {
+      "index": 13,
+      "orientation": 22,
+      "x": 4,
+      "y": 0,
+      "z": 6
+    },
+    {
+      "index": 12,
+      "orientation": 22,
+      "x": 5,
+      "y": 0,
+      "z": 6
+    },
+    {
+      "index": 14,
+      "orientation": 0,
+      "x": 2,
+      "y": 0,
+      "z": 7
+    },
+    {
+      "index": 14,
+      "orientation": 0,
+      "x": -3,
+      "y": 0,
+      "z": 4
+    },
+    {
+      "index": 12,
+      "orientation": 22,
+      "x": -3,
+      "y": 0,
+      "z": 5
+    },
+    {
+      "index": 12,
+      "orientation": 22,
+      "x": -3,
+      "y": 0,
+      "z": 6
+    },
+    {
+      "index": 12,
+      "orientation": 22,
+      "x": -3,
+      "y": 0,
+      "z": 7
+    },
+    {
+      "index": 12,
+      "orientation": 22,
+      "x": -4,
+      "y": 0,
+      "z": 4
+    },
+    {
+      "index": 14,
+      "orientation": 16,
+      "x": -4,
+      "y": 0,
+      "z": 2
+    },
+    {
+      "index": 12,
+      "orientation": 22,
+      "x": -5,
+      "y": 0,
+      "z": 2
+    },
+    {
+      "index": 12,
+      "orientation": 22,
+      "x": -3,
+      "y": 0,
+      "z": 0
+    },
+    {
+      "index": 13,
+      "orientation": 22,
+      "x": -3,
+      "y": 0,
+      "z": -1
+    },
+    {
+      "index": 13,
+      "orientation": 0,
+      "x": -3,
+      "y": 0,
+      "z": -2
+    },
+    {
+      "index": 14,
+      "orientation": 10,
+      "x": 9,
+      "y": 0,
+      "z": 2
+    },
+    {
+      "index": 14,
+      "orientation": 10,
+      "x": 7,
+      "y": 0,
+      "z": 5
+    }
+  ],
+  "sample_used_cells": 122,
+  "structure_catalog": [
+    {
+      "index": 0,
+      "model": "res://models/road-straight.glb",
+      "price": 25,
+      "resource": "res://structures/road-straight.tres"
+    },
+    {
+      "index": 1,
+      "model": "res://models/road-straight-lightposts.glb",
+      "price": 25,
+      "resource": "res://structures/road-straight-lightposts.tres"
+    },
+    {
+      "index": 2,
+      "model": "res://models/road-corner.glb",
+      "price": 25,
+      "resource": "res://structures/road-corner.tres"
+    },
+    {
+      "index": 3,
+      "model": "res://models/road-split.glb",
+      "price": 25,
+      "resource": "res://structures/road-split.tres"
+    },
+    {
+      "index": 4,
+      "model": "res://models/road-intersection.glb",
+      "price": 25,
+      "resource": "res://structures/road-intersection.tres"
+    },
+    {
+      "index": 5,
+      "model": "res://models/pavement.glb",
+      "price": 10,
+      "resource": "res://structures/pavement.tres"
+    },
+    {
+      "index": 6,
+      "model": "res://models/pavement-fountain.glb",
+      "price": 10,
+      "resource": "res://structures/pavement-fountain.tres"
+    },
+    {
+      "index": 7,
+      "model": "res://models/building-small-a.glb",
+      "price": 50,
+      "resource": "res://structures/building-small-a.tres"
+    },
+    {
+      "index": 8,
+      "model": "res://models/building-small-b.glb",
+      "price": 60,
+      "resource": "res://structures/building-small-b.tres"
+    },
+    {
+      "index": 9,
+      "model": "res://models/building-small-c.glb",
+      "price": 70,
+      "resource": "res://structures/building-small-c.tres"
+    },
+    {
+      "index": 10,
+      "model": "res://models/building-small-d.glb",
+      "price": 70,
+      "resource": "res://structures/building-small-d.tres"
+    },
+    {
+      "index": 11,
+      "model": "res://models/building-garage.glb",
+      "price": 70,
+      "resource": "res://structures/building-garage.tres"
+    },
+    {
+      "index": 12,
+      "model": "res://models/grass.glb",
+      "price": 10,
+      "resource": "res://structures/grass.tres"
+    },
+    {
+      "index": 13,
+      "model": "res://models/grass-trees.glb",
+      "price": 25,
+      "resource": "res://structures/grass-trees.tres"
+    },
+    {
+      "index": 14,
+      "model": "res://models/grass-trees-tall.glb",
+      "price": 25,
+      "resource": "res://structures/grass-trees-tall.tres"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "command": [
+    "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/work/pipeline-build/runtime/Godot.app/Contents/MacOS/Godot",
+    "--path",
+    "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/outputs/game-world-pipeline/engine",
+    "--",
+    "--spec",
+    "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/outputs/game-world-pipeline/runs/warehouse-repair-01/candidates/000-blocked-fixture/scene.json",
+    "--out",
+    "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/outputs/game-world-pipeline/runs/warehouse-repair-01/candidates/000-blocked-fixture"
+  ],
+  "exit_code": 0,
+  "elapsed_seconds": 2.9000327587127686,
+  "scene_sha256": "de6472efd68186f61ade2e6dffe76d03f735403c0eaff7c6b3d7ffdc4b1bed93"
+}

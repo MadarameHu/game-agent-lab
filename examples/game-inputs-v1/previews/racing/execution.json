@@ -1,0 +1,19 @@
+{
+  "command": [
+    "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/work/pipeline-build/runtime/Godot.app/Contents/MacOS/Godot",
+    "--path",
+    "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/outputs/game-inputs-v1/bases/racing/project",
+    "--rendering-method",
+    "gl_compatibility",
+    "--resolution",
+    "1200x800",
+    "--script",
+    "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/outputs/game-inputs-v1/tools/capture_preview.gd",
+    "--",
+    "--preview-out",
+    "/Users/hjw/Documents/Codex/2026-09-19/agentic-game-development-as-a-verifiable/outputs/game-inputs-v1/previews/racing",
+    "--scene-setup",
+    "default"
+  ],
+  "exit_code": 0
+}
